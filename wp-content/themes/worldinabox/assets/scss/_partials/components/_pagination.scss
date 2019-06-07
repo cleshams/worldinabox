@@ -1,0 +1,12 @@
+.wp-pagenavi a, .wp-pagenavi span {
+	border: 0;
+	text-transform: uppercase;
+    color: $colourMid;
+    font-family: $fontPrimary;
+    font-size: $fontSizeMedium;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	color: $colourDark;
+	background-color: transparent;
+}

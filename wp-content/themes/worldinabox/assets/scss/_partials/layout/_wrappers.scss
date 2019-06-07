@@ -1,0 +1,35 @@
+//-------------------------------------------
+// _wrapper.scss
+//-------------------------------------------
+
+// Site Wrapper
+.site-wrapper {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  max-width: $layoutMaxWidth;
+  margin: 0 auto;
+}
+
+// Containers
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $layoutPadding;
+  &--outer {
+    max-width: $layoutOuterWidth;
+  }
+  &--inner {
+    max-width: $layoutInnerWidth;
+  }
+  &--narrow {
+    max-width: $layoutNarrowWidth;
+  }
+  &--flush {
+    padding: 0;
+  }
+  &--medium {
+    max-width: 1100px;
+  }
+}

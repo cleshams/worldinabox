@@ -1,0 +1,69 @@
+.main-content {
+  padding: $layoutPadding * 2 0;
+  @include breakpoint(medium) {
+    padding: $layoutPadding * 2 0;
+  }
+  &--centre {
+  	text-align: center;
+  }
+}
+
+.content {
+  padding: $layoutPadding / 2 0;
+  @include breakpoint(medium) {
+    padding: $layoutPadding 0;
+  }
+
+  &--lg-top {
+	padding-top: $layoutPadding * 5;
+  }
+
+  &--lg-bottom {
+	padding-bottom: $layoutPadding * 5;
+  }
+
+  &--centre {
+  	text-align: center;
+  }
+  &--no-top {
+    padding-top: 0;
+  }
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+
+  &--centre {
+    text-align: center;
+  }
+
+}
+
+.content__item {
+   padding: $layoutPadding 0;
+
+  &--lg {
+  padding: $layoutPadding * 2 0;
+  }
+
+  &--lg-top {
+  padding-top: $layoutPadding * 2;
+  }
+
+  &--lg-bottom {
+  padding-bottom: $layoutPadding * 2;
+  }
+
+  &--centre {
+    text-align: center;
+  }
+  &--no-top {
+    padding-top: 0;
+  }
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+  &--centre {
+    text-align: center;
+  }
+
+}

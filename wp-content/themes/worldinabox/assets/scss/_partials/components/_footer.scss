@@ -1,0 +1,120 @@
+.site-footer {
+	background-color: $footerBackgroundColour;
+  background-image: url('assets/images/movema-pattern--opac.svg');
+  background-size: 1400px;
+  background-position: top center;
+  background-repeat: repeat-y;
+	color: $footerTextColour;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 16px;
+        top: -16px;
+        background-image: url('assets/images/edge__top--dark.svg');
+        background-size: 760px;
+        z-index: -1;
+        background-repeat: repeat-x;
+    }
+
+
+}
+
+.site-footer__copy {
+  margin-bottom: 0px;
+  font-size: $fontSizeSmall;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.site-footer__link-terms a {
+  text-decoration: none;
+  color: white;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+.site-footer li {
+  margin-bottom: 0;
+}
+
+.site-footer h3, .site-footer h4, .site-footer h2, .site-footer h5 {
+  color: white;
+}
+
+.site-footer a {
+
+  	&:hover, &:focus {
+		color: $colourPrimary;
+	}
+}
+
+.site-footer input {
+  background: $colourMid;
+  border-color: $colourMid;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.site-footer input.btn {
+  background: white;
+  border-color: white;
+  color: $colourDark;
+}
+
+footer .nav {
+        position: static;
+        height: auto;
+        width: auto;
+
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          flex-wrap: wrap;
+          list-style: none;
+          font-size: 1.8rem;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: stretch;
+          height: 100%;
+        }
+
+}
+
+
+footer .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: color .2s;
+    font-family: $fontPrimary;
+    text-transform: uppercase;
+    font-size: $fontSizeBody;
+
+    &:hover, &:focus {
+        color: $navLinkColourHover;
+        opacity: 1;
+    }    
+}
+
+
+footer .nav__menu {
+
+}
+

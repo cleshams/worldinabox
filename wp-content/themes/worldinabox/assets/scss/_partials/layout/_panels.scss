@@ -1,0 +1,26 @@
+.pannel {
+  padding: $layoutPadding;
+  @include breakpoint(medium) {
+    padding: #{$layoutPadding * 1.5};
+  }
+  &--no-top {
+    padding-top: 0;
+  }
+  &--no-right {
+    padding-left: 0;
+  }
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+  &--no-left {
+    padding-left: 0;
+  }
+  &--flush {
+    padding: 0;
+  }
+  &--no-bg {
+    background: none;
+  }
+  &--alt {
+  }
+}

@@ -1,0 +1,116 @@
+.home-page-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: stretch;
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
+}
+
+.home-page-links--half {
+    height: 520px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    flex: 1 1 auto;
+    @include breakpoint(medium) {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+}
+
+
+.home-page-link__info {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: $layoutPadding;
+/*    padding-top: $layoutPadding * 5;
+*/    padding-bottom: 0;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 9;
+
+    @include breakpoint(medium) {
+        padding: $layoutPadding * 2;
+/*        padding-top: $layoutPadding * 6;
+*/    }
+
+}
+
+.home-page-link__title {
+    color: white;
+    margin-bottom: $layoutPadding / 2;
+  font-size: 4rem;
+  @include breakpoint(large) {
+    font-size: 5.4rem;
+  }
+
+}
+
+
+.home-page-link__sub-title {
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: $fontSizeMedium;
+}
+
+.home-page-link__content {
+/*    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;*/
+}
+
+.home-page-link__item:hover {
+/*    .home-page-link__content {
+        visibility: visible;
+        opacity: 1;
+    }*/
+    .home-page-link__info {
+        padding-top:  0;
+    }
+    .home-page-link__overlay {
+        background: rgba(29, 29, 29, 0.8);
+    }
+}
+
+
+.home-page-link__item {
+    min-height: 520px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.home-page-link__overlay--magenta, .home-page-link__overlay--blue {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 29, 29, 0.8);
+    z-index: 1;
+}
+
+.home-page-link__overlay--magenta {
+    background: rgba(230, 0, 125, 0.8);    
+}
+.home-page-link__overlay--blue {
+    background: rgba(0, 169, 174, 0.8);    
+}

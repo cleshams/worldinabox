@@ -1,0 +1,235 @@
+.home-news-blocks__container {
+    @include breakpoint(small-max) {
+    	padding: 0;
+    }
+}
+.news-blocks__wrap {
+	padding: $layoutPadding * 2 0;
+}
+
+.home-news-blocks__wrap {
+	padding-bottom: 0;
+}
+
+.news-blocks__inner {
+	position: relative;
+	overflow: hidden;
+}
+.news-blocks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.news-block__item {
+
+    width: 100%;
+    @include breakpoint(small) {
+	flex: 1 1 auto;
+	display: flex;
+    flex-direction: column;
+    height: 270px;
+    flex-direction: row;
+	}
+	@include breakpoint(medium) {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+}
+
+@include breakpoint(medium-max) {
+
+	.news-block__item:nth-child(even) {
+	    flex-direction: row-reverse;
+	
+		.news-block__content {	
+			&:after {
+			    border-top: 20px solid transparent;
+			    border-bottom: 20px solid transparent;
+			    border-left: 24px solid #fff;
+			    border-right: 0;
+			    position: absolute;
+				left: auto;
+				right: -23px;
+			    display: block;
+			    transition: border-left 600ms;
+			}
+		}
+
+		.news-block__content--blue {
+			&:after {
+			   	border-left: 24px solid $blue;
+			}
+		}
+
+		.news-block__content--orange {
+			&:after {
+			   	border-left: 24px solid $orange;
+			}
+		}
+
+	}
+}
+
+.news-block__item:hover {
+
+	.news-block__content {
+    	animation: pulse .5s linear;
+    	transition: all .25s ease;
+	}
+}
+
+.news-block__img-wrap {
+	height: 240px;
+	width: 100%;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+
+    @include breakpoint(small) {
+		width: 50%;
+		flex: 0 0 auto;
+		height: 100%;
+    }
+}
+.news-block__img {
+	background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 600ms;
+}
+
+.news-block__content {
+	width: 100%;	
+	position: relative;
+	z-index: 99;
+	color: white;
+    transition: all 600ms, background-color 600ms;
+
+    @include breakpoint(small) {
+		width: 50%;
+		flex: 0 0 auto;
+
+		&:after {
+			content: '';
+			width: 0;
+		    height: 0;
+		    margin: -20px 0 0 0;
+		    border-top: 20px solid transparent;
+		    border-bottom: 20px solid transparent;
+		    border-right: 24px solid #fff;
+		    position: absolute;
+		    top: 50%;
+		    left: -23px;
+		    display: block;
+		    transition: border-right 600ms;
+		}
+
+	}
+
+	h4 {
+		font-size: $fontSizeLarge;
+	}
+}
+
+.news-block__content--purple {
+	background-color: $purple;
+	&:after {
+	    border-right: 24px solid $purple;		
+	}	
+}
+.news-block__content--green {
+	background-color: $green;
+	&:after {
+	    border-right: 24px solid $green;		
+	}	
+}
+.news-block__content--blue {
+	background-color: $blue;
+	&:after {
+	    border-right: 24px solid $blue;		
+	}	
+}
+.news-block__content--orange {
+	background-color: $orange;
+	&:after {
+	    border-right: 24px solid $orange;		
+	}	
+}
+
+
+@include breakpoint(medium) {
+
+	.news-block__item--reverse {
+	    flex-direction: row-reverse;
+
+		.news-block__content:after {
+		    border-right: 0;
+		   	border-left: 24px solid #fff;
+		   	left: auto;
+		   	right: -23px;
+		   	transition: border-left 600ms;
+		}
+
+		.news-block__content--purple {
+			&:after {
+			   	border-left: 24px solid $purple;
+			}
+		}
+
+		.news-block__content--green {
+			&:after {
+			   	border-left: 24px solid $green;
+			}
+		}
+
+		.news-block__content--blue {
+			&:after {
+			   	border-left: 24px solid $blue;
+			}
+		}
+
+		.news-block__content--orange {
+			&:after {
+			   	border-left: 24px solid $orange;
+			}
+		}
+
+	}
+
+}
+
+
+.news-block__inner {
+
+	padding: 30px;
+    @include breakpoint(small) {
+    	padding: 0;
+	    transform: translateY(-50%);
+		width: 80%;
+		margin: 0 auto;
+		position: relative;
+		top: 50%;
+	}
+}
+
+.news-block__btn {
+	font-size: $fontSizeSmall;
+	color: white;
+}
+
+.news-block__date {
+	font-size: $fontSizeSmall;
+	color: white;
+	font-family: $fontPrimary;
+	font-weight: 400;
+}
+
+.news-block__text {
+	font-size: $fontSizeSmall;
+	line-height: $lineHeightSmall;
+}

@@ -1,0 +1,196 @@
+form {
+  margin-bottom: #{$layoutMargin};
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  @include placeholder {
+    color: $placeholderColour;
+  }
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: $uiFormBackgroundColour;
+  line-height: 1;
+  font-size: $fontSizeBody;
+  font-family: $fontBody;
+  color: $bodyTextColour;
+}
+
+label {
+  background: none;
+      text-transform: uppercase;
+      font-family: $fontPrimary;
+      font-size: $fontSizeSmall;
+}
+
+// Remove glow in chrome
+input:focus {
+  outline: 0;
+}
+
+
+/* Fieldset
+-----------------------------------------------*/
+
+fieldset {
+  padding: $layoutPadding;
+  padding-top: $layoutPadding / 2;
+  border: 2px solid $uiFormBackgroundColour;
+  margin-bottom: 15px;
+
+  legend {
+    text-transform: uppercase;
+    letter-spacing: $btnLetterSpacing;
+    font-size: $fontSizeSmall;
+    padding: 0 5px;
+  }
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+      border-radius: 10px;
+      box-sizing: border-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type='reset'],
+input[type='button'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio'],
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Labels
+-----------------------------------------------*/
+label {
+  // margin-bottom: #{$layoutMargin / 2};
+      text-transform: uppercase;
+    font-size: $fontSizeSmall;
+
+  sup {
+    font-weight: 600;
+    font-size: 1.2em;
+    top: -0.2em;
+    margin-left: 0.2em;
+  }
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='range'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  @include placeholder {
+    color: $placeholderColour;
+  }
+  display: block;
+  width: 100%;
+  // max-width: 320px;
+  margin-bottom: 20px;
+  padding: 1em;
+  border: $uiFormBorderWidth solid $uiFormInputBorderColour;
+  border-radius: $uiFormBorderRadius;
+    box-sizing: border-box;
+
+}
+
+/* Button Controls
+-----------------------------------------------*/
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: 13px;
+  height: 13px;
+  vertical-align: initial;
+    margin-bottom: 20px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+
+input[type='file'] {
+  display: inline-block;
+}
+
+/* Search Input
+-----------------------------------------------*/
+
+/* Make webkit render the search input like a normal text field */
+input[type='search'] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+
+textarea {
+  @include placeholder {
+    color: $placeholderColour;
+  }
+  display: block;
+  width: 100%;
+  // max-width: 500px;
+  margin-bottom: 20px;
+  padding: 1em;
+  border: $uiFormBorderWidth solid $uiFormInputBorderColour;
+  border-radius: $uiFormBorderRadius;
+  vertical-align: top;
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+
+select {
+  display: block;
+      margin-bottom: 20px;
+}
+
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
+}

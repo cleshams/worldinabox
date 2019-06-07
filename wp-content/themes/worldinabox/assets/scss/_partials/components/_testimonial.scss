@@ -1,0 +1,133 @@
+.testimonials {
+	align-items: center;
+	padding: $layoutPadding * 2 0;
+	background-color: $blue;
+	background-image: url('assets/images/movema-pattern--opac.svg');
+	background-size: 1400px;
+	background-position: top center;
+	background-repeat: repeat-y;
+	text-align: center;
+	color: white;
+}
+
+.testimonial__slider {
+  position: relative;
+  padding: $layoutPadding;
+  color: white;
+
+/*  &:after, &:before {
+  	content: '';
+  	position: absolute;
+  	display: block;
+  	height: 46px;
+  	width: 56px;
+  	background-size: 56px;
+  	background-repeat: none;  
+  	z-index: 99;	
+  }
+  &:after {
+  	background-image: url('assets/images/icon-quote--right.png');
+    bottom: 95px;
+    right: 0px;
+  }
+  &:before {
+  	background-image: url('assets/images/icon-quote--left.png');
+  	top: 25px;
+    left: 0px;
+  }*/
+
+}
+
+.success__name {
+	font-size: $fontSizeBody;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+
+.testimonials__img {
+	margin-bottom: $layoutMargin;
+
+	  @include breakpoint(medium) {
+	  	margin-bottom: 0;
+	  }
+}
+
+#testimonials-slider {
+	background: transparent;
+  padding: $layoutPadding;
+  margin-bottom: 60px;
+  @include breakpoint(medium) {
+   padding: $layoutPadding $layoutPadding * 3;
+  }
+  padding-top: 0;
+
+}
+
+.testimonial__quote {
+   font-size: $fontSizeMedium;
+
+  @include breakpoint(medium) {
+	 font-size: $fontSizeLarge;
+	 line-height: $lineHeightLarge;
+  }
+}
+
+.testimonial__info {
+	margin-top: $layoutMargin;
+}
+
+
+.testimonials__container {
+    @include breakpoint(medium-max) {
+      padding: 0;
+    }
+}
+
+#testimonials-slider {
+  .flex-direction-nav {
+    @include breakpoint(medium-max) {
+      display: none;
+    }    
+  }
+
+}
+
+.testimonial__marks {
+  position: relative;
+  padding: 0 45px;
+
+  &:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url('assets/images/icon-quote--left.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url('assets/images/icon-quote--right.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.testimonial__video {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

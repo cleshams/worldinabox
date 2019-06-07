@@ -1,0 +1,256 @@
+header .nav {
+    width: 100%;
+    @include breakpoint(large-max) {
+		opacity: 0;
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 0%;
+	}
+	@include breakpoint(large) {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        height: auto;
+        width: auto;
+    }
+    &.open {
+        opacity: .9;
+        visibility: visible;
+        height: 100%;
+		background: $navOpenBackgroundColour;
+        z-index: 999;
+    }
+}
+
+
+
+header {
+
+    .current-menu-item {
+        background-color: $colourPrimary;
+
+        .nav__link {
+            color: white;
+            @include breakpoint(large) {
+                &:after {
+                    content: '';
+                    height: 54px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: -40px;
+                    border-radius: 0 0 50% 50% / 17px 17px 17px 17px;
+                    background-color: $colourPrimary;
+                    z-index: 99;
+                }
+            }
+
+        }
+    }
+
+}
+
+header .nav__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include breakpoint(large-max) {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        height: 100%;
+    }
+}
+
+
+.nav__item {
+    margin: 0;
+    position: relative;
+    
+    @include breakpoint(large) {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+
+
+header .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: $fontSizeLarge;
+    color: white;
+    font-weight: 400;
+  	transition: color .2s;
+    font-family: $fontPrimary;
+    text-transform: uppercase;
+
+    @include breakpoint(large) {
+        color: $navLinkColour;
+    }
+
+    @include breakpoint(large) {
+        font-size: 1.8rem;
+    }
+
+	&:hover, &:focus {
+            color: white;
+            opacity: .8;
+
+        @include breakpoint(large) {
+    		color: $navLinkColourHover;
+            opacity: 1;
+	   }
+    }
+
+}
+
+
+@include breakpoint(large) {
+
+    .nav__item-dropdown:hover > .nav__dropdown-menu {
+        display: block;
+    }
+
+}
+
+/** Dropdown styles **/
+.nav__dropdown-menu {
+    display: none;
+    padding: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    @include breakpoint(large) {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1000;
+        width: 28rem;
+        background-color: $colourPrimary;
+        margin: 0 0 0;
+    }
+
+    @include breakpoint(large-max) {
+        &.drop {
+            display: block;
+        }
+    }
+}
+
+.nav__dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .75rem 1.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: $btnLetterSpacing;
+    font-size: $fontSizeSmall;
+    font-weight: 400;
+    transition: color .2s, opacity .2s;
+    @include breakpoint(large) {
+        color: white;
+        opacity: 0.5;
+    }
+
+    &:hover, &:focus, &:active  {
+        color: $colourSecondary;
+        opacity: 1;
+    }
+}
+
+
+.nav__item-dropdown {
+    position: relative;
+}
+
+.hamburger-button {
+    display: flex;   
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.hamburger-button__container {
+    position: relative;
+    flex: 0 0 auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $colourLight;
+    border-radius: 20px;
+    z-index: 9999;
+    &:hover {
+        background-color: $colourPrimary;
+    }
+
+
+    @include breakpoint(large) {
+        display: none;
+    }
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &.active {
+    background-color: white;
+
+    .hamburger-button__top {
+        transform: translateY(8px) translateX(0) rotate(45deg);
+        background: $colourPrimary;
+        z-index: 9999;
+    }
+    .hamburger-button__middle {
+        opacity: 0;
+        background: $colourPrimary;
+    }
+
+    .hamburger-button__bottom {
+        transform: translateY(-8px) translateX(0) rotate(-45deg);
+        background: $colourPrimary;
+        z-index: 9999;
+    }
+  }
+
+  span {
+    background: $colourDark;
+    border: none;
+    height: 4px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition:  all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 18px;
+    }
+
+    &:nth-of-type(3) {
+      top: 26px;
+    }
+  }
+}
+

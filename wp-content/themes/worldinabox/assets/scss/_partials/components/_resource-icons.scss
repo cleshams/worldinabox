@@ -1,0 +1,38 @@
+.resource-icons {
+	background-color: $colourLight;
+	text-align: center;
+	padding: $layoutPadding * 2 0;
+}
+
+.resource-icons__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+}
+
+.resource-icon__item {
+	flex: 1 1 auto;
+	text-align: center;
+	margin: $layoutMargin 0;
+	  @include breakpoint(medium) {
+		flex: 0 0 auto;
+		width: 20%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+.resource-icon__img {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	height: 80px;
+	width: auto;
+}

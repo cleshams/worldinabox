@@ -1,0 +1,29 @@
+$red: #fb6b47;
+$orange: #f18500;
+$blue: #63d2d8;
+$purple: #e6007d;
+$green: #a6ce39;
+$yellow: #fbea10;
+$greyDark: #434a54;
+$greyLight: #ebebeb;
+$greyMid: #a6a6a6;
+
+$brand-colors: (
+  'primary': $orange,
+  'secondary': $blue,
+  'tertiary': $green,
+  'light': $greyLight,
+  'dark': $greyDark,
+  'mid': $greyMid,
+);
+
+@function brand-color($key: 'primary') {
+  @return map-get($brand-colors, $key);
+}
+
+$colourPrimary: brand-color('primary');
+$colourSecondary: brand-color('secondary');
+$colourTertiary: brand-color('tertiary');
+$colourDark: brand-color('dark');
+$colourLight: brand-color('light');
+$colourMid: brand-color('mid');

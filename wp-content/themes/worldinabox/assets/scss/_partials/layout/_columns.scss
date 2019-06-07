@@ -1,0 +1,84 @@
+//-------------------------------------------
+// _columns.scss
+//-------------------------------------------
+
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  &--reversed {
+    flex-direction: column-reverse;
+  }
+  @include breakpoint(medium) {
+    flex-direction: row;
+    &--reversed {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.columns__column {
+  flex: 1 1 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  &--sidebar {
+    order: 10;
+    @include breakpoint(medium) {
+      order: 0;
+    }
+  }
+  @include breakpoint(medium) {
+
+    &--full {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    &--quarter {
+      flex: 0 0 auto;
+      width: 25%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &--third {
+      flex: 0 0 auto;
+      width: 33.333%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &--half {
+      flex: 0 0 auto;
+      width: 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &--two-thirds {
+      flex: 0 0 auto;
+      width: 66.666%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &--three-quarters {
+      flex: 0 0 auto;
+      width: 75%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &--offset-top {
+      position: relative;
+      margin-top: -#{$layoutMargin * 4};
+      z-index: 20;
+    }
+    &--shrink {
+      flex-shrink: 1;
+    }
+  }
+}

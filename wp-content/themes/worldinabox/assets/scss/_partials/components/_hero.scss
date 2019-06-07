@@ -1,0 +1,176 @@
+.hero {
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(medium) {
+        height: 700px;
+    }
+}
+
+.hero--small {
+    height: 280px;
+    text-align: center;
+}
+
+.hero--medium {
+    height: 500px;
+    text-align: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Provides cross-browser RGBa background */
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80000000', endColorstr='#80000000');
+    background: transparent;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2;
+}
+
+.hero__overlay--purple {
+    background: rgba(230, 0, 125, 0.55);
+}
+
+/* set filter as none for IE9+, because IE9+ support RGBa */
+:root .overlay {
+    filter: none\0/IE9;
+}
+
+
+.hero__content--abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+
+.hero__content-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.hero__columns {
+      justify-content: flex-start;  
+}
+
+.hero__title {
+	color: white;
+    margin-bottom: $layoutMargin / 2;
+    font-size: 3.4rem;
+    @include breakpoint(large) {
+        font-size: 4rem;
+    }
+
+}
+
+.home-hero__title {
+    margin-bottom: $layoutMargin;
+}
+
+.hero__title--large {
+    color: white;
+    margin-bottom: $layoutMargin / 2;
+    font-size: 4.4rem;
+    @include breakpoint(large) {
+        font-size: 8.4rem;
+    }
+
+    span {
+        color: $yellow;
+    }
+}
+
+.hero__text {
+
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: rgba(255,255,255,.75);
+
+    @include breakpoint(medium) {
+        font-size: $fontSizeMedium;
+        line-height: $lineHeightMedium;
+    }
+}
+
+.hero__text--small {
+    font-size: $fontSizeSmall;
+}
+
+.hero__btn {
+    @include breakpoint(medium-max) {
+        display: block;
+        text-align: center;
+    }    
+}
+
+.hero-btn-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-btn-video a i {
+    font-size: 8rem;
+    display: block;
+    line-height: 95px;
+}
+.hero-btn-video__btn {
+    text-decoration: none;
+    text-align: center;
+    @include breakpoint(medium-max) {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.hero-btn-video a {
+    @include breakpoint(medium-max) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.hero-btn-video a i {
+    @include breakpoint(medium-max) {
+        margin-right: 10px;
+        font-size: 2.5rem;
+    } 
+}
+
+.hero-btn-video a span {
+    @include breakpoint(medium-max) {
+        font-size: 1.6rem;
+    }
+
+    font-family: $fontPrimary;
+    font-size: $fontSizeMedium;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.hero__logo-img {
+    height: 94px;
+    max-width: 100%;
+    display: block;
+    width: 712px;
+}
+

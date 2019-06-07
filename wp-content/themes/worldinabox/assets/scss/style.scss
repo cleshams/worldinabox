@@ -1,0 +1,74 @@
+/*!
+Theme Name: 	World in a Box
+Theme URI: 		http://www.geckodesign.co.uk/
+Description: 	Starter Theme
+Version: 		1.1
+Author: 		Gecko Design
+Author URI: 	http://www.geckodesign.co.uk
+*/
+
+// vendor
+@import "_partials/vendor/_normalize.scss";
+
+// settings
+@import "_partials/settings/_layout.scss";
+@import "_partials/settings/_colours.scss";
+@import "_partials/settings/_typography.scss";
+@import "_partials/settings/_buttons.scss";
+@import "_partials/settings/_ui.scss";
+@import "_partials/settings/_footer.scss";
+@import "_partials/settings/_nav.scss";
+@import "_partials/settings/_header.scss";
+
+// Tools
+@import "_partials/tools/_animations.scss";
+@import "_partials/tools/_placeholder.scss";
+@import "_partials/tools/_breakpoints.scss";
+@import "_partials/tools/_helpers.scss";
+
+// layout
+@import "_partials/layout/_wrappers.scss";
+@import "_partials/layout/_columns.scss";
+@import "_partials/layout/_panels.scss";
+@import "_partials/layout/_content.scss";
+
+// content
+@import "_partials/content/_base.scss";
+@import "_partials/content/_images.scss";
+@import "_partials/content/_tables.scss";
+@import "_partials/content/_lists.scss";
+@import "_partials/content/_links.scss";
+@import "_partials/content/_typography.scss";
+@import "_partials/content/_forms.scss";
+
+// components
+@import "_partials/components/_list-inline.scss";
+@import "_partials/components/_buttons.scss";
+@import "_partials/components/_footer.scss";
+@import "_partials/components/_header.scss";
+@import "_partials/components/_site-logo.scss";
+@import "_partials/components/_nav.scss";
+@import "_partials/components/_nav-btns.scss";
+@import "_partials/components/_flexslider.scss";
+@import "_partials/components/_sidebar.scss";
+@import "_partials/components/_hero.scss";
+@import "_partials/components/_block.scss";
+@import "_partials/components/_content.scss";
+@import "_partials/components/_social.scss";
+@import "_partials/components/_overlay.scss";
+@import "_partials/components/_share.scss";
+@import "_partials/components/_page-header.scss";
+@import "_partials/components/_testimonial.scss";
+@import "_partials/components/_video-bg.scss";
+@import "_partials/components/_form-group.scss";
+@import "_partials/components/_widget-shopping-cart.scss";
+@import "_partials/components/_backgrounds.scss";
+@import "_partials/components/_edges.scss";
+@import "_partials/components/_page-links.scss";
+@import "_partials/components/_news-blocks.scss";
+@import "_partials/components/_resource-icons.scss";
+@import "_partials/components/_shop-cat-nav.scss";
+@import "_partials/components/_woocommerce.scss";
+@import "_partials/components/_img-video.scss";
+@import "_partials/components/_post-info.scss";
+@import "_partials/components/_pagination.scss";

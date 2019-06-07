@@ -1,0 +1,6 @@
+2019-01-20T22:56:33+00:00 CRITICAL require_once(): Failed opening required '/Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cpt/press-type.php' (include_path='.:/Applications/MAMP/bin/php/php7.2.7/lib/php') in /Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cm-cpt.php on line 16
+
+2019-01-20T22:56:34+00:00 CRITICAL require_once(): Failed opening required '/Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cpt/press-type.php' (include_path='.:/Applications/MAMP/bin/php/php7.2.7/lib/php') in /Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cm-cpt.php on line 16
+
+2019-01-20T22:56:34+00:00 CRITICAL require_once(): Failed opening required '/Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cpt/press-type.php' (include_path='.:/Applications/MAMP/bin/php/php7.2.7/lib/php') in /Users/chris/Dropbox/gec01601-world-in-a-box/worldinabox-wp/wp-content/plugins/cm-cpt/cm-cpt.php on line 16
+

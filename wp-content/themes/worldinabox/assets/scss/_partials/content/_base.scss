@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: inherit;
+  &::before, &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+::-moz-selection { background: rgba(0, 0, 0, 0.2); }
+::selection { background: rgba(0, 0, 0, 0.2); }
+
+:focus {
+  outline: none;
+}

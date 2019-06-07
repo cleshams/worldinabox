@@ -1,0 +1,16 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $colourPrimary;
+  }
+
+  &:focus {
+    outline: $colourPrimary;
+  }
+
+}

@@ -1,0 +1,157 @@
+.wow {
+  visibility: hidden;
+}
+
+.content__intro-text {
+	font-size: $fontSizeMedium;
+	line-height: $lineHeightMedium;
+}
+
+.main-content {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: '';
+		display: block;
+		width: 370px;
+		height: 810px;
+		position: absolute;
+		top: 10px;
+		left: -40px;
+		background-image: url('assets/images/bg-dancer--light.svg');
+		background-repeat: no-repeat;
+		background-size: 370px;
+		z-index: -1;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: 370px;
+		height: 728px;
+		position: absolute;
+		bottom: 0px;
+		right: -40px;
+		left: auto;
+		top: auto;
+		background-image: url('assets/images/bg-drums--light.svg');
+		background-repeat: no-repeat;
+		background-size: 370px;
+		z-index: -1;
+	}	
+
+}
+
+
+.team-content {
+}
+
+.class-instructor-content {
+	text-align: center;
+}
+
+
+.content__indent {
+	padding-left: 100px;
+}
+
+.why-content {
+}
+
+.why-content__inner {
+	padding: $layoutPadding * 2 0;
+	overflow: hidden;
+	position: relative;
+
+}
+
+
+.why-content__item {
+	text-align: center;
+}
+
+img.why-content__img {
+	margin: auto;
+	margin-bottom: $layoutMargin;
+	max-width: 280px;
+}
+
+
+.home-intro {
+    @include breakpoint(medium-max) {
+    	text-align: center;
+    }
+}
+
+.home-intro__columns {
+    @include breakpoint(medium-max) {
+    	flex-direction: column-reverse;
+    }
+}
+
+.home-intro__text {
+
+}
+
+.home-intro__img {
+	margin-bottom: $layoutMargin;
+	margin-left: auto;
+	margin-right: auto;
+    @include breakpoint(small-max) {
+    	display: none;
+    }
+}
+
+
+.pagination {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	flex-direction: row;
+	position: relative;
+	margin: $layoutMargin * 2 0;
+/*	&:after {
+		content: '';
+		width: 2px;
+		background-color: $colourLight;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		position: absolute;
+	}*/
+
+	li {
+	    padding: 1rem;
+	    color: $colourMid;
+	    font-weight: 400;
+	  	transition: color .2s;
+	    font-family: $fontPrimary;
+	    text-transform: uppercase;
+        font-size: $fontSizeMedium;
+        flex: 1 1 auto;
+        width: 50%;
+	}
+
+	a {
+		text-decoration: none;
+	
+		&:hover, &:focus {
+			color: $navLinkColourHover;
+		}
+	}
+}
+
+.contact-content__form {
+	input[type='tel'], input[type='text'], input[type='email'],  textarea {
+		background-color: white;
+
+		  &::placeholder {
+		    color: $colourMid;
+		    font-weight: 400;
+		    font-family: $fontPrimary;
+		    text-transform: uppercase;
+	        font-size: $fontSizeBody;		    
+		  }
+	}
+}

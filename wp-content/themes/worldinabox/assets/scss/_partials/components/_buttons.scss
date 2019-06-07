@@ -1,0 +1,212 @@
+.btn {
+  min-width: 64px;
+  padding: 20px 30px;
+  color: white;
+  background-color: $colourPrimary;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  font-family: $fontPrimary;
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+  font-size: $fontSizeBody;
+  font-weight: 400;
+  border: 2px solid $colourPrimary;
+  text-align: center;
+  border-radius: 10px;
+  &:after {
+    content: '>';
+    margin-left: 5px;
+  }  
+
+  &:hover, &:focus, &:active {
+    background: $colourSecondary;
+    color: #ffffff;
+    border: 2px solid $colourSecondary;
+  }
+
+}
+
+// Small Button
+.btn--small {
+  font-size: $fontSizeSmall;
+  padding: 6px 13px;
+}
+
+// Large Button
+.btn--medium {
+  font-size: $fontSizeBody;
+  padding: 18px 26px;
+}
+
+// Large Button
+.btn--large {
+  font-size: 1.4rem;
+  padding: 25px 46px;
+}
+
+// Block Button
+.btn--block {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+
+// Primary button
+.btn--primary {
+  background: $colourPrimary;
+  color: #ffffff;
+  border: 2px solid $colourPrimary;
+
+  &:hover, &:focus, &:active {
+    background: lighten($colourPrimary, 10%);
+    color: #ffffff;
+    border: 2px solid lighten($colourPrimary, 10%);
+  }
+}
+
+
+
+// Primary button
+.btn--secondary {
+  background: $colourSecondary;
+  color: #ffffff;
+  border: 2px solid $colourSecondary;
+
+  &:hover, &:focus, &:active {
+    background: lighten($colourSecondary, 10%);
+    color: #ffffff;
+    border: 2px solid lighten($colourSecondary, 10%);
+  }
+}
+
+// Primary button
+.btn--tertiary {
+  background: $colourTertiary;
+  color: #ffffff;
+  border: 2px solid $colourTertiary;
+
+  &:hover, &:focus, &:active {
+    background: lighten($colourTertiary, 10%);
+    color: #ffffff;
+    border: 2px solid lighten($colourTertiary, 10%);
+  }
+}
+
+
+// Primary button
+.btn--dark {
+  background: $colourDark;
+  color: #ffffff;
+  border: 2px solid $colourDark;
+
+  &:hover, &:focus, &:active {
+    background: $colourPrimary;
+    color: #ffffff;
+    border: 2px solid $colourPrimary;
+  }
+}
+
+// Primary button
+.btn--light {
+  background: $colourLight;
+  color: $colourDark;
+  border: 2px solid $colourLight;
+
+  &:hover, &:focus, &:active {
+    background: darken($colourLight, 10%);
+    color: $colourDark;
+    border: 2px solid darken($colourLight, 10%);
+  }
+}
+
+
+// White button
+.btn--white {
+  background: #ffffff;
+  color: $colourPrimary;
+  border: 2px solid white;
+
+  &:hover, &:focus, &:active {
+    background: $colourPrimary;
+    color: #ffffff;
+    border: 2px solid $colourPrimary;
+  }
+}
+
+
+// Bordered buttons
+.btn--bordered-primary {
+  background: transparent;
+  color: $colourPrimary;
+  border: 2px solid currentColor;
+
+  &:hover, &:focus, &:active  {
+    background: $colourPrimary;
+    color: white;
+    border: 2px solid $colourPrimary;
+  }
+}
+
+.btn--bordered-white {
+  background: transparent;
+  color: white;
+  border: 2px solid #ffffff;
+
+  &:hover, &:focus, &:active {
+    background: white;
+    color: $colourDark;
+    border: 2px solid #ffffff;
+  }
+}
+
+
+.btn-group {
+  margin-top: $layoutMargin;
+  .btn {
+    margin: 5px;
+  }
+}
+
+
+
+.btn-instagram {
+  position: relative;
+  padding-left: 60px;
+  &:before {
+    content: '\f16d';
+    font-family:'FontAwesome';
+    margin-right: 5px;
+    font-size: $fontSizeVeryLarge;
+    position: absolute;
+    left: 26px;
+    font-weight: 400;
+  }
+
+  &:hover, &:focus, &:active  {
+    color: white;
+  }
+}
+
+
+.btn-link {
+  color: $bodyTextColour;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $fontPrimary;
+  cursor: pointer;
+  transition: all .2s;
+  font-size: $fontSizeBody;
+  font-weight: 400;
+  &:hover, &:focus, &:active {
+    color: $colourSecondary;
+  }
+
+  &:after {
+    content: '>';
+    margin-left: 5px;
+  }  
+}

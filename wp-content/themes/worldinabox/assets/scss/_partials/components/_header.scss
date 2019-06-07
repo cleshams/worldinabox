@@ -1,0 +1,86 @@
+.site-header {
+    width: 100%;
+    padding: 0;
+    background: $headerBackgroundColour;
+    color: #ffffff;
+    z-index: 999;
+	position: relative;
+    height: 130px;
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 16px;
+        bottom: -14px;
+        background-image: url('assets/images/edge__btm--white.svg');
+        background-size: 690px;
+        z-index: 2;
+        background-repeat: repeat-x;
+    }
+
+}
+
+
+/*body.admin-bar .site-header{
+    top: 46px;
+  @media only screen and (min-width:783px) {
+    top: 32px;
+  }
+}*/
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed !important;
+    }
+}
+
+.site-header__container {
+	height: 100%;
+}
+
+.site-header__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__wrap {
+    height: 100%;
+    display: flex; 
+    margin-left: auto;
+}
+
+
+.sub-header {
+    font-size: $fontSizeLarge;
+    margin-bottom: 10px;
+    color: $colourMid;
+}
+
+.icon-heading:before {
+    margin-right: 10px;
+    color: $colourPrimary;
+    content: '\f095';
+    font-family:'FontAwesome';
+    display: inline-block;
+    width: 30px;
+}
+
+.icon-heading__email:before {
+    margin-right: 10px;
+    color: colouPrimary;
+    content: '\f0e0';
+    font-family:'FontAwesome';
+    display: inline-block;
+}

@@ -1,0 +1,28 @@
+.bg-pattern--white {
+	background-color: white;
+	background-image: url('assets/images/movema-pattern--light.svg');
+	background-size: 1400px;
+	background-position: top center;
+	background-repeat: repeat-y;
+}
+
+.bg-overflow {
+	overflow: hidden;
+	position: relative;
+}
+
+.bg-drums--tr {
+	&:after {
+		content: '';
+		display: block;
+		width: 270px;
+		height: 531px;
+		position: absolute;
+		top: 60px;
+		right: -40px;
+		background-image: url('assets/images/bg-drums--light.svg');
+		background-repeat: no-repeat;
+		background-size: 270px;
+		z-index: -1;
+	}
+}
