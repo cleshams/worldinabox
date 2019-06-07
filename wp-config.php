@@ -18,18 +18,54 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'worldina_wiab_db');
 
-/** MySQL database username */
-define('DB_USER', 'worldina_wiab_db');
+#¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+#
+#	ENVIROMENTS
+#
+#¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
 
-/** MySQL database password */
-define('DB_PASSWORD', 'Kw2MT!6MF');
+define('ENV_LOCAL', 		'local.worldinabox.co.uk');
+define('ENV_STAGING',		'staging-worldinabox-co.stackstaging.com');
+define('ENV_PRODUCTION', 	'worldinabox.co');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+
+if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
+{	
+	define('DB_NAME', 'worldinabox_local');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+	define('DB_HOST', '127.0.0.1');
+	define('DEBUG', true);
+	define('DEBUG_LOG', true);
+	
+}
+elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
+{
+	define('DB_NAME', 'worldinabox-31303751eb');
+	define('DB_USER', 'worldinabox-31303751eb');
+	define('DB_PASSWORD', 'l7e28mt64w');
+    define('DB_HOST', 'shareddb-n.hosting.stackcp.net');
+    define('DEBUG', true);
+    define('DEBUG_LOG', true);
+    define('DEBUG_DISPLAY', false);
+
+}
+elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION || $_SERVER['HTTP_HOST'] == ENV_PRODUCTION_www)
+{
+	define('DB_NAME', 'worldina_wiab_db');
+	define('DB_USER', 'worldina_wiab_db');
+	define('DB_PASSWORD', 'Kw2MT!6MF');
+    define('DB_HOST', 'localhost');
+    define('DEBUG', false);
+    define('DEBUG_LOG', false);
+    define('DEBUG_DISPLAY', false);
+}
+else
+{
+	$msg = '<h1>' . $_SERVER['HTTP_HOST'] . ' doesnt match a defined environment' . '</h1>';
+	die($msg);
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -46,40 +82,17 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'SvJ}Wx/q-y~x5PF:=OxRYv.J[W`[;*+8/f`B9kO+@<qFY8v3EG<AJTvb+0hBrR,/');
+define('SECURE_AUTH_KEY',  'p+fL=KGNpEq-P-WSe%ii*G7{W,j6a.$A!Y>EA*~:|CCdV[T~iD`T/`XW2yR48@Z|');
+define('LOGGED_IN_KEY',    'T^NZP{u(W5^YUea6N.B++#@%+?s2hf96.jloZ],1O<DL84SLY3lp9q9DM]d}Q>MH');
+define('NONCE_KEY',        'kJ2!+ux&`UR8wN{f+t`AR?Av5A2g0EntG:H+KKP>t-TPol f|Yt;H*YUG2c{%s#d');
+define('AUTH_SALT',        'l=,R[bd$(*>*ki3+ih6gxo3e[^_RG2;+Cl!edy,;uhdK<6tsL-[1K%SyE=X]+j)8');
+define('SECURE_AUTH_SALT', '}z^xZtrN||JW/L9.!])-^4({*51G_eT+/P$NIe`@@1H6n:E<$3AF K:gz(B%x=Fi');
+define('LOGGED_IN_SALT',   'F4X79u-DDO0;9z&1&C4w|.~[lXH`VMf_1Xrl)ZIu==!|/)U</LXYe1iOUroJK+Aa');
+define('NONCE_SALT',       'w0+Ij~t#=..G&hIN3C<WE(v,-){TYUVQ$1^)7kO|>Azx6T8_Bt0zonSacj);7H?G');
 
-/**#@-*/
-
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
- */
 $table_prefix  = 'wp_';
 
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
- */
-define('WP_DEBUG', false);
-
-/* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
