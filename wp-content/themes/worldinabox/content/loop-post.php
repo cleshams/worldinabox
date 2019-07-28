@@ -8,9 +8,6 @@
                 } else {
                     $newsimage = 'http://via.placeholder.com/400x400';
                 }
-
-            }
-
         ?>
 
         <span style="background-image: url('<?php echo $newsimage; ?>');" class="news-block__img"></span>
