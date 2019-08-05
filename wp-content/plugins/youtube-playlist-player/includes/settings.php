@@ -6,11 +6,12 @@ function ytpp_settings() { ?>
 		<h2><?php _e('YouTube Playlist Player Settings', 'youtube-playlist-player'); ?></h2>
 
         <?php $tab = isset($_GET['tab']) ? $_GET['tab'] : 'dashboard'; ?>
+
         <h2 class="nav-tab-wrapper">
-            <a href="<?php echo admin_url('admin.php?page=ytpp&amp;tab=dashboard'); ?>" class="nav-tab <?php echo $tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php _e('Dashboard', 'youtube-playlist-player'); ?></a>
-            <a href="<?php echo admin_url('admin.php?page=ytpp&amp;tab=settings'); ?>" class="nav-tab <?php echo $tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e('General Settings', 'youtube-playlist-player'); ?></a>
-            <a href="<?php echo admin_url('admin.php?page=ytpp&amp;tab=api'); ?>" class="nav-tab <?php echo $tab == 'api' ? 'nav-tab-active' : ''; ?>"><?php _e('YouTube API', 'youtube-playlist-player'); ?></a>
-            <a href="<?php echo admin_url('admin.php?page=ytpp&amp;tab=help'); ?>" class="nav-tab <?php echo $tab == 'help' ? 'nav-tab-active' : ''; ?>"><?php _e('Help/Usage', 'youtube-playlist-player'); ?></a>
+            <a href="<?php echo admin_url('admin.php?page=ytpp&tab=dashboard'); ?>" class="nav-tab <?php echo $tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php _e('Dashboard', 'youtube-playlist-player'); ?></a>
+            <a href="<?php echo admin_url('admin.php?page=ytpp&tab=settings'); ?>" class="nav-tab <?php echo $tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e('General Settings', 'youtube-playlist-player'); ?></a>
+            <a href="<?php echo admin_url('admin.php?page=ytpp&tab=api'); ?>" class="nav-tab <?php echo $tab == 'api' ? 'nav-tab-active' : ''; ?>"><?php _e('YouTube API', 'youtube-playlist-player'); ?></a>
+            <a href="<?php echo admin_url('admin.php?page=ytpp&tab=help'); ?>" class="nav-tab <?php echo $tab == 'help' ? 'nav-tab-active' : ''; ?>"><?php _e('Help/Usage', 'youtube-playlist-player'); ?></a>
         </h2>
 
         <?php if ((string) $tab === 'dashboard') { ?>

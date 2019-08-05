@@ -27,10 +27,10 @@ function playerShow($atts) {
     wp_enqueue_script('ytpp');
     wp_enqueue_style('ytpp');
 
-    extract(shortcode_atts(array(
+    extract(shortcode_atts([
         'mainid' => '',
         'vdid' => ''
-    ), $atts));
+    ], $atts));
 
     $ytpp_height = (int) get_option('ytpp_height');
     $mainId = trim($mainid);
@@ -41,7 +41,8 @@ function playerShow($atts) {
     $ytppControls = (int) get_option('ytpp_controls');
     $ytppPrivacy = (int) get_option('ytpp_privacy');
     $ytppYouTubeUri = 'https://www.youtube.com';
-    if ($ytppPrivacy === 1) {
+
+    if ((int) $ytppPrivacy === 1) {
         $ytppYouTubeUri = 'https://www.youtube-nocookie.com';
     }
 
@@ -62,10 +63,10 @@ function ytppPlayerShowV3($atts) {
     wp_enqueue_script('ytppv3');
     wp_enqueue_style('ytpp');
 
-    extract(shortcode_atts(array(
+    extract(shortcode_atts([
         'mainid' => '',
         'vdid' => ''
-    ), $atts));
+    ], $atts));
 
     $ytppYouTubeApi = (string) get_option('ytppYouTubeApi');
     $apiKey = trim($ytppYouTubeApi);
@@ -77,6 +78,7 @@ function ytppPlayerShowV3($atts) {
     $ytppControls = (int) get_option('ytpp_controls');
     $ytppPrivacy = (int) get_option('ytpp_privacy');
     $ytppYouTubeUri = 'https://www.youtube.com';
+
     if ((int) $ytppPrivacy === 1) {
         $ytppYouTubeUri = 'https://www.youtube-nocookie.com';
     }

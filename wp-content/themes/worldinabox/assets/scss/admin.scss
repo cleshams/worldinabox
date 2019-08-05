@@ -1,0 +1,16 @@
+#wp-admin-bar-environment
+{
+    &-local a.ab-item
+    {
+        color: red;
+        font-weight: bold;
+    }
+    &-staging a.ab-item
+    {
+        color: orange;
+    }
+    &-production a.ab-item
+    {
+        color: greenyellow;
+    }
+}

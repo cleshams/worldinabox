@@ -2,9 +2,9 @@
 Contributors: butterflymedia
 Tags: youtube, player, playlist, video, carousel, thumbnail, javascript
 Requires at least: 4.6
-Tested up to: 4.9.7
-Requires PHP: 5.5
-Stable tag: 4.4.1
+Tested up to: 5.1
+Requires PHP: 7.0
+Stable tag: 4.5.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,10 @@ Check out more WordPress plugins here:
 5. Help/Usage
 
 == Changelog ==
+
+= 4.5.0 =
+* UPDATE: Updated PHP requirements
+* UPDATE: Updated WordPress compatibility
 
 = 4.4.1 =
 * FIX: Fixed a strict check

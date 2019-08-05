@@ -27,11 +27,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_action( 'enqueue_block_assets', array( $this, 'block_assets' ) );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_assets' ) );
 			add_filter( 'body_class', array( $this, 'body_classes' ) );
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
+			add_filter( 'block_editor_settings', array( $this, 'custom_editor_settings' ), 10, 2 );
 		}
 
 		/**
@@ -180,6 +182,37 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_theme_support( 'editor-styles' );
 
 			/**
+			 * Add support for editor font sizes.
+			 */
+			add_theme_support( 'editor-font-sizes', array(
+				array(
+					'name' => __( 'Small', 'storefront' ),
+					'size' => 14,
+					'slug' => 'small',
+				),
+				array(
+					'name' => __( 'Normal', 'storefront' ),
+					'size' => 16,
+					'slug' => 'normal',
+				),
+				array(
+					'name' => __( 'Medium', 'storefront' ),
+					'size' => 23,
+					'slug' => 'medium',
+				),
+				array(
+					'name' => __( 'Large', 'storefront' ),
+					'size' => 26,
+					'slug' => 'large',
+				),
+				array(
+					'name' => __( 'Huge', 'storefront' ),
+					'size' => 37,
+					'slug' => 'huge',
+				),
+			) );
+
+			/**
 			 * Enqueue editor styles.
 			 */
 			add_editor_style( array( 'assets/css/base/gutenberg-editor.css', $this->google_fonts() ) );
@@ -282,9 +315,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
-			wp_enqueue_style( 'storefront-gutenberg-blocks', get_template_directory_uri() . '/assets/css/base/gutenberg-blocks.css', '', $storefront_version );
-			wp_style_add_data( 'storefront-gutenberg-blocks', 'rtl', 'replace' );
-
 			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );
 
@@ -345,15 +375,29 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Enqueue supplemental block editor styles.
+		 * Enqueue block assets.
+		 *
+		 * @since 2.5.0
+		 */
+		public function block_assets() {
+			global $storefront_version;
+
+			// Styles.
+			wp_enqueue_style( 'storefront-gutenberg-blocks', get_template_directory_uri() . '/assets/css/base/gutenberg-blocks.css', '', $storefront_version );
+			wp_style_add_data( 'storefront-gutenberg-blocks', 'rtl', 'replace' );
+		}
+
+		/**
+		 * Enqueue supplemental block editor assets.
 		 *
 		 * @since 2.4.0
 		 */
 		public function block_editor_assets() {
 			global $storefront_version;
 
-			wp_enqueue_style( 'storefront-editor-block-styles', get_theme_file_uri( '/assets/css/base/gutenberg-blocks.css' ), false, $storefront_version, 'all' );
-			wp_style_add_data( 'storefront-editor-block-styles', 'rtl', 'replace' );
+			// JS.
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+			wp_enqueue_script( 'storefront-editor', get_template_directory_uri() . '/assets/js/editor' . $suffix . '.js', array( 'wp-data', 'wp-dom-ready', 'wp-edit-post' ), $storefront_version, true );
 		}
 
 		/**
@@ -432,6 +476,26 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			return $classes;
+		}
+
+		/**
+		 * Adds a custom parameter to the editor settings that is used
+		 * to track whether the main sidebar has widgets.
+		 *
+		 * @since 2.4.3
+		 * @param array   $settings Default editor settings.
+		 * @param WP_Post $post Post being edited.
+		 *
+		 * @return array Filtered block editor settings.
+		 */
+		public function custom_editor_settings( $settings, $post ) {
+			$settings['mainSidebarActive'] = false;
+
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
+				$settings['mainSidebarActive'] = true;
+			}
+
+			return $settings;
 		}
 
 		/**

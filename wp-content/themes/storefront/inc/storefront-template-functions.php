@@ -134,17 +134,23 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	 * @return void
 	 */
 	function storefront_credit() {
+		$links_output = '';
+
+		if ( apply_filters( 'storefront_credit_link', true ) ) {
+			$links_output .= '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.';
+		}
+
+		if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
+			$separator = '<span role="separator" aria-hidden="true"></span>';
+			$links_output = get_the_privacy_policy_link( '', ( ! empty( $links_output ) ? $separator : '' ) ) . $links_output;
+		}
 		?>
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
-			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			<br />
-				<?php
-				if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
-					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-				}
-				?>
-				<?php echo '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.'; ?>
+
+			<?php if ( ! empty( $links_output ) ) { ?>
+				<br />
+				<?php echo wp_kses_post( $links_output ); ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
@@ -312,6 +318,10 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_page_header() {
+		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) ) {
+			return;
+		}
+
 		?>
 		<header class="entry-header">
 			<?php
@@ -356,16 +366,21 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		?>
 		<header class="entry-header">
 		<?php
+
+		/**
+		 * Functions hooked in to storefront_post_header_before action.
+		 *
+		 * @hooked storefront_post_meta - 10
+		 */
+		do_action( 'storefront_post_header_before' );
+
 		if ( is_single() ) {
-			storefront_post_meta();
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
-			if ( 'post' === get_post_type() ) {
-				storefront_post_meta();
-			}
-
 			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
+
+		do_action( 'storefront_post_header_after' );
 		?>
 		</header><!-- .entry-header -->
 		<?php
@@ -419,11 +434,15 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_meta() {
+		if ( 'post' !== get_post_type() ) {
+			return;
+		}
+
 		// Posted on.
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf(
@@ -434,11 +453,13 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			'<span class="posted-on">%s <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>',
+		$output_time_string = sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>', esc_url( get_permalink() ), $time_string );
+
+		$posted_on = '
+			<span class="posted-on">' .
 			/* translators: %s: post date */
-			_x( 'Posted on', 'post date', 'storefront' )
-		);
+			sprintf( __( 'Posted on %s', 'storefront' ), $output_time_string ) .
+			'</span>';
 
 		// Author.
 		$author = sprintf(
@@ -480,6 +501,32 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	}
 }
 
+if ( ! function_exists( 'storefront_edit_post_link' ) ) {
+	/**
+	 * Display the edit link
+	 *
+	 * @since 2.5.0
+	 */
+	function storefront_edit_post_link() {
+		edit_post_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'storefront' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			),
+			'<div class="edit-link">',
+			'</div>'
+		);
+	}
+}
+
 if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
 	/**
 	 * Display the post taxonomies
@@ -497,17 +544,15 @@ if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
 		<aside class="entry-taxonomy">
 			<?php if ( $categories_list ) : ?>
 			<div class="cat-links">
-				<span class="screen-reader-text"><?php echo esc_attr( __( 'Posted in', 'storefront' ) ); ?></span>
-				<?php echo wp_kses_post( $categories_list ); ?>
+				<?php echo esc_html( _n( 'Category:', 'Categories:', count( get_the_category() ), 'storefront' ) ); ?> <?php echo wp_kses_post( $categories_list ); ?>
 			</div>
-			<?php endif; // End if categories. ?>
+			<?php endif; ?>
 
 			<?php if ( $tags_list ) : ?>
 			<div class="tags-links">
-				<span class="screen-reader-text"><?php echo esc_attr( __( 'Tagged', 'storefront' ) ); ?></span>
-				<?php echo wp_kses_post( $tags_list ); ?>
+				<?php echo esc_html( _n( 'Tag:', 'Tags:', count( get_the_tags() ), 'storefront' ) ); ?> <?php echo wp_kses_post( $tags_list ); ?>
 			</div>
-			<?php endif; // End if $tags_list. ?>
+			<?php endif; ?>
 		</aside>
 
 		<?php

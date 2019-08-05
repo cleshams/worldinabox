@@ -1,0 +1,7 @@
+#wp-admin-bar-environment-local {
+  color: red;
+  font-weight: bold; }
+#wp-admin-bar-environment-staging {
+  color: yellow; }
+#wp-admin-bar-environment-production {
+  color: greenyellow; }

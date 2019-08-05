@@ -1,6 +1,9 @@
 <?php
 
+$wppath = dirname(__FILE__);
 
+require_once($wppath . '/functions-sc.php');
+require_once($wppath . '/platform/functions-platform.php');
 
     // =========================================================================
     // REMOVE JUNK FROM HEAD
@@ -43,10 +46,6 @@
 
 	require_once THEME_DIR . '/functions/woocommerce.php';
 
-
-	// Register Meta Boxes
-
-	// require_once THEME_DIR . '/functions/cmb-functions.php';
 
 
 	// Register Menus
@@ -119,11 +118,11 @@
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
-if (!current_user_can('administrator') && !is_admin()) {
-  show_admin_bar(false);
+	if (!current_user_can('administrator') && !is_admin())
+	{
+		show_admin_bar(false);
+	}
 }
-}
-
 
 
 	// Scripts
@@ -148,9 +147,6 @@ if (!current_user_can('administrator') && !is_admin()) {
 
 		wp_register_script( 'vide-js', THEME_URI.'/assets/js/jquery.vide.min.js', array( 'jquery' ), '', true );
 		wp_enqueue_script( 'vide-js' );
-
-		// wp_register_script( 'magnific-js', THEME_URI.'/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), '', true );
-		// wp_enqueue_script( 'magnific-js' );
 
 		wp_register_script( 'lity-js', THEME_URI.'/assets/js/lity.min.js', array( 'jquery' ), '', true );
 		wp_enqueue_script( 'lity-js' );		
@@ -193,6 +189,7 @@ if (!current_user_can('administrator') && !is_admin()) {
 	add_image_size( 'landscape-md', 800, 400, true );
 	add_image_size( 'landscape-lg', 1200, 800, true );
 	}
+	
 
 	add_filter('body_class', 'cm_body_class');
 
@@ -224,15 +221,17 @@ if (!current_user_can('administrator') && !is_admin()) {
 	}
 
 add_action('wp_head', 'wpb_add_googleanalytics');
-function wpb_add_googleanalytics() { ?>
+function wpb_add_googleanalytics()
+{ 
+?>
  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132979273-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132979273-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-  gtag('config', 'UA-132979273-1');
-</script>
+	gtag('config', 'UA-132979273-1');
+	</script>
  
 <?php }

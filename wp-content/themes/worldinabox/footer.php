@@ -3,7 +3,7 @@
             <div>
                 <div class="content__item--lg">
                     <h3 class="page-header"><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;<a href="https://www.instagram.com/worldinaboxmovema/" target="_blank">#worldinaboxmovema</a></h3>
-                    <?php // echo do_shortcode('[instagram-feed]'); ?>
+                    <?php  echo do_shortcode('[instagram-feed]'); ?>
                 </div>
             </div>
 

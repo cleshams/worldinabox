@@ -13,3 +13,4 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Register CPT
 require_once( dirname(__FILE__) . '/cpt/testimonials-type.php');
+require_once( dirname(__FILE__) . '/cpt/platform-post-types.php');

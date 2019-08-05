@@ -32,6 +32,7 @@ define('ENV_PRODUCTION', 	'worldinabox.co');
 
 if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
 {	
+	define('IS_LOCAL', true);
 	define('DB_NAME', 'worldinabox_local');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', 'root');
@@ -42,6 +43,7 @@ if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
 }
 elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
 {
+	define('IS_STAGING', true);
 	define('DB_NAME', 'worldinabox-31303751eb');
 	define('DB_USER', 'worldinabox-31303751eb');
 	define('DB_PASSWORD', 'l7e28mt64w');
@@ -53,6 +55,7 @@ elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
 }
 elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION)
 {
+	define('IS_PRODUCTION', true);
 	define('DB_NAME', 'worldina_wiab_db');
 	define('DB_USER', 'worldina_wiab_db');
 	define('DB_PASSWORD', 'Kw2MT!6MF');
@@ -100,3 +103,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+define('CONCATENATE_SCRIPTS', false);
