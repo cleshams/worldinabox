@@ -1,0 +1,18 @@
+2019-08-16T16:01:43+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\plugins\woocommerce-memberships\vendor\skyverge\wc-plugin-framework\woocommerce\compatibility\class-sv-wc-datetime.php on line 25
+
+2019-08-16T16:06:17+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\plugins\woocommerce-memberships\vendor\skyverge\wc-plugin-framework\woocommerce\api\abstract-sv-wc-api-json-request.php on line 25
+
+2019-08-16T16:06:19+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\plugins\woocommerce-memberships\includes\class-wc-memberships-user-messages.php on line 24
+
+2019-08-16T16:06:21+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\plugins\woocommerce-memberships\includes\class-wc-memberships-user-memberships.php on line 24
+
+2019-08-16T16:07:04+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-admin\includes\user.php on line 16
+
+2019-08-16T18:02:55+00:00 CRITICAL Uncaught Error: Class 'get_posts' not found in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\page-warm-ups.php:18
+Stack trace:
+#0 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\template-loader.php(78): include()
+#1 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-blog-header.php(19): require_once('D:\\MAMP\\htdocs\\...')
+#2 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\index.php(17): require('D:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\page-warm-ups.php on line 18
+

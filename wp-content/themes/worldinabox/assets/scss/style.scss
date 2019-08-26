@@ -18,7 +18,6 @@ Author URI: 	http://www.geckodesign.co.uk
 @import "_partials/settings/_ui.scss";
 @import "_partials/settings/_footer.scss";
 @import "_partials/settings/_nav.scss";
-@import "_partials/settings/_header.scss";
 
 // Tools
 @import "_partials/tools/_animations.scss";
@@ -40,13 +39,17 @@ Author URI: 	http://www.geckodesign.co.uk
 @import "_partials/content/_links.scss";
 @import "_partials/content/_typography.scss";
 @import "_partials/content/_forms.scss";
+@import "_partials/content/_cards.scss";
 
 // components
 @import "_partials/components/_list-inline.scss";
 @import "_partials/components/_buttons.scss";
+@import "_partials/components/platform_single.scss";
 @import "_partials/components/_footer.scss";
 @import "_partials/components/_header.scss";
 @import "_partials/components/_site-logo.scss";
+@import "_partials/components/modal.scss";
+@import "_partials/components/search-form.scss";
 @import "_partials/components/_nav.scss";
 @import "_partials/components/_nav-btns.scss";
 @import "_partials/components/_flexslider.scss";
@@ -72,3 +75,5 @@ Author URI: 	http://www.geckodesign.co.uk
 @import "_partials/components/_img-video.scss";
 @import "_partials/components/_post-info.scss";
 @import "_partials/components/_pagination.scss";
+
+@import "_partials/settings/_platform-overrides.scss";

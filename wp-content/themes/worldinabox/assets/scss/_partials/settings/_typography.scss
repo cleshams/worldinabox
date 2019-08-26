@@ -20,3 +20,38 @@ $headingsColour: inherit;
 $bodyTextColour: $colourDark;
 $bodyTextPrimary: $colourPrimary;
 $bodyTextSecondary: $colourSecondary;
+
+
+.text
+{
+    &__center
+    {
+        text-align: center;
+    }
+
+    &__sub-title
+    {
+        font-family: $fontPrimary;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &__med-title
+    {
+        font-family: $fontPrimary;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &__big-title
+    {
+        font-family: $fontPrimary;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    &__larger
+    {
+        font-size: 18px;
+    }
+}

@@ -1,9 +1,8 @@
 .site-header {
     width: 100%;
     padding: 0;
-    background: $headerBackgroundColour;
-    color: #ffffff;
-    z-index: 999;
+    background: #fff;
+    z-index: 4;
 	position: relative;
     height: 130px;
 
@@ -23,19 +22,12 @@
         bottom: -14px;
         background-image: url('assets/images/edge__btm--white.svg');
         background-size: 690px;
-        z-index: 2;
+        z-index: 0;
         background-repeat: repeat-x;
     }
 
 }
 
-
-/*body.admin-bar .site-header{
-    top: 46px;
-  @media only screen and (min-width:783px) {
-    top: 32px;
-  }
-}*/
 
 @media screen and (max-width: 600px) {
     #wpadminbar {

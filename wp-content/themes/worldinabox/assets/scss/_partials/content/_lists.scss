@@ -51,3 +51,20 @@ ul.tag-list {
 		}
 	}
 }
+
+
+ul.flex-third
+{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin-left: 0px;
+
+	li
+	{
+		width:30%;
+		margin: 1.5%;
+        flex-grow: 1;
+        
+	}
+}

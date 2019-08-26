@@ -27,9 +27,6 @@
 
 
 
-
-
-
 .m-a-0 { margin:        0 !important; }
 .m-t-0 { margin-top:    0 !important; }
 .m-r-0 { margin-right:  0 !important; }
@@ -99,8 +96,16 @@
 .p-x-lg { padding-right:  120px !important; padding-left:   120px !important; }
 .p-y-lg { padding-top:    120px !important; padding-bottom: 120px !important; }
 
-
-
 .text-centre {
     text-align: center;
+}
+
+.visually-hidden { 
+    position: absolute;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
 }

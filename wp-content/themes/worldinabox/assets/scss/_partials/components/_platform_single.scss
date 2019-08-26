@@ -1,0 +1,135 @@
+.single-lessons, .single-games
+{
+    .lesson-main-content
+    {
+        flex-basis: 75%;
+        padding-right: 4.5%;
+
+        p
+        {
+            max-width: 66ch;
+        }
+
+        > .text--sub-title
+        {
+            margin-bottom: 8px;
+        }
+    }
+
+    h1
+    {
+        font-size: 5rem;
+    }
+
+    h2
+    {
+        margin-top: 4rem;
+    }
+
+    .unit-logo
+    {
+        max-width: 200px;
+    }
+
+    dt
+    {
+        margin-top: 2rem;
+    }
+    dd + dd
+    {
+        margin-top: 1rem;
+    }
+    
+    .popout
+    {
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 4rem 0;
+        color: #fff;
+    
+        h3
+        {
+            margin-bottom: 12px;
+        }
+    
+        p
+        {
+            max-width: 80ch;
+            font-weight: bold;
+        }
+    }
+}
+
+.new-moves
+{
+    ul
+    {   
+        font-weight: bold;
+        color: $purple;
+        font-size: 17px;
+    }
+}
+
+
+.breadcrumbs
+{
+    margin-bottom: 4rem;
+    margin-top: -2rem;
+
+    a:not(:first-child)
+    {
+        margin-left: 10px;
+    }
+    a:not(:last-child)
+    {
+        margin-right: 10px;
+    }
+    span
+    {
+        margin-left: 10px;
+    }
+}
+
+.resource-link
+{
+    span
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    span.icon
+    {
+        margin-right: 10px;
+        max-width: 30px;
+
+        svg
+        {
+            width: 100%;
+            height: auto;
+            fill: #000;
+        }
+    }
+
+    &:hover,
+    &:focus
+    {
+        span.icon svg 
+        {
+            fill: $orange;
+        }
+    }
+}
+
+.image-container
+{
+    background-size: cover;
+    background-position: center;
+}
+
+.shape
+{
+    border-radius: 19% 76% 48% 53% / 19% 24% 83% 81%;
+    min-height: 300px;
+    width:320px;
+}

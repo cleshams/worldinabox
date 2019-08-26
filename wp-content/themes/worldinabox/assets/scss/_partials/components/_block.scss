@@ -41,7 +41,7 @@
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    z-index: 99;
+    z-index: 3;
 }
 
 .block__link:hover .block__overlay, .block__link:focus .block__overlay {

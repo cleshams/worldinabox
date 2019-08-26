@@ -1,10 +1,9 @@
 <?php
 function get_breadcrumbs($unit, $title)
 {
-    $homeUrl = HOME_URI;
-    echo '<a href="'.HOME_URI.'/platform">Home</a>';
+    echo '<a href="'.HOME_URI.'/dashboard">Dashboard</a>';
     echo ' > ';
-    echo '<a href="'.$homeUrl.'/platform/'.$unit->slug.'">'.$unit->name.'</a>';
+    echo '<a href="'.HOME_URI.'/dashboard/unit-'.$unit->slug.'">'.$unit->name.'</a>';
     echo ' > ';
     echo '<span>'.$title.'</span>';
 }

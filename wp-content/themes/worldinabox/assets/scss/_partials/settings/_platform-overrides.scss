@@ -1,0 +1,263 @@
+
+.platform
+{
+    .site-header
+    {
+        background: $platformPink;
+
+        &:after
+        {
+            background-image: url('assets/images/edge__btm--pink.svg');
+        }
+
+        &__inner
+        {
+            justify-content: flex-start;
+        }
+
+        &__wrap
+        {
+            flex-grow: 1;
+            margin-left: calc(20px + 4vw);
+            justify-content: space-between;
+        }
+    }
+
+    .hamburger-button
+    {
+        display: none;
+    }
+
+    .nav__link
+    {
+        color: #fff;
+
+        &:hover, &:focus
+        {
+            color: $yellow;
+        }
+    }
+
+    .nav__item
+    {
+        position: static;
+    }
+
+    .nav-btns__item + .nav-btns__item
+    {
+        margin-left: 20px;
+    }
+
+    .nav-btns__btn
+    {
+        background: none;
+        width: 30px;
+        height: 30px;
+
+        svg
+        {
+            fill: #fff;
+            width:100%;
+            max-height: 100%;
+        }
+
+        &:hover, &:focus
+        {
+            background: none;
+            svg
+            {
+                fill: $yellow;
+            }
+        }
+    }
+
+    .nav-btns__logout
+    {
+        svg
+        {
+            transform: rotate(180deg);
+        }
+    }
+
+    .site-logo
+    {
+        position: relative;
+        top: 30px;
+    }
+
+    .dropdown-toggle
+    {
+        background: transparent;
+        position: relative;
+        padding-right: 20px;
+
+        &::after
+        {
+            content: "^";
+            font-family: "Londrina Solid", cursive;
+            font-size: 33px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(90deg);
+            transition: 0.25s ease-out;
+            transform-origin: 50%;
+            height: 16px;
+        }
+
+        &.open
+        {
+            color: $yellow;
+
+            &::after
+            {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+
+    .dropdown
+    {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        background: $purple;
+        transition: 0.35s ease-out;
+        height: 1px;
+        overflow: hidden;
+        
+        &.open
+        {
+            height: 84px;
+        }
+
+        ul
+        {
+            display: flex;
+            margin: auto;
+            max-width: 550px;
+            list-style: none;
+            justify-content: space-between;
+            margin-top: 18px;
+        }
+
+        .nav__link
+        {
+            color: #fff;
+            &:hover, &:focus
+            {
+                color: $yellow;
+            }
+        }
+    }
+
+    main
+    {
+        padding-top: calc(2vh + 4rem);
+
+        section + section
+        {
+            margin-top: calc(2vh + 4rem);
+        }
+    }
+
+    footer
+    {
+        .back-to p a
+        {
+            font-size: 2.2rem;
+        }
+    }
+
+    .cms
+    {
+        h4
+        {
+            font-family: 'Lato';
+            text-transform: none;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        h2
+        {
+            margin-bottom: 1em;
+        }
+    }
+    
+}
+
+.section__activites-links
+{
+    li
+    {
+        text-align: center;
+    }
+
+    a
+    {
+        width:80%;
+    }
+}
+
+.section__additional-links
+{
+    li
+    {
+        text-align: center;
+    }
+}
+
+.unit-info 
+{
+    align-items: center;
+
+    > div:nth-child(1)
+    {
+        padding: 0 5%;
+
+        img
+        {
+            max-width: 100%;
+        }
+    }
+
+    p
+    {
+        max-width: 50ch;
+    }
+}
+
+.unit-lesson-links 
+{
+    flex-wrap: wrap;
+}
+
+.page-template-page-warm-ups
+{
+    .cms
+    {
+        .has-media-on-the-right
+        {
+            grid-template-columns: auto 35%;
+        }
+        img
+        {
+            max-height: 320px;
+            display: block;
+            width: auto;
+            margin-left: auto;
+        }
+    }
+}
+
+.page-template-page-routines
+{
+    .cms h1 + p
+    {
+        max-width: 65ch;
+        margin: auto;
+        text-align: center;
+    }
+}

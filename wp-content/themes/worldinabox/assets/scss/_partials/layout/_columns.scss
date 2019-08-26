@@ -75,7 +75,7 @@
     &--offset-top {
       position: relative;
       margin-top: -#{$layoutMargin * 4};
-      z-index: 20;
+      z-index: 3;
     }
     &--shrink {
       flex-shrink: 1;

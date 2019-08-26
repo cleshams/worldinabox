@@ -1,0 +1,273 @@
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: none;
+    display: none
+}
+
+.modal form {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.modal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: rgba(39,49,66,0.5);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s
+}
+
+.modal.opening {
+    display: block
+}
+
+.modal.opening::after,.modal.opening .iframe-container-container {
+    opacity: 0;
+    -webkit-animation: opacity-fill 0.4s forwards;
+    animation: opacity-fill 0.4s forwards
+}
+
+.modal.opening form {
+    -webkit-animation-name: modal-opening;
+    animation-name: modal-opening
+}
+
+.modal.closing {
+    display: block
+}
+
+.modal.closing::after,.modal.closing .iframe-container-container {
+    opacity: 1;
+    -webkit-animation: opacity-fade 0.3s forwards;
+    animation: opacity-fade 0.3s forwards;
+    display: block
+}
+
+.modal.closing form {
+    -webkit-animation-name: modal-closing;
+    animation-name: modal-closing
+}
+
+.modal.is-open {
+    display: block
+}
+
+.modal.is-open::after {
+    opacity: 1;
+    display: block
+}
+
+.modal .iframe-container-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 90vh;
+    background: transparent;
+    border-radius: 4px;
+    padding: 0
+}
+
+.modal .form-container-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFF5C7;
+    width: 60%;
+    min-width: 260px;
+    max-width: 800px;
+    max-height: 95vh;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 500px;
+    padding: 30px;
+    overflow: scroll
+}
+
+.modal .form-container-container form {
+    padding-top: 0px
+}
+
+.modal .iframe-container {
+    padding: 0 0 56.25% 0;
+    height: 0px
+}
+
+.modal iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+.modal .close-modal {
+    position: absolute;
+    z-index: 7;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    widtH: 50px;
+    height: 50px;
+    color: #fff;
+    padding: 10px;
+    font-family: "Zirkel Bold";
+    -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 4px 0px rgba(0,0,0,0.4);
+    border-radius: 0px 0 0px 3px;
+    background: #1fa3dd
+}
+
+@-webkit-keyframes modal-opening {
+    from {
+        -webkit-transform: translate(-50%, -50%) scale(0.85);
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 1
+    }
+}
+
+@keyframes modal-opening {
+    from {
+        -webkit-transform: translate(-50%, -50%) scale(0.85);
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes modal-closing {
+    from {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%) scale(1.05);
+        transform: translate(-50%, -50%) scale(1.05);
+        opacity: 0
+    }
+}
+
+@keyframes modal-closing {
+    from {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%) scale(1.05);
+        transform: translate(-50%, -50%) scale(1.05);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes opacity-fill {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes opacity-fill {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes opacity-fade {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes opacity-fade {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 5
+}
+
+.modal__container {
+    background-color: #fff;
+    padding: 30px;
+    width: 60%;
+    min-width: 260px;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 6
+}

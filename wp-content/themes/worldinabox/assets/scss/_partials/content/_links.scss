@@ -14,3 +14,78 @@ a {
   }
 
 }
+
+.flex-third li.lesson--shape
+{
+    padding: 0;
+    margin: 3%;
+    width: 25%;
+
+    a
+    {
+        position: relative;    
+        text-align: center;
+        color: #fff;
+        background-color: $purple;
+        border-radius: 19% 76% 48% 53% / 19% 24% 83% 81%;
+        min-height: 270px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.3s ease-out;
+
+        &:hover, &:focus
+        {
+            border-radius: 8px;
+        }
+        
+        
+        &:after
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &:nth-child(6n - 1) a
+        {
+            background-color: $blue;
+        }
+        
+        &:nth-child(6n - 2) a
+        {
+            background-color: $orange;
+        }
+        
+        &:nth-child(6n - 3) a
+        {
+            background-color: $greyDark;
+        }
+        
+        &:nth-child(6n - 4) a
+        {
+            background-color: $realPurple;
+        }
+        
+        &:nth-child(6n - 5) a
+        {
+            background-color: $leafgreen;
+        }
+
+        &:nth-child(even) a
+        {
+            border-radius: 53% 48% 76% 19% / 81% 83% 24% 19%;
+            &:hover, &:focus
+            {
+                border-radius: 8px;
+            }
+        }
+
+        
+
+}

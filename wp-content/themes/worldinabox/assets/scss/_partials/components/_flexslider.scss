@@ -123,7 +123,7 @@ html[xmlns] .flexslider .slides {
   margin: -20px 0 0;
   position: absolute;
   top: 50%;
-  z-index: 10;
+  z-index: 1;
   overflow: hidden;
   opacity: 0;
   cursor: pointer;
@@ -181,7 +181,7 @@ html[xmlns] .flexslider .slides {
   bottom: 5px;
   left: 10px;
   opacity: 0.8;
-  z-index: 10;
+  z-index: 1;
   overflow: hidden;
   cursor: pointer;
   color: #000;
@@ -302,7 +302,7 @@ Reset
     }
     .flex-control-nav {
         bottom: -30px;
-        z-index: 99;
+        z-index: 2;
         left: 0;
         right: 0;
     }
@@ -372,7 +372,7 @@ Reset
           position: absolute;
           top: 50%;
           margin-top: -55px;
-          z-index: 999;
+          z-index: 3;
           cursor: pointer;
           text-indent: inherit;
           -webkit-transition: all .3s ease;

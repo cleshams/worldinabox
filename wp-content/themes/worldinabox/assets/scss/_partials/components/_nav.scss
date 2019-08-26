@@ -20,7 +20,7 @@ header .nav {
         visibility: visible;
         height: 100%;
 		background: $navOpenBackgroundColour;
-        z-index: 999;
+        z-index: 4;
     }
 }
 
@@ -43,7 +43,7 @@ header {
                     bottom: -40px;
                     border-radius: 0 0 50% 50% / 17px 17px 17px 17px;
                     background-color: $colourPrimary;
-                    z-index: 99;
+                    z-index: 3;
                 }
             }
 
@@ -141,7 +141,7 @@ header .nav__link {
         position: absolute;
         top: 80px;
         left: 0;
-        z-index: 1000;
+        z-index: 5;
         width: 28rem;
         background-color: $colourPrimary;
         margin: 0 0 0;
@@ -199,7 +199,7 @@ header .nav__link {
     background-repeat: no-repeat;
     background-color: $colourLight;
     border-radius: 20px;
-    z-index: 9999;
+    z-index: 2;
     &:hover {
         background-color: $colourPrimary;
     }
@@ -219,7 +219,7 @@ header .nav__link {
     .hamburger-button__top {
         transform: translateY(8px) translateX(0) rotate(45deg);
         background: $colourPrimary;
-        z-index: 9999;
+        z-index: 2;
     }
     .hamburger-button__middle {
         opacity: 0;
@@ -229,7 +229,7 @@ header .nav__link {
     .hamburger-button__bottom {
         transform: translateY(-8px) translateX(0) rotate(-45deg);
         background: $colourPrimary;
-        z-index: 9999;
+        z-index: 2;
     }
   }
 

@@ -67,3 +67,21 @@
   }
 
 }
+
+.display
+{
+    &--flex
+    {
+        display: flex;
+    }
+
+    &--two-gapped
+    {
+        justify-content: space-between;
+        > div
+        {
+            width:46%;
+
+        }
+    }
+}

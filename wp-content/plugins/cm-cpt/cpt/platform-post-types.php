@@ -31,7 +31,8 @@ function register_custom_post_types()
         'capability_type' => 'post',
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
-        'menu_icon'=> 'dashicons-welcome-widgets-menus'
+        'menu_icon'=> 'dashicons-welcome-widgets-menus',
+        'rewrite' => array('slug' => 'dashboard/lessons')
     );
     
     register_post_type( 'Lessons', $lesson_args );
@@ -91,7 +92,8 @@ function register_custom_post_types()
         'capability_type' => 'post',
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
-        'menu_icon'=> 'dashicons-groups'
+        'menu_icon'=> 'dashicons-groups',
+        'rewrite' => array('slug' => 'dashboard/games')
     );
         
     register_post_type( 'Games', $games_args );
@@ -155,9 +157,22 @@ function create_taxonomies()
         'show_admin_column' => true,
         'query_var'         => true,
         'show_tagcloud' 	=> false,
+        'rewrite'           => array('slug' => 'dashboard/unit-')
     );
 
-    register_taxonomy( 'unit', array( 'lessons' ), $unit_args );        
+    register_taxonomy( 'unit', array( 'lessons' ), $unit_args );   
+
+    add_rewrite_rule('^dashboard/unit-(.*)/?','index.php?unit=$matches[1]','top');   
+
+    add_filter( 'term_link', 'change_unit_permalinks', 10, 2 );
+
+    function change_unit_permalinks( $permalink, $term ) {
+        if ($term->taxonomy == 'unit') 
+        {
+            $permalink = str_replace('unit-/', 'unit-', $permalink);
+        }
+        return $permalink;
+    }
 }
 
 ?>

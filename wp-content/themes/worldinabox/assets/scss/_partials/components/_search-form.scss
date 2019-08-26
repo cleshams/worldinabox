@@ -1,0 +1,32 @@
+.header--search-form
+{
+    background: $greyLight;
+    padding: 36px 10px 28px;
+
+    form
+    {
+        width:80%;
+        margin: auto;
+        max-width: 800px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    input[type="text"]
+    {
+        border-bottom: 2px solid $greyDark;
+        padding: 0px 5px 4px 5px;
+        border-radius: 0px;
+        margin-bottom: 0px;
+    }
+
+    input.button
+    {
+        font-family: $fontPrimary;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 0 16px;
+    }
+
+
+}

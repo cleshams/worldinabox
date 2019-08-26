@@ -44,6 +44,14 @@ function control_editor_for_post($editors)
 {
     global $post;
 
+    if($post == null)
+    {
+        $editors['classic_editor'] = true;
+        $editors['block-editor'] = false;
+
+        return $editors;
+    }
+
     switch ($post->post_type) {
         case 'post':
             $editors['classic_editor'] = false;
@@ -71,3 +79,53 @@ function control_editor_for_post($editors)
    
     return $editors;
 }
+
+
+
+/*************************** */
+// Hex to RGB
+/*************************** */
+
+function hextorgb($hex) {
+    // extra sanity check that we're dealing with the hex colors
+    // in #NNNNNN format that ACF/WordPress/Iris colorpicker returns
+    if (strlen($hex) == 7 && substr($hex,0,1) == '#') {
+        $r = hexdec(substr($hex,1,2));
+        $g = hexdec(substr($hex,3,2));
+        $b = hexdec(substr($hex,5,2));
+        return $r . ',' . $g . ',' . $b;
+    }
+    else {
+        // provide a default in an emergency
+        return "128,128,128" ;
+    }
+}
+
+/*************************** */
+// Pre Get Posts (order lessons by lesson number)
+/*************************** */
+
+add_action( 'pre_get_posts', 'order_lessons_by_number');
+
+function order_lessons_by_number($query)
+{
+    if(!is_admin() && $query->is_tax('unit'))
+    {
+        $query->set('orderby', 'meta_value_num');
+        $query->set('meta_key', 'lesson_number');
+        $query->set('order', 'ASC');
+    }
+}
+
+
+
+/*************************** */
+// Allow SVG uploads
+/*************************** */
+
+function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+    }
+add_filter( 'upload_mimes', 'cc_mime_types' );
+    
