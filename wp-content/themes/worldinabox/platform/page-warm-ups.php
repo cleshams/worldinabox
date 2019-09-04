@@ -56,8 +56,8 @@ while ( have_posts() ) : the_post();
                     </div>
                     <div class="video-trigger-container">
                         <span class="text__sub-title">Video</span>
-                        <button class="trigger-video" title="trigger '.$title.' video to open" data-src="">
-                            <img src="'.$placeholder['url'].'" alt="trigger '.$title.' video"/>
+                        <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
+                            <img src="'.$placeholder['url'].'" alt=""/>
                         </button>  
                     </div>
                 </div>

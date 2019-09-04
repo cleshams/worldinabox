@@ -34,8 +34,6 @@ while ( have_posts() ) : the_post();
                         echo '<span class="btn--bordered-white btn btn--small">Lessons </span>';
                     echo '</div>';
                 echo '</li>';
-
-
             }
             ?>
             </ul>

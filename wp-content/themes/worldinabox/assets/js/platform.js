@@ -14,52 +14,51 @@ function loadAll() {
 function initModals()
 {
 
-    var openModalButtons = document.querySelectorAll('.play');
+    var openModalButtons = document.querySelectorAll('.trigger-video');
 
 
     for(let i = 0; i < openModalButtons.length; i++)
     {
-        openModalButtons[i].addEventListener('click', openVimeoModal);
+        openModalButtons[i].addEventListener('click', openiFrameModal);
     }
 }
 
-function openVimeoModal(e)
+function openiFrameModal(e)
 {
-    var vimeoId = e.target.getAttribute('data-id');
+    console.log(e.target);
+    var iframeSrc = e.target.getAttribute('data-src');
+    var iframeCode = '<iframe frameborder="0" src="' + iframeSrc + '" allowfullscreen allow="autoplay" autoplay="1"></iframe>';
 
-    var iframeSrc = 'https://player.vimeo.com/video/' + parseInt(vimeoId) + '?autoplay=1&title=0';
-    var iframeCode = '<iframe frameborder="0" src="' + iframeSrc + '"></iframe>';
-
-    let vimeoContainer = document.querySelector('.modal');
-    let open = vimeoContainer.classList.contains('is-open');
+    let iframeContainer = document.querySelector('.modal');
+    let open = iframeContainer.classList.contains('is-open');
 
     if(open){
-        vimeoContainer.removeClass('is-open').classList.add('closing');
+        iframeContainer.removeClass('is-open').classList.add('closing');
         setTimeout(function(){
-            vimeoContainer.classList.add('closed').classList.remove('closing');
-            document.querySelector(vimeoContainer).find('iframe').remove();
+            iframeContainer.classList.add('closed').classList.remove('closing');
+            document.querySelector(iframeContainer).find('iframe').remove();
         }, 300);
 
     }
     else
     {
-        vimeoContainer.classList.remove('closed')
-        vimeoContainer.classList.add('opening');
+        iframeContainer.classList.remove('closed')
+        iframeContainer.classList.add('opening');
         setTimeout(function(){
-            vimeoContainer.classList.add('is-open')
+            iframeContainer.classList.add('is-open')
             document.querySelector('.iframe-container').insertAdjacentHTML('beforeend',iframeCode);
-            setTimeout(function() {vimeoContainer.classList.remove('opening')}, 100);
+            setTimeout(function() {iframeContainer.classList.remove('opening')}, 100);
         }, 300);
 
-        vimeoContainer.addEventListener('click', function(e) {
+        iframeContainer.addEventListener('click', function(e) {
             console.log(e.target);
             if(e.target.classList.contains('modal') || e.target.classList.contains('close-modal'))
             {
-                vimeoContainer.classList.add('closing');
+                iframeContainer.classList.add('closing');
                 setTimeout(function() {
-                    vimeoContainer.classList.add('closed');
-                    vimeoContainer.classList.remove('closing');
-                    vimeoContainer.classList.remove('is-open');
+                    iframeContainer.classList.add('closed');
+                    iframeContainer.classList.remove('closing');
+                    iframeContainer.classList.remove('is-open');
                     document.querySelector('.modal iframe').remove();
                 }, 300);
             }

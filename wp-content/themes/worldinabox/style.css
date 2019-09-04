@@ -1610,6 +1610,12 @@ select[multiple] {
     .warm-ups > li h2 {
       margin-left: 5px;
       margin-bottom: 0px; }
+    .warm-ups > li .warmup-content {
+      opacity: 0;
+      -webkit-transition: 0.15s cubic-bezier(0.5, 0, 0, 1);
+      transition: 0.15s cubic-bezier(0.5, 0, 0, 1); }
+    .warm-ups > li.open .warmup-content {
+      opacity: 1; }
     .warm-ups > li > button {
       background-color: transparent;
       color: #fff;
@@ -1966,7 +1972,24 @@ select[multiple] {
 .new-moves ul {
   font-weight: bold;
   color: #e6007d;
-  font-size: 17px; }
+  font-size: 17px;
+  margin-bottom: 0px; }
+.new-moves > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .new-moves > div .trigger-video {
+    width: 37.5%;
+    margin: auto 2rem; }
+    .new-moves > div .trigger-video img {
+      max-width: 100%;
+      pointer-events: none; }
 
 .breadcrumbs {
   margin-bottom: 4rem;
@@ -1999,6 +2022,34 @@ select[multiple] {
   border-radius: 19% 76% 48% 53% / 19% 24% 83% 81%;
   min-height: 300px;
   width: 320px; }
+
+.warmup-content > div:nth-child(1) {
+  padding-right: 2.5%; }
+
+.glossary-terms dt {
+  font-weight: 500;
+  font-family: "Londrina Solid", cursive;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  margin: 2rem 0 0.25rem 0; }
+@media all and (min-width: 600px) {
+  .glossary-terms {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .glossary-terms dd {
+      -ms-flex-preferred-size: 68%;
+          flex-basis: 68%;
+      margin: 1rem 0; }
+    .glossary-terms dt {
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+      margin: 1rem 0; } }
 
 .site-footer {
   background-color: #434a54;
@@ -2226,6 +2277,50 @@ img.footer-logo__img {
   margin: auto;
   margin-top: -100px; }
 
+.trigger-video {
+  cursor: pointer;
+  position: relative; }
+  .trigger-video::after {
+    content: "";
+    border-radius: 50%;
+    border: 10px solid #d95ca0;
+    width: 40px;
+    height: 40px;
+    background-color: #d95ca0;
+    background-image: url("assets/images/icons/play.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+    -webkit-transform-origin: 25% 30%;
+            transform-origin: 25% 30%; }
+  .trigger-video:before {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.5, 0.5, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.5, 0.5, 1); }
+  .trigger-video img, .trigger-video span {
+    pointer-events: none; }
+  .trigger-video:hover::after, .trigger-video:focus::after {
+    background-color: #f18500;
+    border-color: #f18500;
+    -webkit-transform: scale(1.2) translate(-50%, -50%);
+            transform: scale(1.2) translate(-50%, -50%); }
+  .trigger-video:hover::before, .trigger-video:focus::before {
+    opacity: 1; }
+
 .modal {
   width: 100vw;
   height: 100vh;
@@ -2340,15 +2435,20 @@ img.footer-logo__img {
   top: 0px;
   right: 0px;
   font-size: 30px;
-  widtH: 50px;
+  width: 50px;
   height: 50px;
   color: #fff;
   padding: 10px;
-  font-family: "Zirkel Bold";
+  font-family: "Londrina Solid", cursive;
   -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.4);
   border-radius: 0px 0 0px 3px;
-  background: #1fa3dd; }
+  background: #d95ca0;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  .modal .close-modal:hover, .modal .close-modal:focus {
+    background: #434a54; }
 
 @-webkit-keyframes modal-opening {
   from {

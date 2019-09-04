@@ -21,7 +21,7 @@ while ( have_posts() ) : the_post();
     
     <section class="cms bg__grey-light bg--grey-light-brush">
         <div class="container container--inner">
-            <h1 class="text__center">Warm-Ups</h1>
+            <h1 class="text__center"><?php the_title(); ?></h1>
             <?php
                 the_content();
             ?>
@@ -58,8 +58,8 @@ while ( have_posts() ) : the_post();
                         '.$content.'
                     </div>
                     <div class="video-trigger-container">
-                        <span class="text__sub-title">Video</span>
-                        <button class="trigger-video" title="trigger '.$title.' video to open" data-src="">
+                        <span class="text__med-title">Video</span>
+                        <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
                             <img src="'.$placeholder['url'].'" alt="trigger '.$title.' video"/>
                         </button>  
                     </div>
@@ -77,7 +77,7 @@ while ( have_posts() ) : the_post();
     <section class="section__additional-links">
         <div class="container container--inner">
             <ul class="flex-third">
-                <li><a href="" class="text__med-title">Glossary</a></li>
+                <li><a href="/dashboard/glossary" class="text__med-title">Glossary</a></li>
                 <li><a href="" class="text__med-title">Lesson Plan Builder</a></li>
                 <li><a href="" class="text__med-title">Help & Support</a></li>
             </ul>

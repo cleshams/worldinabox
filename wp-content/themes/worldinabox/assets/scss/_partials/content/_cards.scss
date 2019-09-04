@@ -103,6 +103,20 @@
             margin-bottom: 0px;
         }
 
+        .warmup-content
+        {
+            opacity: 0;
+            transition: 0.15s cubic-bezier(.5, 0, 0, 1);
+        }
+
+        &.open
+        {
+            .warmup-content
+            {
+                opacity: 1;
+            }
+        }
+
         > button
         {
             background-color: transparent;
@@ -139,6 +153,7 @@
                 {
                     transform: translateY(-50%) rotate(180deg);
                 }
+
             }
         }
 

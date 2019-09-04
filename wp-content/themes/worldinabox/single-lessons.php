@@ -11,6 +11,7 @@ $lessonNum = get_field('lesson_number');
 $intro = get_field('overview');
 $new_moves = get_field('new_moves');
 $video = get_field('video');
+$placeholder = get_field(('video_placeholder'));
 $creative_task = get_field('creative_task');
 $resources = get_field('resources');
 $additional_content = get_field('additional_content');
@@ -66,7 +67,10 @@ $unitColour = get_field('colour', 'unit_'.$unitID);
                         <?php
                         if($video)
                         {
-                            echo '<iframe src="'.$video.'" allowfullscreen />';
+                            echo '
+                            <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
+                                <img src="'.$placeholder['url'].'" alt="trigger '.$title.' video"/>
+                            </button>  ';
                         }
                         ?>
                     </div>

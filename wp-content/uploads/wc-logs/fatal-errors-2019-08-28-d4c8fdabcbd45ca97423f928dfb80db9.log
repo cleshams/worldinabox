@@ -1,0 +1,22 @@
+2019-08-28T17:25:31+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\Requests\Transport\cURL.php on line 162
+
+2019-08-28T17:35:53+00:00 CRITICAL Uncaught Error: Call to undefined function wc_membership_user_can() in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\partials-header.php:3
+Stack trace:
+#0 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\template.php(724): require()
+#1 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\template.php(671): load_template('D:\\MAMP\\htdocs\\...', false)
+#2 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#3 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\page-dashboard.php(6): get_template_part('platform/partia...', 'header')
+#4 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\template-loader.php(78): include('D:\\MAMP\\htdocs\\...')
+#5 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-blog-header.php(19): require_once('D:\\MAMP\\htdocs\\...')
+#6 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\index.php(17): require('D:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\partials-header.php on line 3
+
+2019-08-28T19:21:45+00:00 CRITICAL Uncaught Error: Call to undefined function echowpautop() in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\page-glossary.php:15
+Stack trace:
+#0 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-includes\template-loader.php(78): include()
+#1 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-blog-header.php(19): require_once('D:\\MAMP\\htdocs\\...')
+#2 D:\MAMP\htdocs\local-worldinabox.co.uk\wp\index.php(17): require('D:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in D:\MAMP\htdocs\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\page-glossary.php on line 15
+

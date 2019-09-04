@@ -1,3 +1,11 @@
+<?php
+global $post;
+if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_the_ID())))
+{
+    wp_redirect('/my-account');
+}
+?>
+
 <!DOCTYPE HTML>
 <head>
 	<title><?php bloginfo( 'name' ); ?><?php wp_title( ' ' ); ?></title>
@@ -28,15 +36,19 @@
                             <button class="nav__link dropdown-toggle dropdown__sibling">Lessons</button>
                             <div class="dropdown">
                                 <ul>
-                                    <li>
-                                        <a href="<?php echo HOME_URI; ?>/dashboard/lessons/unit-1" class="nav__link">Unit 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo HOME_URI; ?>/dashboard/lessons/unit-2" class="nav__link">Unit 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo HOME_URI; ?>/dashboard/lessons/unit-3" class="nav__link">Unit 3</a>
-                                    </li>
+                                    <?php
+                                    $units = get_terms('unit');
+                                    foreach($units as $unit)
+                                    {
+                                        $title = $unit->name;
+                                        $slug = $unit->slug;
+                                        $number = get_field('unit_number', 'unit_' . $unit->term_id);
+
+                                        echo '<li>
+                                            <a href="'.HOME_URI.'/dashboard/unit-'.$slug.'" class="nav__link">Unit '.$number.'</a>
+                                            </li>';
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </li>
