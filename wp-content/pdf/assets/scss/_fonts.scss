@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'AvantGard';
+	src: local('AvantGard Reg'), local('AvantGard-Reg'),
+		url('../fonts/avantGardeStd-reg.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvantGard';
+	src: local('AvantGard Bold'), local('AvantGard-Bold'),
+		url('../fonts/avantGardeStd-bold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvantGard';
+	src: local('AvantGard Black'), local('AvantGard-Black'),
+		url('../fonts/avantgardelt-black.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Londrina';
+	src: local('Londrina Regular'), local('Londrina-Regular'),
+		url('../fonts/LondrinaSolid-Regular.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
