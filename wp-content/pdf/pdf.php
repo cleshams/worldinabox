@@ -1,8 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 // debug (render as standard html)
-$mode = 'debug';
-// $mode = 'pdf';
+// $mode = 'debug';
+$mode = 'pdf';
 
 if(isset($_GET['debug']))
 {
@@ -29,9 +29,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
 $lessonId = 380;
 
 
-$footerLogo = 'assets/images/movema.png';
-$titleImage = 'assets/images/swoosh.svg';
-
+$footerLogo = 'assets/images/movema-logo.svg';
+$swooshYellow = 'assets/images/swoosh-yellow.svg';
+$swooshPurple = 'assets/images/swoosh-purple.svg';
+$mainLogo = 'assets/images/logo.svg';
 
 
 /************ */

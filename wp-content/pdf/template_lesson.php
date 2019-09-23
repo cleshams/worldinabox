@@ -8,21 +8,32 @@ $unit = get_field('unit', $lessonId);
 $duration = get_field('duration', $lessonId);
 $objectives = get_field('objectives', $lessonId);
 $title = get_the_title($lessonId);
-$lessonNum = get_field('lesson_number', $lessonId);
+// $lessonNum = get_field('lesson_number', $lessonId);
 
-$new_moves = get_field('new_moves', $lessonId);
-$video = get_field('video', $lessonId);
-$placeholder = get_field(('video_placeholder'), $lessonId);
 $creative_task = get_field('creative_task', $lessonId);
 $resources = get_field('resources', $lessonId);
-$additional_content = get_field('additional_content', $lessonId);
-$popout = get_field('popout_message', $lessonId);
 
 $unit = wp_get_post_terms($lessonId, 'unit');
 $unitID = $unit[0]->term_id;
-$unitNumber = get_field('unit_number','unit_'.$unitID);
-$logo = get_field('unit_logo', 'unit_'.$unitID);
-$unitColour = get_field('colour', 'unit_'.$unitID);
+
+
+/* Warmup Variables */
+$selectedWarmup = 443;
+$warmupTitle = get_the_title($selectedWarmup);
+$warmupResources = array();
+
+
+/* Game Variables */
+$selectedGame = 451;
+$gameTitle = get_the_title($selectedGame);
+$gameInstructionsArray = get_field('instructions', $selectedGame);
+$gameInstructions = array();
+foreach($gameInstructionsArray as $gameInstruction)
+{
+    $gameInstructions[] = $gameInstruction['instruction'];
+}
+$gameResources = array();
+
 
 ?>
 
@@ -37,157 +48,65 @@ $unitColour = get_field('colour', 'unit_'.$unitID);
 
 </head>
 
-<body class="pdf pdf--lesson" id="pdf--lesson">
+<body class="pdf pdf--lesson">
 	<div class="frame frame--bottom"></div>
 
-	<div id="pdf-motty">
-	    <img src="assets/images/motty.png" />
+	<div class="title-block">
+		<h1><span class="text__subtitle text__blue">Lesson Plan: </span><span class="text__title text__pink"><?= $title; ?> </span></h1>
+	</div>
+
+	<div class="pdf-area">
+		<h2><span class="text__subtitle text__blue">Theme: </span><span class="text__title text__pink"><?= $unit[0]->name; ?></span></h2>
 	</div>
 
 
-	<div id="pdf-title">
-		<p><span id="pdf-title-name"><?= $title; ?> Lesson Plan</span></p>
-	</div>
+    
+	<table class="objectives bg__yellow" cellpadding="10">
+        <tr>
+            <th>Learning Objectives:</th>
+            <td>
+                <ul>
+                    <?php foreach($objectives as $objective)
+                    {
+                        echo '<li>'.$objective['objective'].'</li>';
+                    }
+                    ?>
+                </ul>
+            </td>
+        </tr>
+	</table>
 
-	<div id="pdf-area">
-		<p><span class="text__title">Unit:</span> <span><?= $unit[0]->name; ?></span></p>
-	</div>
-
-
-	<div id="pdf-objective">
-        <p><strong>Objectives:</strong></p>
-        <ul>
-            <?php foreach($objectives as $objective)
-            {
-                echo '<li>'.$objective['objective'].'</li>';
-            }
-            ?>
-        </ul>
-	</div>
-
-
-	<div class="section">
-
-		<?php if($_resources || $_equipment): ?>
-		<div id="pdf-equipment">
-
-			<p class="title">you will need...</p>
-
-			<?php if($_resources): ?>
-
-				<div id="equipment__resources">
-
-					<p><strong>resources:</strong></p>
-
-					<p>
-					There are downloadable resources available to accompany this lesson.
-					</p>
-
-
-				</div>
-
-			<?php endif; ?>
-
-
-			<?php if($_equipment): ?>
-
-				<div id="equipment__equipment">
-
-					<p><strong>equipment:</strong></p>
-
-					<p>
-					<?= $_equipment; ?>
-					</p>
-
-				</div>
-
-			<?php endif; ?>
-
-		</div>
-		<?php endif; ?>
-
-
-		<div id="pdf-image">
-		<?php
-			if($logo):
-
-				$src = '..' . wp_make_link_relative($logo['url']);
-
-			else:
-
-				$src = $placeholders[array_rand($placeholders)];
-
-			endif;
-		?>
-
-			<img src="<?= $src ?>" />
-
-		</div>
-
-	<div>
-
-
-
-	<?php if($_focus): ?>
-
-		<div id="pdf-focus" class="cl content">
-
-			<span class="content__title">focus:</span>
-
-			<?= $_focus; ?>
-
-		</div>
-
-	<?php endif; ?>
-
-
-
-	<?php if($_instructions): ?>
-
-		<div id="pdf-instructions" class="cl content">
-
-			<span class="content__title">instructions:</span>
-
-			<ol>
-			<?php
-				foreach($_instructions as $_item):
-			?>
-					<li><?= $_item['instruction']; ?></li>
-			<?php
-				endforeach;
-			?>
-			</ol>
-
-		</div>
-
-	<?php endif; ?>
-
-
-
-	<?php
-		if($_contentblock):
-			foreach($_contentblock as $_block):
-	?>
-
-				<div id="" class="content">
-
-					<span class="content__title"><?= $_block['title'] ?></span>
-
-					<?php
-						foreach($_block['block'] as $_b):
-					?>
-							<p><?= $_b['content']; ?></p>
-					<?php
-						endforeach;
-					?>
-
-				</div>
-
-	<?php
-			endforeach;
-
-		endif;
-	?>
+    <h3>Lesson Plan Overview</h3>
+	<table class="main-content bg__yellow">
+        <thead>
+            <th>Length</th>
+            <th>Activity</th>
+            <th>Selection</th>
+            <th>Overview</th>
+            <th>Resources</th>
+        </thead>
+        <tr>
+            <td>5 mins</td>
+            <td>Introduction</td>
+            <td><?php echo $title; ?></td>
+            <td>Make sure the room is prepared and safe.<br>Introduce the session themes</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5 mins</td>
+            <td>Warm Up</td>
+            <td><?php echo $warmupTitle; ?></td>
+            <td>Guide the class through a gentle warm up to prepeare the body for action</td>
+            <td><?php echo implode('<br>', $warmupResources); ?></td>
+        </tr>
+        <tr>
+            <td>10 mins</td>
+            <td>Active Game</td>
+            <td><?php echo $gameTitle; ?></td>
+            <td><?php echo implode('<br>', $gameInstructions); ?></td>
+            <td><?php echo implode('<br>', $gameResources); ?></td>
+        </tr>
+    </table>
 
 </body>
 </html>

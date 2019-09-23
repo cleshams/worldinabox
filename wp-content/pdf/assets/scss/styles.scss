@@ -1,55 +1,54 @@
-
-// dependencies
-
 @import 'fonts';
 
 // vars
 
 $frame-size: 1.5cm;
-$frame-colour: #C9EBF4;
-$frame-colour: #DEF0F3;
 
 $font-bodysize: 12pt;
 
 // colours
 $red: #fb6b47;
 $orange: #f18500;
-$blue: #63d2d8;
+$blue: #14dddd;
 $purple: #e6007d;
 $green: #a6ce39;
 $yellow: #fbea10;
 $greyDark: #434a54;
 $greyLight: #ebebeb;
 $greyMid: #a6a6a6;
-$platformPink: #d95ca0;
+$platformPink: #ec008b;
 $realPurple: #64499d;
 $leafgreen: #53b847;
 
-$font-title: normal normal 700 18px Londrina;
+$font-title: normal normal 700 28px/1.2 Londrina;
 
 *
 {
-	margin:0;
-	padding:0;
-	border:0;
-	vertical-align:bottom;
-	line-height:normal;
-	line-height:1.3;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	line-height: normal;
+	line-height: 1.3;
 	box-sizing: border-box;
 }
 
 html,
 body
 {
-	font-size:10px;
+	font-size: $font-bodysize;
 	color: $greyDark;
 }
 
 body
 {
-	margin: 0;
 	font-family: 'AvantGard';
-	font-weight: 300;
+    font-weight: 300;
+	margin-top: 1.2cm;
+	margin-bottom: 1.5cm;
+	margin-left: 1cm;
+	margin-right: 1cm;
+
 }
 
 
@@ -62,10 +61,68 @@ body
 }
 
 
-.text__title
+//   ----------------
+//  Typography
+//   ---------------
+.text
 {
-    font: $font-title;
+    &__title
+    {
+        font: $font-title;
+    }
+    &__subtitle
+    {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__blue
+    {
+        color: $blue
+    }
+    &__pink
+    {
+        color: $platformPink;
+    }
 }
+
+h2
+{
+    margin-bottom: 0.5cm;
+}
+
+h3
+{
+    margin-bottom: 0.25cm;
+}
+
+//   ----------------
+//  Layout and styles
+//   ---------------
+.bg
+{
+    &__yellow
+    {
+        background: $yellow;
+    }
+}
+
+table
+{
+    border-collapse: collapse;
+    margin-bottom: 0.5cm;
+
+    th, td
+    {
+        padding: 10px;
+    }
+}
+
+
+
+//   ----------------
+//  Specifics
+//   ---------------
 
 .frame
 {
@@ -88,12 +145,7 @@ body
 		height:21cm;
 	}
 
-
 }
-
-
-
-// motty
 
 #pdf-footer-logo
 {
@@ -112,101 +164,36 @@ body
 }
 
 
-
-
-
-#pdf-title
+.title-block
 {
-	position:fixed;
-	top:0.5cm;
-	width:100%;
-	height:1.5cm;
+    text-align: center;
 
-	p
-	{
-		display:block;
-		padding-top:0.35cm;
-		padding-left:0.5cm;
-		height:1.5cm;
-
-		span
-		{
-			color:#fff;
-			font-size:14pt;
-			line-height:1em;
-			text-transform:uppercase;
-
-			&#pdf-title-name
-			{
-				font-weight:bold;
-				margin-right:0.5em;
-			}
-
-			&#pdf-title-id
-			{
-				font-weight:normal;
-			}
-
-		}
-
-	}
-
+    h1
+    {
+        display: inline-block;
+        margin: auto;
+        background-image: url('../images/swoosh-yellow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 130%;
+        padding: 10px 270px 10px 100px;
+    }
 }
 
-
-
-#pdf-badge-border
+.objectives
 {
-	position:fixed;
-	top:0cm;
-	right:0cm;
-	z-index:5;
-	width:5cm;
-	height:5cm;
-	margin-top:-1.5cm;
-	margin-right:-1.5cm;
-	background:#fff;
-	border-radius:2.5cm 2.5cm 2.5cm 2.5cm;
+    ul
+    {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    th
+    {
+        border-right: 1px solid $platformPink;
+    }
 }
-
-#pdf-badge
-{
-	position:fixed;
-	top:0cm;
-	right:0cm;
-	z-index:5;
-	width:4cm;
-	height:4cm;
-	margin-right:-1cm;
-	margin-top:-1cm;
-	background:#000;
-	border-radius:2cm 2cm 2cm 2cm;
-}
-
-#pdf-badge-year
-{
-	position:fixed;
-	top:0cm;
-	right:0cm;
-	z-index:10;
-	width:3cm;
-    padding-top:7mm;
-
-	span
-	{
-		display:block;
-
-		font-weight: 700;
-		font-size:12pt;
-		line-height:1em;
-		text-transform: uppercase;
-		text-align: center;
-		color:#fff;
-	}
-}
-
-
-
 
 #pdf-objective,
 #pdf-area
@@ -317,111 +304,6 @@ hr
 {
 	page-break-after:always;
 	border:0;
-}
-
-// lessons only
-
-body#pdf--lesson
-{
-
-	margin-top: 3.2cm;
-	margin-bottom: 2.5cm;
-	margin-left: 1cm;
-	margin-right: 1cm;
-
-
-	.frame
-	{
-		&--bottom
-		{
-			height:1cm;
-		}
-	}
-
-	#pdf-title
-	{
-		left:0.5cm;
-	}
-
-
-	#pdf-area
-	{
-		margin-bottom:2mm;
-	}
-
-	#pdf-objective
-	{
-		margin-bottom:5mm;
-	}
-
-
-	#pdf-equipment
-	{
-		position:relative;
-		float:left;
-		width:27.5%;
-		height:6cm;
-		background:#FEF8BE;
-		padding:0.75cm;
-		margin-bottom:1cm;
-
-		p.title
-		{
-			display:block;
-			font-size:14pt;
-			font-weight:bold;
-			text-transform:uppercase;
-			padding-bottom:0.5em;
-			margin-bottom:0.5em;
-			border-bottom:1px solid #aaa;
-		}
-
-		> div
-		{
-			p
-			{
-				font-size:9pt;
-
-				strong
-				{
-					text-transform:capitalize;
-				}
-			}
-
-			&#equipment__resources
-			{
-				margin-bottom:3mm;
-			}
-		}
-
-	}
-
-
-	#pdf-image
-	{
-		width:55%;
-		text-align:right;
-	}
-
-	#pdf-focus
-	{
-		clear:both;
-		width:100%;
-	}
-
-	#pdf-instructions
-	{
-		clear:both;
-		width:100%;
-	}
-
-	#pdf-motty
-	{
-		bottom:0;
-		right:0;
-	}
-
-
 }
 
 

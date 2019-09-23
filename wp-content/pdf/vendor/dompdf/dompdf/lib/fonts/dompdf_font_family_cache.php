@@ -84,4 +84,10 @@
     'normal' => $fontDir . '/313b72244876c105bef2aaf2a1a4c0d8',
     'bold' => $fontDir . '/397a976e430b82ea95b83135ebecf9a0',
   ),
+  'avantgard' => array(
+    'normal' => $fontDir . '\0d35b376ef0507e6547e4c2949db79b6',
+  ),
+  'londrina' => array(
+    'normal' => $fontDir . '\e7a907a18581a48ab63d7404527d6d7f',
+  ),
 ) ?>
