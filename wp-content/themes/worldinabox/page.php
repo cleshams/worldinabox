@@ -14,7 +14,7 @@
                         $imageid = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'landscape-lg' );
                         $heroimage = $imageid['0'];
                     } else {
-                        $heroimage = 'http://via.placeholder.com/1200x700';
+                        $heroimage = '';
                     }
 
                     ?>

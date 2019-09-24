@@ -83,15 +83,15 @@ if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_t
                             </svg>
                         </a>
 					</li>
+                    <li class="hamburger-button nav-btns__item">
+                        <button type="button" class="hamburger-button__container" id="toggle">
+                            <span class="hamburger-button__top"></span>
+                            <span class="hamburger-button__middle"></span>
+                            <span class="hamburger-button__bottom"></span>
+                        </button>
+                    </li>
 				</ul>
 
-				<div class="hamburger-button">
-					<button type="button" class="hamburger-button__container" id="toggle">
-						<span class="hamburger-button__top"></span>
-						<span class="hamburger-button__middle"></span>
-						<span class="hamburger-button__bottom"></span>
-					</button>
-				</div>
 			</div>
 
 		</div>

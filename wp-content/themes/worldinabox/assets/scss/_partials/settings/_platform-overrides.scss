@@ -5,6 +5,31 @@
     {
         background: $platformPink;
 
+        @media all and (max-width: 540px)
+        {
+            height: 100px;
+
+            &__container
+            {
+                padding: 0 10px;
+            }
+        }
+
+        @media all and (max-width:400px)
+        {
+            height: 80px;
+
+            .site-logo
+            {
+                height: 85px;
+
+                img.site-logo__img
+                {
+                    height: 65px;
+                }
+            }
+        }
+
         &:after
         {
             background-image: url('assets/images/edge__btm--pink.svg');
@@ -26,6 +51,33 @@
     .hamburger-button
     {
         display: none;
+
+        @media all and (max-width: 959px)
+        {
+            display: inline;
+            height: 40px;
+
+            &__container
+            {
+                background: transparent;
+
+                span
+                {
+                    background: #fff;
+                    border-radius: 2px;
+                    height: 3px;
+                }
+
+                &.active
+                {
+                    span
+                    {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
     }
 
     .nav__link
@@ -79,10 +131,31 @@
         }
     }
 
+    @media all and (max-width: 959px)
+    {
+        .nav-btns
+        {
+            margin-left: auto;
+            z-index: 5;
+        }
+    }
+
     .site-logo
     {
         position: relative;
         top: 30px;
+
+        @media all and (max-width:959px)
+        {
+            top: 10px;
+            height: 120px;
+            z-index: 5;
+
+            img.site-logo__img
+            {
+                height: 120px;
+            }
+        }
     }
 
     .dropdown-toggle
@@ -125,7 +198,7 @@
         right: 0;
         background: $purple;
         transition: 0.35s ease-out;
-        height: 1px;
+        height: 0px;
         overflow: hidden;
         
         &.open
@@ -151,6 +224,48 @@
                 color: $yellow;
             }
         }
+    }
+
+    @media all and (max-width:959px)
+    {
+        .dropdown__parent
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+        .dropdown
+        {
+            width:100%;
+            position: static;
+        }
+    }
+
+    @media all and (max-width: 540px)
+    {
+        .dropdown
+        {
+            &.open
+            {
+                height: 200px;
+            }
+            ul
+            {
+                flex-wrap: wrap;
+    
+                li
+                {
+                    min-width: 240px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    header .nav.open
+    {
+        opacity: 1;
     }
 
     main
@@ -198,6 +313,28 @@
     a
     {
         width:80%;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    ul
+    {
+        @media all and (max-width: 700px)
+        {
+            flex-wrap: wrap;
+
+            li{
+                width: 50%;
+                min-width: 240px;
+                a
+                {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
 
@@ -206,6 +343,21 @@
     li
     {
         text-align: center;
+    }
+
+    @media all and (max-width: 540px)
+    {
+        ul
+        {
+            flex-wrap: wrap;
+
+            li
+            {
+                width:50%;
+                min-width: 240px;
+                margin: 2%;
+            }
+        }
     }
 }
 

@@ -1,18 +1,16 @@
 .site-logo {
 	flex: 0 0 auto;
-
-        height: 95px;
-        width: 115px;
+    z-index: 3;
+    height: 95px;
+    width: 115px;
 
     @include breakpoint(small) {
         height: 120px;
         width: 145px;
     }
     @include breakpoint(medium) {
-    position: absolute;
-    top: 10px;
-    z-index: 3;
-        
+        position: absolute;
+        top: 10px;
         height: 178px;
         width: 215px;
     }

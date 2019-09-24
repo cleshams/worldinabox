@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	);
 ?></p>
 
-<a href="..//dashboard" class="">Looking for the digital platform? Click here</a>
+<p><a href="..//dashboard" class="btn btn--medium dashboard-link">Looking for the digital platform? Click here</a></p>
 
 <p><?php
 	printf(
