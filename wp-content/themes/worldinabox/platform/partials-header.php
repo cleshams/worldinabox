@@ -99,11 +99,11 @@ if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_t
   </header>
   <div class="header--search-form">
         <form>
-            <input id="search" class="search-input" type="text" aria-describedby="error">
+            <input id="search" class="search-input" type="text" placeholder="Feature in development">
             <label class="search-label visually-hidden" for="search">
                 Search for lessons    
             </label>
-            <input class="button" type="button" value="Search">
+            <input class="button" type="button" value="Search" disabled>
             <p id="error" role="alert"></p>
         </form>
 	</div>
