@@ -53,39 +53,81 @@ a {
         }
     }
     &:nth-child(6n - 1) a
+    {
+        background-color: $blue;
+    }
+    
+    &:nth-child(6n - 2) a
+    {
+        background-color: $orange;
+    }
+    
+    &:nth-child(6n - 3) a
+    {
+        background-color: $greyDark;
+    }
+    
+    &:nth-child(6n - 4) a
+    {
+        background-color: $realPurple;
+    }
+    
+    &:nth-child(6n - 5) a
+    {
+        background-color: $leafgreen;
+    }
+
+    &:nth-child(even) a
+    {
+        border-radius: 53% 48% 76% 19% / 81% 83% 24% 19%;
+        &:hover, &:focus
         {
-            background-color: $blue;
+            border-radius: 8px;
         }
-        
-        &:nth-child(6n - 2) a
+    }
+
+    @media all and (max-width:949px)
+    {
+        width:40%;
+        margin: 3% 1%;
+
+        a
         {
-            background-color: $orange;
+            width: 270px;
+            min-height: 240px;
         }
-        
-        &:nth-child(6n - 3) a
+
+        h3
         {
-            background-color: $greyDark;
+            max-width: 85%;
         }
+    }
+
+    @media all and (max-width: 600px )
+    {
         
-        &:nth-child(6n - 4) a
+        a
         {
-            background-color: $realPurple;
+            width: 220px;
+            min-height: 200px;
         }
-        
-        &:nth-child(6n - 5) a
+    }
+
+    @media all and (max-width: 450px)
+    {
+        width: 80%;
+
+        a
         {
-            background-color: $leafgreen;
+            margin: auto;
+            width: 80%;
+            border-radius: 8px;
         }
 
         &:nth-child(even) a
         {
-            border-radius: 53% 48% 76% 19% / 81% 83% 24% 19%;
-            &:hover, &:focus
-            {
-                border-radius: 8px;
-            }
+            border-radius: 8px;
         }
-
-        
+    }
 
 }

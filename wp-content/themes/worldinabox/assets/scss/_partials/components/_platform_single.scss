@@ -190,3 +190,27 @@
         }
     }   
 }
+
+@media all and (max-width: 700px)
+{
+    .lesson-content
+    {
+        flex-wrap: wrap;
+
+        .lesson-main-content,
+        .lesson-supplementary
+        {
+            width:100%;
+            flex-basis: 100%;
+        }
+
+        .lesson-supplementary
+        {
+            .text__sub-title
+            {
+                display: none;
+            }
+        }
+    }
+
+}

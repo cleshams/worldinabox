@@ -300,7 +300,15 @@
             margin-bottom: 1em;
         }
     }
+ 
     
+    @media all and(max-width: 600px)
+    {
+        .container
+        {
+            padding: 0 12px;
+        }
+    }
 }
 
 .section__activites-links
@@ -379,6 +387,22 @@
     {
         max-width: 50ch;
     }
+
+    @media all and (max-width: 949px)
+    {
+        flex-wrap: wrap;
+
+        > div
+        {
+            width:100%;
+            &:nth-child(1) img
+            {
+                max-width: 250px;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
 }
 
 .unit-lesson-links 
@@ -400,6 +424,15 @@
             display: block;
             width: auto;
             margin-left: auto;
+        }
+
+        @media all and (max-width: 749px)
+        {
+            .wp-block-media-text
+            {
+                display: flex;
+                flex-direction: column-reverse;
+            }
         }
     }
 }
