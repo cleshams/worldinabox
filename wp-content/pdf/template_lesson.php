@@ -34,6 +34,20 @@ foreach($gameInstructionsArray as $gameInstruction)
 }
 $gameResources = array();
 
+/* Routine Variables */
+$followAlong = 485;
+$followAlongTitle = get_the_title($followAlong);
+$followAlongContent = get_field('contet', $followAlong);
+$followAlongResource = get_field('video', $followAlong);
+
+if(isset($counter))
+{
+    $counter++;
+}
+else
+{
+    $counter = 1;
+}
 
 ?>
 
@@ -49,11 +63,14 @@ $gameResources = array();
 </head>
 
 <body class="pdf pdf--lesson">
-	<div class="frame frame--bottom"></div>
 
-	<div class="title-block">
-		<h1><span class="text__subtitle text__blue">Lesson Plan: </span><span class="text__title text__pink"><?= $title; ?> </span></h1>
-	</div>
+    <div class="frame frame--bottom"></div>
+
+    <div class="title-block">
+        <h1><span class="text__subtitle text__blue">Lesson Plan: </span><span class="text__title text__pink"><?=$title; ?></span></h1>
+    </div>
+
+	
 
 	<div class="pdf-area">
 		<h2><span class="text__subtitle text__blue">Theme: </span><span class="text__title text__pink"><?= $unit[0]->name; ?></span></h2>
@@ -61,7 +78,7 @@ $gameResources = array();
 
 
     
-	<table class="objectives bg__yellow" cellpadding="10">
+	<table class="objectives bg__yellow" cellpadding="6">
         <tr>
             <th>Learning Objectives:</th>
             <td>
@@ -78,13 +95,13 @@ $gameResources = array();
 
     <h3>Lesson Plan Overview</h3>
 	<table class="main-content bg__yellow">
-        <thead>
+        <tr class="bg__blue">
             <th>Length</th>
             <th>Activity</th>
             <th>Selection</th>
             <th>Overview</th>
             <th>Resources</th>
-        </thead>
+        </tr>
         <tr>
             <td>5 mins</td>
             <td>Introduction</td>
@@ -92,7 +109,7 @@ $gameResources = array();
             <td>Make sure the room is prepared and safe.<br>Introduce the session themes</td>
             <td></td>
         </tr>
-        <tr>
+        <tr class="bg__orange">
             <td>5 mins</td>
             <td>Warm Up</td>
             <td><?php echo $warmupTitle; ?></td>
@@ -105,6 +122,13 @@ $gameResources = array();
             <td><?php echo $gameTitle; ?></td>
             <td><?php echo implode('<br>', $gameInstructions); ?></td>
             <td><?php echo implode('<br>', $gameResources); ?></td>
+        </tr>
+        <tr class="bg__orange">
+            <td>10 mins</td>
+            <td>Follow Along</td>
+            <td><?php echo $warmupTitle; ?></td>
+            <td><?php echo $followAlongContent; ?></td>
+            <td><?php echo $followAlongResource; ?></td>
         </tr>
     </table>
 

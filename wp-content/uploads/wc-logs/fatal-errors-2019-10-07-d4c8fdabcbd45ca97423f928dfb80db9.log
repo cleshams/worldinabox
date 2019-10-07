@@ -1,0 +1,82 @@
+2019-10-07T17:29:02+00:00 CRITICAL require_once(): Failed opening required 'D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp//wp-content/TCPDF-master/tcpdf.php' (include_path='.;C:\php\pear') in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\lesson-plan-generator.php on line 6
+
+2019-10-07T19:21:22+00:00 CRITICAL Uncaught Error: Call to a member function page_script() on null in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php:60
+Stack trace:
+#0 {main}
+  thrown in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php on line 60
+
+2019-10-07T19:21:40+00:00 CRITICAL Uncaught Error: Call to undefined method Dompdf\Dompdf::page_script() in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php:60
+Stack trace:
+#0 {main}
+  thrown in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php on line 60
+
+2019-10-07T19:38:56+00:00 CRITICAL Uncaught Error: Call to a member function get_page_number() on null in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\template_lesson.php:58
+Stack trace:
+#0 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php(48): require()
+#1 {main}
+  thrown in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\template_lesson.php on line 58
+
+2019-10-07T19:54:36+00:00 CRITICAL Uncaught Error: Class 'Font_Metrics' not found in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code:3
+Stack trace:
+#0 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53): eval()
+#1 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(61): Dompdf\PhpEvaluator->evaluate('\r\n  // setup\r\n ...')
+#2 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(293): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#3 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(138): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#4 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Render in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 3
+
+2019-10-07T19:55:23+00:00 CRITICAL Uncaught Error: Class name must be a valid object or a string in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code:3
+Stack trace:
+#0 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53): eval()
+#1 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(61): Dompdf\PhpEvaluator->evaluate('\r\n  // setup\r\n ...')
+#2 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(293): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#3 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(138): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#4 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Renderer.php(194) in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 3
+
+2019-10-07T19:55:43+00:00 CRITICAL syntax error, unexpected ',' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 3
+
+2019-10-07T19:56:25+00:00 CRITICAL syntax error, unexpected 'Helvetica' (T_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 10
+
+2019-10-07T19:57:21+00:00 CRITICAL syntax error, unexpected '{' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 2
+
+2019-10-07T20:05:48+00:00 CRITICAL syntax error, unexpected end of file in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:06:48+00:00 CRITICAL syntax error, unexpected end of file in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:07:30+00:00 CRITICAL syntax error, unexpected end of file in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:08:31+00:00 CRITICAL syntax error, unexpected end of file in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:08:58+00:00 CRITICAL syntax error, unexpected end of file in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 5
+
+2019-10-07T20:11:28+00:00 CRITICAL syntax error, unexpected 'helvetica' (T_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 5
+
+2019-10-07T20:12:28+00:00 CRITICAL syntax error, unexpected ''' (T_ENCAPSED_AND_WHITESPACE) in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 2
+
+2019-10-07T20:13:33+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:13:44+00:00 CRITICAL syntax error, unexpected '"', expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:13:59+00:00 CRITICAL syntax error, unexpected '"', expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:14:04+00:00 CRITICAL syntax error, unexpected '"', expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:14:38+00:00 CRITICAL syntax error, unexpected '", "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 7
+
+2019-10-07T20:15:17+00:00 CRITICAL syntax error, unexpected '", "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 6
+
+2019-10-07T20:15:36+00:00 CRITICAL syntax error, unexpected '", "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 6
+
+2019-10-07T20:15:55+00:00 CRITICAL syntax error, unexpected '", "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 5
+
+2019-10-07T20:18:19+00:00 CRITICAL syntax error, unexpected '<' in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 4
+
+2019-10-07T20:18:32+00:00 CRITICAL Uncaught Error: Call to undefined method Dompdf\Adapter\CPDF::html() in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code:4
+Stack trace:
+#0 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53): eval()
+#1 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(1093): Dompdf\PhpEvaluator->evaluate('\r\n       if($PA...', Array)
+#2 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(1118): Dompdf\Adapter\CPDF->_add_page_text()
+#3 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\Dompdf.php(932): Dompdf\Adapter\CPDF->stream('Amazon Water.pd...', Array)
+#4 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\pdf.php(60): Dompdf\Dompdf->stream('Amazon Water.pd...', Array)
+#5 {main}
+  thrown in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\pdf\vendor\dompdf\dompdf\src\PhpEvaluator.php(53) : eval()'d code on line 4
+

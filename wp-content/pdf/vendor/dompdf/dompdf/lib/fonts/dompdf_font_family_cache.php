@@ -85,9 +85,21 @@
     'bold' => $fontDir . '/397a976e430b82ea95b83135ebecf9a0',
   ),
   'avantgard' => array(
-    'normal' => $fontDir . '\0d35b376ef0507e6547e4c2949db79b6',
+    'normal' => $fontDir . '/avantgardelt-black',
+    'bold' => $fontDir . '/avantGardeStd-bold',
+    'italic' => $fontDir . '/avantGardeStd-reg',
+    'bold_italic' => $fontDir . '/avantgardelt-black',
   ),
   'londrina' => array(
-    'normal' => $fontDir . '\e7a907a18581a48ab63d7404527d6d7f',
+    'normal' => $fontDir . '/LondrinaSolid-Regular',
+    'bold' => $fontDir . '/LondrinaSolid-Regular',
+    'italic' => $fontDir . '/LondrinaSolid-Regular',
+    'bold_italic' => $fontDir . '/LondrinaSolid-Regular',
+  ),
+  'avantgard-reg' => array(
+    'normal' => $fontDir . '\0d35b376ef0507e6547e4c2949db79b6',
+  ),
+  'avantgard-bold' => array(
+    'normal' => $fontDir . '\a68a08b79ac02e4ce26f7589831009ae',
   ),
 ) ?>

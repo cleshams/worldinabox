@@ -2,9 +2,8 @@
 
 // vars
 
-$frame-size: 1.5cm;
-
-$font-bodysize: 12pt;
+$frame-size: 0.75cm;
+$font-bodysize: 10.5pt;
 
 // colours
 $red: #fb6b47;
@@ -20,7 +19,7 @@ $platformPink: #ec008b;
 $realPurple: #64499d;
 $leafgreen: #53b847;
 
-$font-title: normal normal 700 28px/1.2 Londrina;
+$font-title: normal normal 700 28px/1.2 'Londrina';
 
 *
 {
@@ -68,7 +67,8 @@ body
 {
     &__title
     {
-        font: $font-title;
+        font-family: 'Londrina';
+        font-weight: 700;
     }
     &__subtitle
     {
@@ -105,6 +105,14 @@ h3
     {
         background: $yellow;
     }
+    &__blue
+    {
+        background: $blue;
+    }
+    &__orange
+    {
+        background: $orange;
+    }
 }
 
 table
@@ -115,6 +123,12 @@ table
     th, td
     {
         padding: 10px;
+    }
+
+    td
+    {
+        font-weight: 300;
+        font-family: 'AvantGard-Reg';
     }
 }
 
@@ -167,16 +181,26 @@ table
 .title-block
 {
     text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 10px;
+    width: 100%;
+    background-image: url('../images/swoosh-yellow.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: 73% -50%;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-top: -20px;
 
     h1
     {
-        display: inline-block;
-        margin: auto;
-        background-image: url('../images/swoosh-yellow.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 130%;
-        padding: 10px 270px 10px 100px;
+        display: inline;
+        text-align: center;
+        margin-left: auto;
+        line-height: 10px;
+        padding-bottom: 30px;
     }
 }
 
@@ -195,13 +219,18 @@ table
     }
 }
 
+#pdf-area
+{
+    margin-top: 15px;
+}
+
 #pdf-objective,
 #pdf-area
 {
 
 	p
 	{
-		font-size:11pt;
+		font-size:10pt;
 		display: inline-block;
 
 		strong

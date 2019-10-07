@@ -50,6 +50,9 @@ require('template_lesson.php');
 if($mode != 'debug') :
     $html = ob_get_clean();
     $dompdf->loadHtml($html);
+    $dompdf->set_option('defaultMediaType', 'all');
+    $dompdf->set_option('isPhpEnabled', true);
+    $dompdf->set_option('isFontSubsettingEnabled', true);
     $dompdf->setPaper('A4', $orientation);
     $dompdf->set_option('isRemoteEnabled', true);
     $dompdf->set_option('isHtml5ParserEnabled', true);
