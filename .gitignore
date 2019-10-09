@@ -49,6 +49,6 @@ error_log
 #~~~~~~~~~~~~~~~~~~~~~~~~~~
 phpinfo.php
 */debug.log
-
+wp-content/uploads/wc-logs
 
 .htaccess
