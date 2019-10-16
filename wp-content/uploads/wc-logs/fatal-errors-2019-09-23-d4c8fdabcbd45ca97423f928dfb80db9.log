@@ -1,8 +1,0 @@
-2019-09-23T17:39:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function dashboard_login_redirect(), 1 passed in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-includes\class-wp-hook.php on line 288 and exactly 2 expected in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\functions-platform.php:26
-Stack trace:
-#0 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-includes\class-wp-hook.php(288): dashboard_login_redirect('/my-account/')
-#1 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-includes\plugin.php(208): WP_Hook->apply_filters('/my-account/', Array)
-#2 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(1005): apply_filters('woocommerce_log...', '/my-account/', Object(WP_User))
-#3 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-includes\class-wp-hook.php(286): WC_Form_Handler::process_login('')
-#4 D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-includes\class-wp- in D:\Steve\Work\Websites\dev\local-worldinabox.co.uk\wp\wp-content\themes\worldinabox\platform\functions-platform.php on line 26
-
