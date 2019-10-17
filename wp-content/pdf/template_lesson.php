@@ -5,39 +5,41 @@
 /************ */
 
 $unit = get_field('unit', $lessonId);
-$duration = get_field('duration', $lessonId);
 $objectives = get_field('objectives', $lessonId);
 $title = get_the_title($lessonId);
-// $lessonNum = get_field('lesson_number', $lessonId);
-
-$creative_task = get_field('creative_task', $lessonId);
-$resources = get_field('resources', $lessonId);
 
 $unit = wp_get_post_terms($lessonId, 'unit');
 $unitID = $unit[0]->term_id;
 
+/* Creative Task */
+$creativeTaskFields = get_field('creative_task_group', $lessonId);
+
+/* Main Activity */
+$mainActivityFields = get_field('main_activity', $lessonId);
+
+$introduction = get_field('introduction', $lessonId);
+$reflection = get_field('reflection', $lessonId);
 
 /* Warmup Variables */
 $selectedWarmup = 443;
 $warmupTitle = get_the_title($selectedWarmup);
-$warmupResources = array();
-
+$warmupResources = get_field('resources', $selectedWarmup);
+$warmupInstructions = get_field('instructions_simple', $selectedWarmup);
+$warmupDuration = get_field('duration', $selectedWarmup);
+$warmDown = get_field('warm_down', $selectedWarmup);
 
 /* Game Variables */
 $selectedGame = 451;
 $gameTitle = get_the_title($selectedGame);
-$gameInstructionsArray = get_field('instructions', $selectedGame);
-$gameInstructions = array();
-foreach($gameInstructionsArray as $gameInstruction)
-{
-    $gameInstructions[] = $gameInstruction['instruction'];
-}
-$gameResources = array();
+$gameInstructions = get_field('instructions_simple', $selectedGame);
+$gameDuration = get_field('duration', $selectedGame);
+$gameResources = get_field('resources', $selectedGame);
 
 /* Routine Variables */
 $followAlong = 485;
 $followAlongTitle = get_the_title($followAlong);
-$followAlongContent = get_field('contet', $followAlong);
+$followAlongContent = get_field('instructions_simple', $followAlong);
+$followAlongDuration = get_field('duration', $followAlong);
 $followAlongResource = get_field('video', $followAlong);
 
 if(isset($counter))
@@ -106,29 +108,57 @@ else
             <td>5 mins</td>
             <td>Introduction</td>
             <td><?php echo $title; ?></td>
-            <td>Make sure the room is prepared and safe.<br>Introduce the session themes</td>
+            <td><?php echo $introduction; ?></td>
             <td></td>
         </tr>
         <tr class="bg__orange">
-            <td>5 mins</td>
+            <td><?php echo $warmupDuration; ?> mins</td>
             <td>Warm Up</td>
             <td><?php echo $warmupTitle; ?></td>
             <td>Guide the class through a gentle warm up to prepeare the body for action</td>
-            <td><?php echo implode('<br>', $warmupResources); ?></td>
+            <td><?php echo $warmupResources; ?></td>
         </tr>
         <tr>
-            <td>10 mins</td>
+            <td><?php echo $gameDuration; ?> mins</td>
             <td>Active Game</td>
             <td><?php echo $gameTitle; ?></td>
-            <td><?php echo implode('<br>', $gameInstructions); ?></td>
-            <td><?php echo implode('<br>', $gameResources); ?></td>
+            <td><?php echo $gameInstructions; ?></td>
+            <td><?php echo $gameResources; ?></td>
         </tr>
         <tr class="bg__orange">
-            <td>10 mins</td>
+            <td><?php echo $followAlongContent; ?> mins</td>
             <td>Follow Along</td>
             <td><?php echo $warmupTitle; ?></td>
             <td><?php echo $followAlongContent; ?></td>
             <td><?php echo $followAlongResource; ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $mainActivityFields['duration']; ?> mins</td>
+            <td>Main Activity</td>
+            <td><?php echo $mainActivityFields['activity_title']; ?></td>
+            <td><?php echo $mainActivityFields['description']; ?></td>
+            <td><?php echo $mainActivityFields['resources']; ?></td>
+        </tr>
+        <tr class="bg__orange">
+            <td><?php echo $creativeTaskFields['duration']; ?> mins</td>
+            <td>Creative Task</td>
+            <td><?php echo $creativeTaskFields['title']; ?></td>
+            <td><?php echo $creativeTaskFields['description']; ?></td>
+            <td><?php echo $creativeTaskFields['resources']; ?></td>
+        </tr>
+        <tr>
+            <td>5 mins</td>
+            <td>Warm Down</td>
+            <td><?php echo $warmupTitle; ?></td>
+            <td><?php echo $warmDown; ?></td>
+            <td><?php echo $warmupResources; ?></td>
+        </tr>
+        <tr class="bg__orange">
+            <td>5 mins</td>
+            <td>Reflection</td>
+            <td><?php echo $title; ?></td>
+            <td><?php echo $reflection; ?></td>
+            <td></td>
         </tr>
     </table>
 
