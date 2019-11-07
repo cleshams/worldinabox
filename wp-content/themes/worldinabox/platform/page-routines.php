@@ -1,6 +1,6 @@
 <?php
 /**
-*   Template name: Follow Along Dance Routnes
+*   Template name: Follow Along Dance Routines
 **/
 
 get_template_part('platform/partials', 'header');

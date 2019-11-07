@@ -16,26 +16,43 @@ jQuery(document).ready(function($){
   });
 
 
-var sections = $('section'),
-  nav = $('nav'),
-  nav_height = nav.outerHeight();
+    var sections = $('section'),
+    nav = $('nav'),
+    nav_height = nav.outerHeight();
 
-$(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();
+    $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop();
 
-  sections.each(function() {
-    var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
 
-    if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      sections.removeClass('active');
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('a').removeClass('active');
+                sections.removeClass('active');
 
-      $(this).addClass('active');
-      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-    }
-  });
-});
+                $(this).addClass('active');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+            }
+        });
+    });
+
+    /* ===========================================================
+       Search Form
+    ============================================================== */
+
+    
+    $('.search-form').on('submit', function(e) 
+    {
+        e.preventDefault();
+        var val = $(this).find('.search-input').val();
+        var string = document.createTextNode(val);
+
+        var url = location.origin +'/dashboard/search/?search=';
+        console.log(url + encodeURIComponent(string.textContent));
+        location.href = url + encodeURIComponent(string.textContent);
+
+    })
 
 });
 

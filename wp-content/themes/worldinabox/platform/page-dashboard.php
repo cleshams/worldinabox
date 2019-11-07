@@ -49,6 +49,8 @@ while ( have_posts() ) : the_post();
                 <li><a href="/dashboard/games" class="btn btn--medium">Active Games</a></li>
                 <li><a href="/dashboard/routines" class="btn btn--medium bg__blue">Follow Along Dance Routines</a></li>
             </ul>
+            <h3 class="text__center">Need help finding something?</h3>
+            <button class="btn search-tool-trigger text__center">Try our activity finder</button>
         </div>
     </section>
 

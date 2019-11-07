@@ -2377,6 +2377,13 @@ select[multiple] {
   margin-left: 5px;
 }
 
+.search-tool-trigger {
+  margin: auto;
+  display: block;
+  font-size: 20px;
+  min-width: 300px;
+}
+
 .single-lessons .lesson-main-content, .single-games .lesson-main-content {
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
