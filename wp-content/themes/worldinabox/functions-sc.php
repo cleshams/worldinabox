@@ -129,3 +129,51 @@ function cc_mime_types( $mimes ){
     }
 add_filter( 'upload_mimes', 'cc_mime_types' );
     
+
+/*************************** */
+// Update view count
+/*************************** */
+
+function register_view($postId)
+{
+    $viewCount = get_post_meta($postId, 'view_count');
+
+    if(!$viewCount)
+    {
+        add_post_meta($postId, 'view_count', 0);
+        $viewCount = 0;
+    }
+
+    $user = get_current_user();
+
+    // if(!array_intersect(array('administrator'),$user->roles))
+    // {
+        update_post_meta($postId, 'view_count', $viewCount + 1 );
+    // }
+}
+
+
+/*************************** */
+// Display view count
+/*************************** */
+add_filter( 'manage_lessons_posts_columns', 'set_custom_lesson_columns' );
+
+function set_custom_lesson_columns($columns)
+{
+    $columns['view_count'] = __('View Count');
+
+    return $columns;
+}
+
+add_action( 'manage_lessons_posts_custom_column' , 'custom_lessons_column', 10, 2 );
+
+function custom_lessons_column($column, $postId)
+{
+    switch($column)
+    {
+        case 'view_count' :
+            $viewCount = get_post_meta($postId, 'view_count', true);
+            echo ($viewCount) ? $viewCount : 0;
+            break;
+    }
+}

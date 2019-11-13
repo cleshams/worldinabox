@@ -2,6 +2,8 @@
 get_template_part('platform/partials', 'header');
 the_post();
 
+$id = get_the_ID();
+
 $unit = get_field('unit');
 $duration = get_field('duration');
 $objectives = get_field('objectives');
@@ -17,12 +19,13 @@ $resources = get_field('resources');
 $additional_content = get_field('additional_content');
 $popout = get_field('popout_message');
 
-$unit = wp_get_post_terms(get_the_ID(), 'unit');
+$unit = wp_get_post_terms($id, 'unit');
 $unitID = $unit[0]->term_id;
 $unitNumber = get_field('unit_number','unit_'.$unitID);
 $logo = get_field('unit_logo', 'unit_'.$unitID);
 $unitColour = get_field('colour', 'unit_'.$unitID);
 
+register_view($id);
 ?>
 <main>
 
