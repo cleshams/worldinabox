@@ -46,7 +46,7 @@ while ( have_posts() ) : the_post();
             <h2 class="text__center">Activities</h2>
             <ul class="flex-third">
                 <li><a href="/dashboard/warm-ups" class="btn btn--medium bg__purple">Warm-Ups</a></li>
-                <li><a href="/dashboard/games" class="btn btn--medium">Active Games</a></li>
+                <li><a href="/dashboard/active-games" class="btn btn--medium">Active Games</a></li>
                 <li><a href="/dashboard/routines" class="btn btn--medium bg__blue">Follow Along Dance Routines</a></li>
             </ul>
             <h3 class="text__center">Need help finding something?</h3>

@@ -11,6 +11,8 @@ $instructions = get_field('instructions');
 $tips = get_field('tips');
 $image = get_field('image');
 
+register_view($id);
+
 ?>
 <main>
 

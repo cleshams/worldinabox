@@ -123,6 +123,9 @@ class Woo_Product_Data_Admin {
 							<?php echo $location_title; ?>
 							<span class="woocommerce-help-tip" data-tip="<?php echo $location_tip; ?>"></span>
 						</div>
+						<?php
+						// TODO: Add "PREVIEW" page link to show users what the Custom Email will look like
+						?>
 					</div>
 
 					<?php

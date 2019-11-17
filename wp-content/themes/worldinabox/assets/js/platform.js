@@ -71,27 +71,35 @@ function toggleLessonNav()
 {
     
     const dropdowncontainer = document.querySelector('.dropdown__parent');
-    const dropownSibling = document.querySelector('.dropdown__sibling');
+    const dropdownSibling = document.querySelector('.dropdown__sibling');
 
-    if(dropownSibling)
+    if(dropdownSibling)
     {
         
-        dropownSibling.addEventListener('focus', function() {
+        dropdownSibling.addEventListener('focus', function() {
             dropdowncontainer.querySelector('.dropdown').classList.add('open');
-            dropownSibling.classList.add('open');
+            dropdownSibling.classList.add('open');
         });
 
         document.querySelectorAll('.dropdown a').forEach(function(e, i) {
             e.addEventListener('focus', function()
             {
                 dropdowncontainer.querySelector('.dropdown').classList.add('open');
-                dropownSibling.classList.add('open');
+                dropdownSibling.classList.add('open');
             });
         });
 
-        dropownSibling.addEventListener('mouseenter', function() {
+        dropdownSibling.addEventListener('mouseenter', function() {
             dropdowncontainer.querySelector('.dropdown').classList.add('open');
-            dropownSibling.classList.add('open');
+            dropdownSibling.classList.add('open');
+        });
+
+        dropdownSibling.addEventListener('click', function(e) {
+            // if(window.innerWidth < 960)
+            // {
+                e.target.classList.toggle('open');
+                dropdowncontainer.querySelector('.dropdown').classList.toggle('open');
+            // }
         });
 
         const topLevels = document.querySelectorAll('.nav__menu > .nav__item > a');
@@ -100,11 +108,11 @@ function toggleLessonNav()
             e.addEventListener('focus', function() {
 
                 if(e.classList.contains('dropdown-sibling'))
-                {
-                } else
+                {}
+                 else
                 {
                     dropdowncontainer.querySelector('.dropdown').classList.remove('open');
-                    dropownSibling.classList.remove('open');
+                    dropdownSibling.classList.remove('open');
                 }
             });
             e.addEventListener('mouseenter', function() {
@@ -113,7 +121,7 @@ function toggleLessonNav()
                 else
                 {
                     dropdowncontainer.querySelector('.dropdown').classList.remove('open');
-                    dropownSibling.classList.remove('open');
+                    dropdownSibling.classList.remove('open');
                 }
             })
         })

@@ -136,7 +136,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 function register_view($postId)
 {
-    $viewCount = get_post_meta($postId, 'view_count');
+    $viewCount = get_post_meta($postId, 'view_count', true);
 
     if(!$viewCount)
     {
@@ -148,7 +148,7 @@ function register_view($postId)
 
     // if(!array_intersect(array('administrator'),$user->roles))
     // {
-        update_post_meta($postId, 'view_count', $viewCount + 1 );
+        update_post_meta($postId, 'view_count', ($viewCount + 1) );
     // }
 }
 
@@ -168,6 +168,73 @@ function set_custom_lesson_columns($columns)
 add_action( 'manage_lessons_posts_custom_column' , 'custom_lessons_column', 10, 2 );
 
 function custom_lessons_column($column, $postId)
+{
+    switch($column)
+    {
+        case 'view_count' :
+            $viewCount = get_post_meta($postId, 'view_count', true);
+            echo ($viewCount) ? $viewCount : 0;
+            break;
+    }
+}
+
+add_filter( 'manage_games_posts_columns', 'set_custom_game_columns' );
+
+function set_custom_game_columns($columns)
+{
+    $columns['view_count'] = __('View Count');
+
+    return $columns;
+}
+
+add_action( 'manage_games_posts_custom_column' , 'custom_games_column', 10, 2 );
+
+function custom_games_column($column, $postId)
+{
+    switch($column)
+    {
+        case 'view_count' :
+            $viewCount = get_post_meta($postId, 'view_count', true);
+            echo ($viewCount) ? $viewCount : 0;
+            break;
+    }
+}
+
+add_filter( 'manage_followalongs_posts_columns', 'set_custom_followalong_columns' );
+
+function set_custom_followalong_columns($columns)
+{
+    $columns['view_count'] = __('View Count');
+
+    return $columns;
+}
+
+add_action( 'manage_followalongs_posts_custom_column' , 'custom_followalongs_column', 10, 2 );
+
+function custom_followalongs_column($column, $postId)
+{
+    switch($column)
+    {
+        case 'view_count' :
+            $viewCount = get_post_meta($postId, 'view_count', true);
+            echo ($viewCount) ? $viewCount : 0;
+            break;
+    }
+}
+
+
+add_filter( 'manage_warmups_posts_columns', 'set_custom_warmup_columns' );
+
+function set_custom_warmup_columns($columns)
+{
+    $columns['view_count'] = __('View Count');
+
+    return $columns;
+}
+
+add_action( 'manage_warmups_posts_custom_column' , 'custom_warmups_column', 10, 2 );
+
+function custom_warmups_column($column, $postId)
 {
     switch($column)
     {

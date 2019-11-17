@@ -6554,6 +6554,17 @@ header .widget_shopping_cart:after {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
 }
+@media all and (min-width: 960px) {
+  .platform .dropdown-toggle.open::before {
+    width: 220px;
+    height: 70px;
+    content: "";
+    background: transparent;
+    position: absolute;
+    left: -40px;
+    top: 52%;
+  }
+}
 .platform .dropdown {
   position: absolute;
   top: calc(100% + 6px);
