@@ -30,7 +30,7 @@ while ( have_posts() ) : the_post();
             <li class="lesson--shape">
                 <a href="'.$link.'">
                     <span class="text__sub-title">Theme:</span>
-                    <h3 class="text__title">'.$title.'</h3>
+                    <h3>'.$title.'</h3>
                 </a>
             </li>';
         }

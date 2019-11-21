@@ -41,7 +41,7 @@ echo '
             <li class="lesson--shape">
                 <a href="'.get_the_permalink().'">
                 <span class="text__sub-title">Lesson '.$index.'</span>
-                <h3 class="text__title">'.get_the_title().'</h3>
+                <h3>'.get_the_title().'</h3>
                 </a>
             </li>';
         $index++;

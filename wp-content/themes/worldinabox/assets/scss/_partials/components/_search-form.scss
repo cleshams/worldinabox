@@ -35,7 +35,148 @@
         text-transform: uppercase;
         font-size: 16px;
         margin: 0 16px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus
+        {
+            color: $orange;
+        }
+    }
+}
+
+.swoosh
+{
+    background-size: auto 100%;
+    background-position: 80%;
+    padding: 20px 80px 20px 20px;
+    text-align: center;
+    color: white;
+    background-repeat: no-repeat;
+    margin: 4rem auto 1rem auto;
+
+    &--orange
+    {
+        background-image: url('assets/images/icons/swoosh-orange.svg');
+    }
+    &--yellow
+    {
+        background-image: url('assets/images/icons/swoosh-yellow.svg');
+    }
+    &--purple
+    {
+        background-image: url('assets/images/icons/swoosh-purple.svg');
+    }
+    &--blue
+    {
+        background-image: url('assets/images/icons/swoosh-blue.svg');
+    }
+    &--green
+    {
+        background-image: url('assets/images/icons/swoosh-green.svg');
     }
 
+    @media all and (max-width: 840px)
+    {
+        background-position-x: 60px;
+        background-size: contain;
+        padding: 0;
+    }
 
+    @media all and (max-width: 500px)
+    {
+        background: none;
+        color: $greyDark;
+    }
+}
+
+.page-template-page-search
+{
+    .lesson-link
+    {
+        display: flex;
+        align-items: center;
+
+        .unit-logo
+        {
+            max-height: 110px;
+            display: block;
+            margin-right: 1rem;
+        }
+        .flex
+        {
+            span + span
+            {
+                margin-left: 2rem;
+            }
+        }
+    }
+    .other-links
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 2rem;
+
+        @media all and (max-width: 800px)
+        {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media all and (max-width: 450px)
+        {
+            display: block;
+            text-align: center;
+
+            a
+            {
+                margin: 0 auto 1rem auto;
+                display: inline-block;
+            }
+        }
+
+        a
+        {
+            padding-left: 45px;
+            position: relative;
+            margin-bottom: 1rem;
+
+            &:hover,
+            &:focus
+            {
+                color: $green;
+            }
+            &::before
+            {
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 40px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &:nth-child(3n)
+            {
+                &::before
+                {
+                    background-image: url(assets/images/icons/icon-1.svg);
+                }
+            }
+            &:nth-child(3n - 1)
+            {
+                &::before
+                {
+                    background-image: url(assets/images/icons/icon-2.svg);
+                }
+            }
+            &:nth-child(3n - 2)
+            {
+                &::before
+                {
+                    background-image: url(assets/images/icons/icon-3.svg);
+                }
+            }
+        }
+    }
 }

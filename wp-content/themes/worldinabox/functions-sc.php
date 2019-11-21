@@ -222,7 +222,6 @@ function custom_followalongs_column($column, $postId)
     }
 }
 
-
 add_filter( 'manage_warmups_posts_columns', 'set_custom_warmup_columns' );
 
 function set_custom_warmup_columns($columns)
@@ -244,3 +243,31 @@ function custom_warmups_column($column, $postId)
             break;
     }
 }
+
+
+/*************************** */
+// Display view count
+/*************************** */
+
+function extend_search_query( $query ) {
+    if ( array_key_exists('meta_query', $query->query))
+    {
+        if(is_array($query->query['meta_query']) && $query->query['meta_query'][0]['key'] == 'keywords') {
+            add_filter( 'get_meta_sql', 'es_replace_and_with_or' );
+        };
+    }
+}
+
+
+function es_replace_and_with_or( $sql ) {
+      if ( 1 === strpos( $sql['where'], 'AND' ) ) {
+          $sql['where'] = substr( $sql['where'], 4 );
+          $sql['where'] = ' OR ' . $sql['where'];
+      }
+  
+      //make sure that this filter will fire only once for the meta query
+      remove_filter( 'get_meta_sql', 'es_replace_and_with_or' );
+      return $sql;
+  }
+  
+add_filter( 'pre_get_posts', 'extend_search_query');

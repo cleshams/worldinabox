@@ -29,6 +29,13 @@ $bodyTextSecondary: $colourSecondary;
         text-align: center;
     }
 
+    &__title
+    {
+        font-family: $fontPrimary;
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
     &__sub-title
     {
         font-family: $fontPrimary;

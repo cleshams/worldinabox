@@ -106,7 +106,7 @@ register_view($id);
             </div>
 
             <div class="lesson-supplementary">
-                <p class="text__center text__sub-title">
+                <p class="text__sub-title">
                     Unit <?php echo $unitNumber; ?>
                 </p>
                 <?php echo '<img src="'.$logo['url'].'" alt="'.$title.' Logo" class="unit-logo" />'; ?>
