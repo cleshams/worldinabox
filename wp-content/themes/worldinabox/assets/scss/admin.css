@@ -9,4 +9,8 @@
   color: greenyellow;
 }
 
+.wp-block {
+  max-width: 800px;
+}
+
 /*# sourceMappingURL=admin.css.map */

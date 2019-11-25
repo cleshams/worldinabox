@@ -21,7 +21,7 @@ $introduction = get_field('introduction', $lessonId);
 $reflection = get_field('reflection', $lessonId);
 
 /* Warmup Variables */
-$selectedWarmup = 443;
+// $selectedWarmup = 443;
 $warmupTitle = get_the_title($selectedWarmup);
 $warmupResources = get_field('resources', $selectedWarmup);
 $warmupInstructions = get_field('instructions_simple', $selectedWarmup);
@@ -29,14 +29,14 @@ $warmupDuration = get_field('duration', $selectedWarmup);
 $warmDown = get_field('warm_down', $selectedWarmup);
 
 /* Game Variables */
-$selectedGame = 451;
+// $selectedGame = 451;
 $gameTitle = get_the_title($selectedGame);
 $gameInstructions = get_field('instructions_simple', $selectedGame);
 $gameDuration = get_field('duration', $selectedGame);
 $gameResources = get_field('resources', $selectedGame);
 
 /* Routine Variables */
-$followAlong = 485;
+// $followAlong = 485;
 $followAlongTitle = get_the_title($followAlong);
 $followAlongContent = get_field('instructions_simple', $followAlong);
 $followAlongDuration = get_field('duration', $followAlong);
@@ -85,10 +85,12 @@ else
             <th>Learning Objectives:</th>
             <td>
                 <ul>
-                    <?php foreach($objectives as $objective)
-                    {
-                        echo '<li>'.$objective['objective'].'</li>';
-                    }
+                    <?php
+                    if(is_array($objectives)) : foreach($objectives as $objective)
+                        {
+                            echo '<li>'.$objective['objective'].'</li>';
+                        }
+                    endif;
                     ?>
                 </ul>
             </td>

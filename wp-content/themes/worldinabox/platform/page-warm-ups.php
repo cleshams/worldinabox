@@ -5,6 +5,7 @@
 
 get_template_part('platform/partials', 'header');
 
+$linked = (isset($_GET['warmup'])) ? $_GET['warmup'] : null;
 while ( have_posts() ) : the_post();
 ?>
 
@@ -32,6 +33,8 @@ while ( have_posts() ) : the_post();
         foreach($warmUps as $warmUp)
         {
             $title = $warmUp->post_title;
+            $slug = $warmUp->post_name;
+            $class = ($slug == $linked) ?'class="trigger-on-load"' : '';
             $id = $warmUp->ID;
             $intro = get_field('intro', $id);
             $video = get_field('video', $id);
@@ -40,7 +43,7 @@ while ( have_posts() ) : the_post();
 
               echo '
               <li>
-                <button>
+                <button '.$class.'>
                     <span class="text__sub-title">Theme: </span>
                     <h2>'.$title.'</h2>
                 </button>
@@ -111,6 +114,12 @@ while ( have_posts() ) : the_post();
                 card.style.maxHeight = null;
             } 
         });
+    }
+
+    window.onload = function() {
+        var trigger = document.querySelector('.trigger-on-load');
+        trigger.classList.remove('trigger-on-load');
+        trigger.click();
     }
 </script>
 <?php

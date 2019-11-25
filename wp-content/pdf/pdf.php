@@ -21,12 +21,10 @@ require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
 /* Lesson Content 
 /************ */
 
-// $lessonId = $_GET['lesson_id'];
-// $warmup = $_GET['warmup_id'];
-// $routine = $_GET['routine_id'];
-// $game = $_GET['game_id'];
-
-$lessonId = 380;
+$lessonId = $_POST['pdf-lesson'];
+$selectedWarmup = $_POST['pdf-warmup'];
+$selectedGame = $_POST['pdf-game'];
+$followAlong = $_POST['pdf-routine'];
 
 
 $footerLogo = 'assets/images/movema-logo.svg';

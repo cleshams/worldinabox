@@ -116,7 +116,7 @@ foreach($results->posts as $post)
             foreach($warmups as $warmup)
             {
                 $title = $warmup->post_title;
-                $link = get_the_permalink($warmup);
+                $link = '../warm-ups/?warmup=' .$warmup->post_name;
                 $type = 'Warm-Up';
 
                 echo '
@@ -129,7 +129,7 @@ foreach($results->posts as $post)
             foreach($followalongs as $followalong)
             {
                 $title = $followalong->post_title;
-                $link = get_the_permalink($followalong);
+                $link = '../follow-along-dance-routines/?warmup=' .$followalong->post_name;
                 $type = 'Follow Along Dance Routine';
 
                 echo '
