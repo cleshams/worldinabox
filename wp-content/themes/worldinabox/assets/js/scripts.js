@@ -94,6 +94,13 @@ jQuery(document).ready(function($){
     // fixedContentPos: false
 
     // });
+
+    
+    $('.faq').on('click', '.accordion-toggle', function () {
+        $(this).toggleClass('open')
+            .next('.faq-answer')
+            .slideToggle();
+    });
   
 
 });

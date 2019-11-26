@@ -10,12 +10,12 @@ while ( have_posts() ) : the_post();
 
 <main>
 
-<section class="section__warm-ups">
+<section class="cms">
         <div class="container container--inner">
-
             <h1 class="text__center">Help & Support</h1>
-            <h2 class="text__center" style="color:#d95ca0;">Page in development</h1>
-        
+            <?php
+            the_content();
+            ?>
         </div>
     </section>
     <?php

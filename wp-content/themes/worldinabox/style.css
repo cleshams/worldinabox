@@ -2217,7 +2217,8 @@ select[multiple] {
 .woocommerce-page .woocommerce-error .button,
 .woocommerce-page .woocommerce-info .button,
 .woocommerce-page .woocommerce-message .button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+.wp-block-button__link {
   min-width: 64px;
   padding: 20px 30px;
   color: white;
@@ -2243,7 +2244,8 @@ select[multiple] {
 .woocommerce-page .woocommerce-error .button:after,
 .woocommerce-page .woocommerce-info .button:after,
 .woocommerce-page .woocommerce-message .button:after, .woocommerce #respond input#submit:after, .woocommerce a.button:after, .woocommerce button.button:after, .woocommerce input.button:after,
-.woocommerce #respond input#submit.alt:after, .woocommerce a.button.alt:after, .woocommerce button.button.alt:after, .woocommerce input.button.alt:after {
+.woocommerce #respond input#submit.alt:after, .woocommerce a.button.alt:after, .woocommerce button.button.alt:after, .woocommerce input.button.alt:after,
+.wp-block-button__link:after {
   content: '>';
   margin-left: 5px;
 }
@@ -2262,7 +2264,10 @@ select[multiple] {
 .woocommerce .woocommerce-message .button:active,
 .woocommerce-page .woocommerce-error .button:active,
 .woocommerce-page .woocommerce-info .button:active,
-.woocommerce-page .woocommerce-message .button:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active, .woocommerce button.button:active, .woocommerce input.button:active {
+.woocommerce-page .woocommerce-message .button:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active, .woocommerce button.button:active, .woocommerce input.button:active,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:active {
   background: #63d2d8;
   color: #ffffff;
   border: 2px solid #63d2d8;
@@ -4590,6 +4595,56 @@ img.why-content__img {
 }
 #menu-social-menu li a[href*="instagram.com"]:before {
   content: '\f16d';
+}
+
+.faq {
+  margin: 4rem auto;
+}
+.faq .faq-question {
+  padding: 1.5rem;
+  background: #ebebeb;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Londrina Solid", cursive;
+  letter-spacing: 0.5px;
+}
+.faq .faq-answer {
+  display: none;
+  padding: 2rem 0 0 0;
+  max-width: 80ch;
+}
+.faq button {
+  margin-top: 2rem;
+  width: 100%;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.faq button::after {
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-family: "Londrina Solid", cursive;
+  font-size: 26px;
+}
+.faq button:focus, .faq button:hover {
+  outline: none;
+}
+.faq button:focus .faq-question, .faq button:hover .faq-question {
+  background: #f18500;
+  color: #fff;
+}
+.faq button:focus::after, .faq button:hover::after {
+  color: #fff;
+}
+.faq button.open .faq-question {
+  background: #e6007d;
+  color: #fff;
+}
+.faq button.open::after {
+  content: "-";
+  color: #fff;
 }
 
 .share-wrap__btns {
@@ -6920,17 +6975,33 @@ header .widget_shopping_cart:after {
       flex-wrap: wrap;
 }
 
-.page-template-page-warm-ups .cms .has-media-on-the-right {
+.page-template-page-routines .cms h1 + p {
+  max-width: 65ch;
+  margin: auto;
+  text-align: center;
+}
+
+.cms .wp-block-media-text {
+  grid-template-columns: 35% auto;
+}
+.cms .has-media-on-the-right {
   grid-template-columns: auto 35%;
 }
-.page-template-page-warm-ups .cms img {
+.cms .wp-block-media-text img {
   max-height: 320px;
   display: block;
   width: auto;
   margin-left: auto;
 }
+.cms .wp-block-media-text {
+  margin: 4rem 0;
+}
+.cms .container--inner > p {
+  max-width: 90ch;
+  margin: 2rem auto;
+}
 @media all and (max-width: 749px) {
-  .page-template-page-warm-ups .cms .wp-block-media-text {
+  .cms .wp-block-media-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6940,11 +7011,18 @@ header .widget_shopping_cart:after {
             flex-direction: column-reverse;
   }
 }
-
-.page-template-page-routines .cms h1 + p {
-  max-width: 65ch;
-  margin: auto;
-  text-align: center;
+.cms .wp-block-button {
+  color: inherit;
+}
+.cms .wp-block-button .wp-block-button__link {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #d95ca0;
+  border-color: #d95ca0;
+}
+.cms .wp-block-button .wp-block-button__link:hover, .cms .wp-block-button .wp-block-button__link:focus {
+  background: #63d2d8;
+  border-color: #63d2d8;
 }
 
 /*# sourceMappingURL=style.css.map */

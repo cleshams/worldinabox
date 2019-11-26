@@ -62,7 +62,7 @@ if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_t
                             <a href="<?php echo HOME_URI; ?>/dashboard/active-games" class="nav__link">Games</a>
                         </li>
 						<li class="nav__item">
-                            <a href="<?php echo HOME_URI; ?>/dashboard/lesson-build" class="nav__link">Build a Plan</a>
+                            <a href="<?php echo HOME_URI; ?>/dashboard/lesson-plans/" class="nav__link">Build a Plan</a>
                         </li>
                     </ul>
 				</nav>

@@ -1,0 +1,68 @@
+.faq
+{
+    margin: 4rem auto;
+
+    .faq-question
+    {
+        padding: 1.5rem;
+        background: $greyLight;
+        text-align: left;
+        font-size: 20px;
+        font-family: $fontPrimary;
+        letter-spacing: 0.5px;
+    }
+    .faq-answer
+    {
+        display: none;
+        padding: 2rem 0 0 0; 
+        max-width: 80ch;
+    }
+    button
+    {
+        margin-top: 2rem;
+        width: 100%;
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        &::after
+        {
+            content: "+";
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-family: $fontPrimary;
+            font-size: 26px;
+        }
+
+        &:focus,
+        &:hover
+        {
+            outline: none;
+            .faq-question
+            {
+                background: $orange;
+                color: #fff;
+            }
+
+            &::after
+            {
+                color: #fff;
+            }
+
+        }  
+        &.open
+        {
+            .faq-question
+            {
+                background: $purple;
+                color: #fff;
+            }
+
+            &::after{
+                content: "-";
+                color: #fff;
+            }
+        }
+    } 
+}

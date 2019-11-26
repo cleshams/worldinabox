@@ -271,3 +271,43 @@ function es_replace_and_with_or( $sql ) {
   }
   
 add_filter( 'pre_get_posts', 'extend_search_query');
+
+
+
+
+/********************************************* */
+//Register an FAQ block for Gutenberg using ACF 
+/********************************************* */
+
+function ac_acf_block_render_callback( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists(STYLESHEETPATH . "/acf-templates/acf_block-{$slug}.php") ) {
+		include( STYLESHEETPATH . "/acf-templates/acf_block-{$slug}.php" );
+	}
+}
+
+
+add_action('acf/init', 'custom_acf_init');
+
+function custom_acf_init()
+{	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'faq',
+			'title'				=> __('FAQ'),
+			'description'		=> __('A custom block for frequently asked questions.'),
+			'render_callback'	=> 'ac_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'faq', 'questions', 'faqs' ),
+		));
+	}
+}
+
