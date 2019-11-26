@@ -1,8 +1,14 @@
 <?php
 
+// $selectedWarmup = 443;
+// $lessonId = 344;
+// $selectedGame = 451;
+// $followAlong = 485;
+
 /************ */
 /* Lesson Variables 
 /************ */
+
 
 $unit = get_field('unit', $lessonId);
 $objectives = get_field('objectives', $lessonId);
@@ -21,7 +27,7 @@ $introduction = get_field('introduction', $lessonId);
 $reflection = get_field('reflection', $lessonId);
 
 /* Warmup Variables */
-// $selectedWarmup = 443;
+
 $warmupTitle = get_the_title($selectedWarmup);
 $warmupResources = get_field('resources', $selectedWarmup);
 $warmupInstructions = get_field('instructions_simple', $selectedWarmup);
@@ -29,14 +35,14 @@ $warmupDuration = get_field('duration', $selectedWarmup);
 $warmDown = get_field('warm_down', $selectedWarmup);
 
 /* Game Variables */
-// $selectedGame = 451;
+
 $gameTitle = get_the_title($selectedGame);
 $gameInstructions = get_field('instructions_simple', $selectedGame);
 $gameDuration = get_field('duration', $selectedGame);
 $gameResources = get_field('resources', $selectedGame);
 
 /* Routine Variables */
-// $followAlong = 485;
+
 $followAlongTitle = get_the_title($followAlong);
 $followAlongContent = get_field('instructions_simple', $followAlong);
 $followAlongDuration = get_field('duration', $followAlong);
@@ -128,11 +134,11 @@ else
             <td><?php echo $gameResources; ?></td>
         </tr>
         <tr class="bg__orange">
-            <td><?php echo $followAlongContent; ?> mins</td>
+            <td><?php echo $followAlongDuration; ?> mins</td>
             <td>Follow Along</td>
-            <td><?php echo $warmupTitle; ?></td>
+            <td><?php echo $followAlongTitle; ?></td>
             <td><?php echo $followAlongContent; ?></td>
-            <td><?php echo $followAlongResource; ?></td>
+            <td><a href="<?php echo $followAlongResource; ?>">Video</a></td>
         </tr>
         <tr>
             <td><?php echo $mainActivityFields['duration']; ?> mins</td>
@@ -163,6 +169,9 @@ else
             <td></td>
         </tr>
     </table>
+
+    <img id="pdf-footer-logo" src="../pdf/assets/images/movema-logo.png" alt="Movema Logo"/>
+    <img id="pdf-footer-logo-2" src="../pdf/assets/images/worldinabox.png" alt="World In A Box Logo"/>
 
 </body>
 </html>

@@ -94,16 +94,11 @@ table {
 }
 table th, table td {
   padding: 6px;
-}
-table th + th, table td + td {
-  border-left: 1px solid #d95ca0;
+  border: 1px solid #d95ca0;
 }
 table td {
   font-weight: 300;
   font-family: 'AvantGard-Reg';
-}
-table tr + tr {
-  border-top: 1px solid #d95ca0;
 }
 
 .frame {
@@ -125,29 +120,12 @@ table tr + tr {
 
 #pdf-footer-logo {
   position: fixed;
-  width: 82px;
-  height: 30px;
+  width: 100px;
+  height: 120px;
   text-align: right;
   overflow: hidden;
-  bottom: 20px;
-  left: 1.5cm;
 }
 #pdf-footer-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#pdf-footer-logo-2 {
-  position: fixed;
-  width: 145px;
-  height: 25px;
-  text-align: right;
-  overflow: hidden;
-  bottom: 25px;
-  right: 1.5cm;
-}
-#pdf-footer-logo-2 img {
   display: block;
   width: 100%;
   height: auto;
@@ -158,13 +136,13 @@ table tr + tr {
   position: relative;
   left: 0;
   right: 0;
-  top: 0px;
+  top: 10px;
   width: 100%;
   background-image: url("../images/swoosh-yellow.png");
-  background-size: 180px;
+  background-size: 200px;
   background-repeat: no-repeat;
-  background-position: 73% -20%;
-  height: 60px;
+  background-position: 73% -50%;
+  height: 70px;
   margin-bottom: 10px;
   margin-top: -20px;
 }
@@ -172,8 +150,8 @@ table tr + tr {
   display: inline;
   text-align: center;
   margin-left: auto;
-  line-height: 15px;
-  padding-bottom: 20px;
+  line-height: 10px;
+  padding-bottom: 30px;
 }
 
 .objectives ul {
@@ -186,7 +164,7 @@ table tr + tr {
 }
 
 #pdf-area {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #pdf-objective p,
