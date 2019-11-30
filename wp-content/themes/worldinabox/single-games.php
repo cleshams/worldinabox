@@ -36,6 +36,28 @@ register_view($id);
                 <?php echo $intro; ?>
 
                 <h2 class="text__big-title">Music</h2>
+                <?php 
+                    switch ($musicType) {
+                        case 'spotify':
+                            $songlink = $music['link'];
+                            print_spotify_embed($songlink);
+                            break;
+
+                        case 'file' :
+                            $file = $music['file'];
+                            $title = $music['title'];
+                            echo '<a href="'.$file['url'].'" download>
+                                <span class="icon">';
+                                include('assets/images/icons/' . $musicType . '.php');
+                                echo '</span>
+                                <span>' . $title .'</span>
+                            </a>';
+                        
+                        default:
+                            
+                            break;
+                    }
+                ?>
                 <a href="" class="resource-link">
                     <span class="icon"><?php include('assets/images/icons/' . $musicType . '.php'); ?></span>
                     <span><?php echo $music['title']; ?></span>

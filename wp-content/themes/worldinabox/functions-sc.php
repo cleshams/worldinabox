@@ -311,3 +311,50 @@ function custom_acf_init()
 	}
 }
 
+
+
+/********************************************* */
+//Render Music Resources
+/********************************************* */
+
+function renderMusic($source, $resource)
+{
+    switch ($source) {
+        case 'spotify':
+            $songLink = $resource['url'];
+            print_spotify_embed($songLink);
+            break;
+        
+        case 'soundcloud':
+            # code...
+            break;
+        
+        case 'youtube':
+            # code...
+            break;
+        
+        default:
+            # code...
+            break;
+    }
+}
+
+/********************************************* */
+//Print a Spotify Song Embed
+/********************************************* */
+function print_spotify_embed($songLink)
+{
+    if(strpos($songLink, 'https://open.spotify.com/track/') > -1)
+    {
+        $linkParts = explode('/', $songLink);
+
+        echo '<dd>
+                <iframe src="https://open.spotify.com/embed/track/'.end($linkParts).'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </dd>';
+    }
+    else
+    {
+        echo '<dd><a href="$songLink">'.$songLink.'</a></dd>';
+    }
+
+}

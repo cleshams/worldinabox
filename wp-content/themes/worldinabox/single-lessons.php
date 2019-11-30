@@ -125,10 +125,23 @@ register_view($id);
                 
                     <dt class="text__med-title">Resources</dt>
                     <?php
-                    // foreach($resources as $resource)
-                    // {
-                    //     echo '<dd>'.$objective['objective'].'</dd>';
-                    // }
+                    foreach($resources as $resource)
+                    {
+                        $resourceType = $resource['resource_type'];
+                        switch ($resourceType) {
+                            case 'music':
+                                $source = $resource['source'];
+                                renderMusic($source, $resource);
+                                break;
+                            case 'video':
+                                break;
+                            case 'download':
+                                break;
+                            case 'web':
+                                break;
+                            ;
+                        }
+                    }
                     ?>
                 </dl>
             </div>
