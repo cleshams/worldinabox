@@ -60,7 +60,9 @@ elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
 }
 elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION)
 {
-	define('IS_PRODUCTION', true);
+    define('IS_LOCAL', false);
+    define('IS_STAGING', false);
+    define('IS_PRODUCTION', true);
 	define('DB_NAME', 'worldina_wiab_db');
 	define('DB_USER', 'worldina_wiab_db');
 	define('DB_PASSWORD', 'Kw2MT!6MF');
