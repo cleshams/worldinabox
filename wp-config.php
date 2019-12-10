@@ -32,7 +32,9 @@ define('ENV_PRODUCTION', 	'worldinabox.co');
 
 if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
 {	
-	define('IS_LOCAL', true);
+    define('IS_LOCAL', true);
+    define('IS_STAGING', false);
+    define('IS_PRODUCTION', false);
 	define('DB_NAME', 'worldinabox_local');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', 'root');
@@ -44,7 +46,9 @@ if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
 }
 elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
 {
-	define('IS_STAGING', true);
+    define('IS_STAGING', true);
+    define('IS_LOCAL', false);
+    define('IS_PRODUCTION', false);
 	define('DB_NAME', 'worldinabox-31303751eb');
 	define('DB_USER', 'worldinabox-31303751eb');
 	define('DB_PASSWORD', 'l7e28mt64w');
