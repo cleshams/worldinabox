@@ -10,43 +10,44 @@
 /************ */
 
 
-$unit = get_field('unit', $lessonId);
-$objectives = get_field('objectives', $lessonId);
-$title = get_the_title($lessonId);
-
-$unit = wp_get_post_terms($lessonId, 'unit');
-$unitID = $unit[0]->term_id;
+$unit =                 get_field('unit', $lessonId);
+$unit =                 wp_get_post_terms($lessonId, 'unit');
+$unitID =               $unit[0]->term_id;
+$objectives = preg_split('/\n|\r\n?/', $objectives);
 
 /* Creative Task */
-$creativeTaskFields = get_field('creative_task_group', $lessonId);
+$creativeTaskFields =   get_field('creative_task_group', $lessonId);
 
 /* Main Activity */
-$mainActivityFields = get_field('main_activity', $lessonId);
+$mainActivityFields =   get_field('main_activity', $lessonId);
 
-$introduction = get_field('introduction', $lessonId);
-$reflection = get_field('reflection', $lessonId);
+$introduction =         get_field('introduction', $lessonId);
+$introDuration =        get_field('introduction_duration', $lessonId);
+$reflection =           get_field('reflection', $lessonId);
+$reflectionDuration =   get_field('reflection_duration', $lessonId);
 
 /* Warmup Variables */
 
-$warmupTitle = get_the_title($selectedWarmup);
-$warmupResources = get_field('resources', $selectedWarmup);
-$warmupInstructions = get_field('instructions_simple', $selectedWarmup);
-$warmupDuration = get_field('duration', $selectedWarmup);
-$warmDown = get_field('warm_down', $selectedWarmup);
+$warmupTitle =          get_the_title($selectedWarmup);
+$warmupResources =      get_field('resources', $selectedWarmup);
+$warmupInstructions =   get_field('instructions_simple', $selectedWarmup);
+$warmupDuration =       get_field('duration', $selectedWarmup);
+$warmDown =             get_field('warm_down', $selectedWarmup);
+$warmDownDuration =     get_field('warm_down_duration', $selectedWarmup);
 
 /* Game Variables */
 
-$gameTitle = get_the_title($selectedGame);
-$gameInstructions = get_field('instructions_simple', $selectedGame);
-$gameDuration = get_field('duration', $selectedGame);
-$gameResources = get_field('resources', $selectedGame);
+$gameTitle =            get_the_title($selectedGame);
+$gameInstructions =     get_field('instructions_simple', $selectedGame);
+$gameDuration =         get_field('duration', $selectedGame);
+$gameResources =        get_field('resources', $selectedGame);
 
 /* Routine Variables */
 
-$followAlongTitle = get_the_title($followAlong);
-$followAlongContent = get_field('instructions_simple', $followAlong);
-$followAlongDuration = get_field('duration', $followAlong);
-$followAlongResource = get_field('video', $followAlong);
+$followAlongTitle =     get_the_title($followAlong);
+$followAlongContent =   get_field('instructions_simple', $followAlong);
+$followAlongDuration =  get_field('duration', $followAlong);
+$followAlongResource =  get_field('video', $followAlong);
 
 if(isset($counter))
 {
@@ -94,7 +95,7 @@ else
                     <?php
                     if(is_array($objectives)) : foreach($objectives as $objective)
                         {
-                            echo '<li>'.$objective['objective'].'</li>';
+                            echo '<li>'.$objective.'</li>';
                         }
                     endif;
                     ?>
@@ -113,7 +114,7 @@ else
             <th>Resources</th>
         </tr>
         <tr>
-            <td>5 mins</td>
+            <td><?php echo $introDuration; ?> mins</td>
             <td>Introduction</td>
             <td><?php echo $title; ?></td>
             <td><?php echo $introduction; ?></td>
@@ -155,14 +156,14 @@ else
             <td><?php echo $creativeTaskFields['resources']; ?></td>
         </tr>
         <tr>
-            <td>5 mins</td>
+            <td><?= $warmDownDuration; ?> mins</td>
             <td>Warm Down</td>
             <td><?php echo $warmupTitle; ?></td>
             <td><?php echo $warmDown; ?></td>
             <td><?php echo $warmupResources; ?></td>
         </tr>
         <tr class="bg__orange">
-            <td>5 mins</td>
+            <td><?= $reflectionDuration ?> mins</td>
             <td>Reflection</td>
             <td><?php echo $title; ?></td>
             <td><?php echo $reflection; ?></td>

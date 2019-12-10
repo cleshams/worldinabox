@@ -8,7 +8,11 @@ window.addEventListener('load', function()
 //
 function loadAll() {
     initModals();
-    toggleLessonNav()
+    toggleLessonNav();
+    if(document.querySelector('.page-template-page-lesson-plans'))
+    {
+        populatePDFTitle();
+    }
 }
 
 function initModals()
@@ -126,5 +130,17 @@ function toggleLessonNav()
             })
         })
     }
+}
+
+function populatePDFTitle() {
+    var lessonField = document.querySelector('#pdf-lesson');
+    var titleInput = document.querySelector('#pdf-title');
+
+    lessonField.addEventListener('change', function(e) {
+        if (titleInput.getAttribute('placeholder') || titleInput.value === '') {
+            let selectLesson = e.target.options[e.target.selectedIndex].text;
+            titleInput.value = selectLesson;
+        }
+    })
 }
 

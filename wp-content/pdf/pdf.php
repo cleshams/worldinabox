@@ -25,6 +25,13 @@ $lessonId = $_POST['pdf-lesson'];
 $selectedWarmup = $_POST['pdf-warmup'];
 $selectedGame = $_POST['pdf-game'];
 $followAlong = $_POST['pdf-routine'];
+$title = $_POST['pdf-title'];
+$objectives = $_POST['pdf-objectives'];
+
+if($title == '')
+{
+    $title =  get_the_title($lessonId);
+}
 
 
 $footerLogo = 'assets/images/movema-logo.svg';

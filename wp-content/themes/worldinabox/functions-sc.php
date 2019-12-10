@@ -358,3 +358,20 @@ function print_spotify_embed($songLink)
     }
 
 }
+
+
+/********************************************* */
+//Fetch lesson objectives
+/********************************************* */
+
+add_action( 'wp_ajax_nopriv_fetch_objectives', 'fetch_objectives' );
+add_action( 'wp_ajax_fetch_objectives', 'fetch_objectives' );
+
+function fetch_objectives() {
+    $data = $_POST['id'];
+
+    $objectives = get_field('objectives', $data);
+
+    echo wp_json_encode($objectives);
+    die();
+}

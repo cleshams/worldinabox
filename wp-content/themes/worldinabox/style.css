@@ -1497,6 +1497,22 @@ a:focus {
 .pdf-plan-form .btn-container {
   width: 100%;
 }
+.pdf-plan-form textarea, .pdf-plan-form input[type="text"] {
+  padding: 1rem;
+  margin: 0 1rem;
+  border: 1px solid #434a54;
+  line-height: 1.2;
+}
+.pdf-plan-form textarea:invalid, .pdf-plan-form input[type="text"]:invalid {
+  border-color: #a6a6a6;
+  color: #a6a6a6;
+}
+.pdf-plan-form textarea:focus, .pdf-plan-form input[type="text"]:focus {
+  border: 1px solid #f18500;
+}
+.pdf-plan-form input[type="text"] {
+  margin-bottom: auto;
+}
 
 body {
   font-size: 1.6rem;

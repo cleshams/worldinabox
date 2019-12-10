@@ -69,4 +69,25 @@
     {
         width: 100%;
     }
+    textarea, input[type="text"]
+    {
+        padding: 1rem;
+        margin: 0 1rem;
+        border: 1px solid $greyDark;
+        line-height: 1.2;
+
+        &:invalid
+        {
+            border-color: $greyMid;
+            color: $greyMid;
+        }
+        &:focus
+        {
+            border: 1px solid $orange;
+        }
+    }
+    input[type="text"]
+    {
+        margin-bottom: auto;
+    }
 }

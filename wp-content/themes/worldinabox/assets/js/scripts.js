@@ -101,6 +101,30 @@ jQuery(document).ready(function($){
             .next('.faq-answer')
             .slideToggle();
     });
+
+    $('#pdf-lesson').on('change', function(e)
+    {
+        var lessonId = e.target.options[e.target.selectedIndex].value;
+        console.log(lessonId);
+        $.ajax({
+            url:ajaxpagination.ajaxurl,
+            type:'post',
+            data: {
+                'id': lessonId,
+                action: 'fetch_objectives'
+            },
+            success: function(result) {
+                var jsonResult = JSON.parse(result);
+                console.log(jsonResult);
+                let output = '';
+                $.each(jsonResult, function(i,v) 
+                {
+                    output += v.objective += '\n';
+                });
+                $('#pdf-objectives').val(output);
+            }
+        });
+    });
   
 
 });

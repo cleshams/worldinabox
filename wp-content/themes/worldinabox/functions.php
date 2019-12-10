@@ -167,6 +167,9 @@ function remove_admin_bar() {
    		wp_register_style('lato', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700');
         wp_enqueue_style( 'lato');
 
+        wp_localize_script( 'scripts', 'ajaxpagination', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' )
+		));
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'cm_script_enqueuer' );

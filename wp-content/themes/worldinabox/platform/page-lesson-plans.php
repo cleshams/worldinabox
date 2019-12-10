@@ -56,7 +56,7 @@ while ( have_posts() ) : the_post();
         <h2 class="text__center">Select Content</h2>
         <form action="<?php echo HOME_URI; ?>/wp-content/pdf/pdf.php" method="post" class="pdf-plan-form display--flex display--flex-wrap">
             <div class="input-container">
-                <select required name="pdf-lesson">
+                <select required name="pdf-lesson" id="pdf-lesson">
                     <?php
                     if($lessonId === null)
                     {
@@ -85,7 +85,7 @@ while ( have_posts() ) : the_post();
                     }
                     ?>
                 </select>
-                <label>1. Lesson</label>
+                <label for="pdf-lesson">1. Lesson</label>
             </div>
             <div class="input-container">
                 <select required name="pdf-warmup">
@@ -102,7 +102,7 @@ while ( have_posts() ) : the_post();
                     }
                     ?>
                 </select>
-                <label>2. Warm Up</label>
+                <label for="pdf-warmup">2. Warm Up</label>
             </div>
 
             <div class="input-container">
@@ -120,7 +120,7 @@ while ( have_posts() ) : the_post();
                     }
                     ?>
                 </select>
-                <label>3. Active Games</label>
+                <label for="pdf-game">3. Active Games</label>
             </div>
 
             <div class="input-container">
@@ -138,7 +138,16 @@ while ( have_posts() ) : the_post();
                     }
                     ?>
                 </select>
-                <label>4. Follow Along Routine</label>
+                <label for="pdf-routine">4. Follow Along Routine</label>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="pdf-title" required name="pdf-title" placeholder="&nbsp;"/>
+                <label for="pdf-title">5. Lesson Title</label>
+            </div>
+            <div class="input-container">
+                <textarea id="pdf-objectives" required name="pdf-objectives" placeholder="&nbsp;" rows="5"></textarea>
+                <label for="pdf-title">6. Lesson Objectives</label>
             </div>
 
             <div class="btn-container">
