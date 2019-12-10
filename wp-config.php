@@ -60,7 +60,7 @@ elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION)
 	define('DB_NAME', 'worldina_wiab_db');
 	define('DB_USER', 'worldina_wiab_db');
 	define('DB_PASSWORD', 'Kw2MT!6MF');
-    define('DB_HOST', 'localhost');
+    define('DB_HOST', '10.169.0.247');
     define('DEBUG', false);
     define('DEBUG_LOG', false);
     define('DEBUG_DISPLAY', false);
