@@ -101,7 +101,7 @@ while ( have_posts() ) : the_post();
             card.classList.toggle('open');
             
             if (card.classList.contains('open')){
-                card.style.maxHeight = card.scrollHeight + "px";
+                card.style.maxHeight = (card.scrollHeight + 20) + "px";
             } else {
                 card.style.maxHeight = null;
             } 
@@ -109,8 +109,10 @@ while ( have_posts() ) : the_post();
     }
     window.onload = function() {
         var trigger = document.querySelector('.trigger-on-load');
-        trigger.classList.remove('trigger-on-load');
-        trigger.click();
+        if(trigger) {
+            trigger.classList.remove('trigger-on-load');
+            trigger.click();
+        }
     }
 </script>
 <?php
