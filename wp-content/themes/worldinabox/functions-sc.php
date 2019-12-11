@@ -326,11 +326,21 @@ function renderMusic($source, $resource)
             break;
         
         case 'soundcloud':
-            # code...
+            echo '
+                <a href="'.$resource['url'].'" class="resource-link" target="_blank">
+                <span class="icon">';
+                include('assets/images/icons/' . $source . '.php');
+                echo '</span>
+                <span>Soundcloud</span></a>';
             break;
         
         case 'youtube':
-            # code...
+            echo '
+            <a href="'.$resource['url'].'" class="resource-link" target="_blank">
+            <span class="icon">';
+            include('assets/images/icons/' . $source . '.php');
+            echo '</span>
+            <span>Youtube</span></a>';
             break;
         
         default:

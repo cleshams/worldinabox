@@ -123,8 +123,11 @@ register_view($id);
                     }
                     ?>
                 
+                <?php
+                if(is_array($resources) && count($resources) > 0) : ?>
                     <dt class="text__med-title">Resources</dt>
                     <?php
+                    
                     foreach($resources as $resource)
                     {
                         $resourceType = $resource['resource_type'];
@@ -134,15 +137,39 @@ register_view($id);
                                 renderMusic($source, $resource);
                                 break;
                             case 'video':
+                                echo '
+                                <dd><a href="'.$resource['url'].'" class="resource-link" target="_blank">
+                                <span class="icon">';
+                                include('assets/images/icons/youtube.php');
+                                echo '</span>
+                                <span>Video</span></a></dd>';
                                 break;
                             case 'download':
+                                $file = $resource['file'];
+                                echo '
+                                <dd><a href="'.$file['url'].'" class="resource-link" download>
+                                    <span class="icon">';
+                                    include('assets/images/icons/download.php');
+                                    echo '</span>
+                                    <span>'.$file['title'] . '</span>
+                                </a></dd>';
                                 break;
                             case 'web':
+                                $link = $resource['url'];
+                                echo '
+                                <dd><a href="'.$link.'" target="_blank" class="resource-link">
+                                    <span class="icon">';
+                                        include('assets/images/icons/web.php');
+                                    echo '</span>
+                                    <span>' . $link . '</span>
+                                </a></dd>';
                                 break;
                             ;
                         }
                     }
+                endif;
                     ?>
+                    
                 </dl>
             </div>
         </div>
