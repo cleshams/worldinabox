@@ -56,7 +56,7 @@ echo '
             <ul class="flex-third">
                 <li><a href="/dashboard/warm-ups" class="btn btn--medium bg__purple">Warm-Ups</a></li>
                 <li><a href="/dashboard/games" class="btn btn--medium">Active Games</a></li>
-                <li><a href="/dashboard/routines" class="btn btn--medium bg__blue">Follow Along Dance Routines</a></li>
+                <li><a href="/dashboard/follow-along-dance-routines/" class="btn btn--medium bg__blue">Follow Along Dance Routines</a></li>
             </ul>
         </div>
     </section>
