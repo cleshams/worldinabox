@@ -47,6 +47,7 @@ while ( have_posts() ) : the_post();
             $content = get_field('contet', $id);
             $video = get_field('video', $id);
             $placeholder = get_field('placeholder', $id);
+            $music = get_field('music_items', $id);
             // $steps = get_field('instructions', $id);
 
               echo '
@@ -57,7 +58,9 @@ while ( have_posts() ) : the_post();
                 </button>
                 <div class="warmup-content display--flex">
                     <div>
-                        '.$content.'
+                        '.$content;
+                        renderMusicFields($music);
+                    echo '
                     </div>
                     <div class="video-trigger-container">
                         <span class="text__med-title">Video</span>

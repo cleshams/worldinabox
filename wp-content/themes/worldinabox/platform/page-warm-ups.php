@@ -40,6 +40,7 @@ while ( have_posts() ) : the_post();
             $video = get_field('video', $id);
             $placeholder = get_field('placeholder', $id);
             $steps = get_field('instructions', $id);
+            $music = get_field('music_items', $id);
 
               echo '
               <li>
@@ -55,8 +56,9 @@ while ( have_posts() ) : the_post();
                         {
                             echo '<li>'.$step['instruction'].'</li>';
                         }
-                    echo '
-                    </div>
+                        echo '</ul>';
+                        renderMusicFields($music);
+                    echo '</div>
                     <div class="video-trigger-container">
                         <span class="text__sub-title">Video</span>
                         <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">

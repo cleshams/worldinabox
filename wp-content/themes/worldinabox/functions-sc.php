@@ -385,3 +385,41 @@ function fetch_objectives() {
     echo wp_json_encode($objectives);
     die();
 }
+
+
+
+/********************************************* */
+//Render Music Field Group
+/********************************************* */
+
+function renderMusicFields($music) {
+    foreach($music as $musicItem) :
+        switch ($musicItem['link_type']) {
+            case 'spotify':
+                $songlink = $musicItem['link'];
+                print_spotify_embed($songlink);
+                break;
+
+            case 'file' :
+                $file = $musicItem['file'];
+                $title = $musicItem['title'];
+                echo '<a href="'.$file['url'].'" download class="resource-link">
+                    <span class="icon">';
+                    include('assets/images/icons/' . $musicItem['link_type'] . '.php');
+                    echo '</span>
+                    <span>' . $title .'</span>
+                </a>';
+                break;
+            
+            default: 
+                $link = $musicItem['link'];
+                $title = $musicItem['title'];
+                echo '<a href="' . $link . '" class="resource-link">
+                    <span class="icon">'; include('assets/images/icons/' . $musicItem['link_type'] . '.php');
+                    echo '</span>
+                    <span>' . $title .'</span>
+                </a>';
+                break;
+        }
+    endforeach;
+}

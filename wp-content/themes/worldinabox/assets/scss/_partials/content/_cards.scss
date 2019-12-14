@@ -108,6 +108,11 @@
         {
             opacity: 0;
             transition: 0.15s cubic-bezier(.5, 0, 0, 1);
+
+            .icon svg
+            {
+                fill: #fff;
+            }
         }
 
         &.open
@@ -178,6 +183,15 @@
         &:nth-child(5n - 2)
         {
             background-color: $orange;
+
+            .resource-link:hover,.resource-link:focus 
+            {
+                color: $blue;
+                svg
+                {
+                    fill: $blue;
+                }
+            }
         }
         
         

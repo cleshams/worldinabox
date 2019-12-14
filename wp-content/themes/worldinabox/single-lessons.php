@@ -58,7 +58,7 @@ register_view($id);
                 <?php echo $intro; ?>
 
                 <div class="new-moves">
-                    <h2 class="text__big-title">Learn 3 moves from the video</h2>
+                    <h2 class="text__big-title">Learn <?= count($new_moves); ?> moves from the video</h2>
                     <div>
                         <ul>
                             <?php foreach($new_moves as $new_moves)

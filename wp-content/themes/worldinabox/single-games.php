@@ -3,8 +3,7 @@ get_template_part('platform/partials', 'header');
 the_post();
 
 $title = get_the_title();
-$music = get_field('music');
-$musicType = $music['link_type'];
+$music = get_field('music_items');
 $themeColour = get_field('theme_colour');
 $intro = get_field('intro');
 $instructions = get_field('instructions');
@@ -22,7 +21,7 @@ register_view($id);
             <?php
             echo '<a href="'.HOME_URI.'/dashboard">Dashboard</a>';
             echo ' > ';
-            echo '<a href="'.HOME_URI.'/dashboard/games">Active Games</a>';
+            echo '<a href="'.HOME_URI.'/dashboard/active-games">Active Games</a>';
             echo ' > ';
             echo '<span>'.$title.'</span>'; ?>
         </div>
@@ -37,31 +36,8 @@ register_view($id);
 
                 <h2 class="text__big-title">Music</h2>
                 <?php 
-                    switch ($musicType) {
-                        case 'spotify':
-                            $songlink = $music['link'];
-                            print_spotify_embed($songlink);
-                            break;
-
-                        case 'file' :
-                            $file = $music['file'];
-                            $title = $music['title'];
-                            echo '<a href="'.$file['url'].'" download>
-                                <span class="icon">';
-                                include('assets/images/icons/' . $musicType . '.php');
-                                echo '</span>
-                                <span>' . $title .'</span>
-                            </a>';
-                        
-                        default:
-                            
-                            break;
-                    }
+                renderMusicFields($music);
                 ?>
-                <a href="" class="resource-link">
-                    <span class="icon"><?php include('assets/images/icons/' . $musicType . '.php'); ?></span>
-                    <span><?php echo $music['title']; ?></span>
-                </a>
 
                 <div class="new-moves">
                     <h2 class="text__big-title">The Game</h2>

@@ -7,9 +7,11 @@ get_template_part('platform/partials', 'header');
 
 $searchTerm = $_GET['search'];
 
-$results = new WP_Query(array(
+
+$results1 = new WP_Query(array(
     'posts_per_page' => -1,
     's' => $searchTerm,
+    'post_type' => array('lesson', 'followalongs', 'games', 'warmups'),
     'meta_query' => array(
         array(
         'key' => 'keywords',
@@ -19,13 +21,19 @@ $results = new WP_Query(array(
     )
 ));
 
+$results2 = new WP_Query(array(
+    'posts_per_page' => -1,
+    'post_type' => array('lesson', 'followalongs', 'games', 'warmups'),
+    'tag' => strtolower($searchTerm),
+));
+
 $lessons = array();
 $games = array();
 $followalongs = array();
 $warmups = array();
 
 
-foreach($results->posts as $post)
+foreach($results1->posts as $post)
 {
     if($post->post_type == 'lessons')
     {
@@ -43,7 +51,25 @@ foreach($results->posts as $post)
     {
         $warmups[] = $post;
     }
-
+}
+foreach($results2->posts as $post)
+{
+    if($post->post_type == 'lessons')
+    {
+        $lessons[] = $post;
+    }
+    if($post->post_type == 'games')
+    {
+        $games[] = $post;
+    }
+    if($post->post_type == 'followalongs')
+    {
+        $followalongs[] = $post;
+    }
+    if($post->post_type == 'warmups')
+    {
+        $warmups[] = $post;
+    }
 }
 ?>
 
