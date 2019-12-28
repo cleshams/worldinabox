@@ -19,7 +19,6 @@ function register_custom_post_types()
         'not_found' => 'No Lessons Found',
         'not_found_in_trash' => 'No Lessons Found in Trash',
         
-        
      );
     
     // Define post type arguments
@@ -32,7 +31,8 @@ function register_custom_post_types()
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
         'menu_icon'=> 'dashicons-welcome-widgets-menus',
-        'rewrite' => array('slug' => 'dashboard/lessons')
+        'rewrite' => array('slug' => 'dashboard/lessons'),
+        'taxonomies' => array('post_tag')
     );
     
     register_post_type( 'Lessons', $lesson_args );
@@ -62,7 +62,8 @@ function register_custom_post_types()
         'capability_type' => 'post',
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
-        'menu_icon'=> 'dashicons-plus-alt'
+        'menu_icon'=> 'dashicons-plus-alt',
+        'taxonomies' => array('post_tag')
     );
         
     register_post_type( 'Warm Ups', $warmup_args );
@@ -93,7 +94,8 @@ function register_custom_post_types()
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
         'menu_icon'=> 'dashicons-groups',
-        'rewrite' => array('slug' => 'dashboard/games')
+        'rewrite' => array('slug' => 'dashboard/games'),
+        'taxonomies' => array('post_tag')
     );
         
     register_post_type( 'Games', $games_args );
@@ -124,7 +126,8 @@ function register_custom_post_types()
         'capability_type' => 'post',
         'supports' => array( 'title', 'editor', ),
         'has_archive' => true,
-        'menu_icon'=> 'dashicons-visibility'
+        'menu_icon'=> 'dashicons-visibility',
+        'taxonomies' => array('post_tag')
     );
         
     register_post_type( 'Follow Alongs', $follow_along_args );

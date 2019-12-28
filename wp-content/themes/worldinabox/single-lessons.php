@@ -63,7 +63,8 @@ register_view($id);
                         <ul>
                             <?php foreach($new_moves as $new_moves)
                             {
-                                echo '<li>'.$new_moves['move'].'</li>';
+                                $link = $new_moves['video'];
+                                echo '<li><button class="trigger-single-video trigger-video" data-src="'.$link.'">'.$new_moves['move'].'</button></li>';
                             }
                             ?>
                         </ul>
@@ -71,7 +72,7 @@ register_view($id);
                         if($video)
                         {
                             echo '
-                            <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
+                            <button class="trigger-video trigger-video-full" title="Play '.$title.' video" data-src="'.$video.'">
                                 <img src="'.$placeholder['url'].'" alt="trigger '.$title.' video"/>
                             </button>  ';
                         }

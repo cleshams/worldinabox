@@ -62,12 +62,13 @@
 
 .new-moves
 {
-    ul
+    ul, ul button
     {   
         font-weight: bold;
         color: $purple;
         font-size: 17px;
         margin-bottom: 0px;
+        cursor: pointer;
     }
 
     > div
@@ -76,7 +77,7 @@
         justify-content: space-between;
         align-items: center;
 
-        .trigger-video
+        .trigger-video-full
         {
             width:37.5%;
             margin: auto 2rem;
