@@ -6,15 +6,27 @@ get_template_part('platform/partials', 'header');
 <?php
 
 $unit = get_queried_object();
+$number = get_field('unit_number', 'unit_' . $unit->term_id);
+
+if(!in_array($unit->slug, array_keys($_SESSION['memberships']))) : 
+    $requiredMembership = get_page_by_path($unit->slug, OBJECT, 'wc_membership_plan');
+    $productIds = get_post_meta($requiredMembership->ID, '_product_ids')[0];
+    $url = get_the_permalink($productIds[0]); ?>
+
+    <section class="notice notice-no-membership">
+        <p>You do not have access to these lessons. You may purchase Unit <?php echo $number;?> to get access or go back to the dashboard.</p>
+        <a href="<?php echo HOME_URI . '/dashboard'; ?>" >Back to Dashboard</a>
+        <a href="<?php echo $url;?>">Purchase Unit <?php echo $number .': ' . $unit->name;?></a>
+    </section>
+<?php
+else :
 
 $logo = get_field('unit_logo', 'unit_'.$unit->term_id);
-$number = get_field('unit_number', 'unit_' . $unit->term_id);
 $title = $unit->name;
 $description = $unit->description;
 
 echo '
     <section class="unit-information container container--inner ">
-        
         
         <div class="display--flex unit-info display--two-gapped">
             <div>
@@ -61,7 +73,10 @@ echo '
         </div>
     </section>
 
+<?php endif; ?>
+
 </main>
+
 <?php
 get_template_part('platform/partials', 'footer');
 ?>

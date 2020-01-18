@@ -4,6 +4,14 @@ if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_t
 {
     wp_redirect('/my-account');
 }
+$memberships = wc_memberships_get_user_active_memberships(get_current_user_id());
+
+foreach($memberships as $membership)
+{
+
+    $slug = $membership->plan->slug;
+    $_SESSION['memberships'][$slug] = $membership->plan_id;
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -42,9 +50,10 @@ if(!wc_memberships_user_can(get_current_user_id(), 'view', array('post' => get_t
                                     {
                                         $title = $unit->name;
                                         $slug = $unit->slug;
+                                        $validClass = (in_array($slug, array_keys($_SESSION['memberships']))) ? '' : ' class="invalid"';
                                         $number = get_field('unit_number', 'unit_' . $unit->term_id);
 
-                                        echo '<li>
+                                        echo '<li'.$validClass.'>
                                             <a href="'.HOME_URI.'/dashboard/unit-'.$slug.'" class="nav__link">Unit '.$number.'</a>
                                             </li>';
                                     }

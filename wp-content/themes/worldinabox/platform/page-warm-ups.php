@@ -32,41 +32,52 @@ while ( have_posts() ) : the_post();
         echo '<ul class="warm-ups">';
         foreach($warmUps as $warmUp)
         {
-            $title = $warmUp->post_title;
-            $slug = $warmUp->post_name;
-            $class = ($slug == $linked) ?'class="trigger-on-load"' : '';
             $id = $warmUp->ID;
-            $intro = get_field('intro', $id);
-            $video = get_field('video', $id);
-            $placeholder = get_field('placeholder', $id);
-            $steps = get_field('instructions', $id);
-            $music = get_field('music_items', $id);
+            $units = wp_get_post_terms($id, 'unit');
+            $proceed = false;
+            foreach($units as $unit)
+            {
+                if(in_array($unit->slug, array_keys($_SESSION['memberships']))) { $proceed = true;} 
+            }
+            
+            if($proceed)
+            {
+                $title = $warmUp->post_title;
+                $slug = $warmUp->post_name;
+                $class = ($slug == $linked) ?'class="trigger-on-load"' : '';
+                
+                $intro = get_field('intro', $id);
+                $video = get_field('video', $id);
+                $placeholder = get_field('placeholder', $id);
+                $steps = get_field('instructions', $id);
+                $music = get_field('music_items', $id);
 
-              echo '
-              <li>
-                <button '.$class.'>
-                    <span class="text__sub-title">Theme: </span>
-                    <h2>'.$title.'</h2>
-                </button>
-                <div class="warmup-content display--flex">
-                    <div>
-                        '.$intro.'
-                        <ul>';
-                        foreach ($steps as $step)
-                        {
-                            echo '<li>'.$step['instruction'].'</li>';
-                        }
-                        echo '</ul>';
-                        renderMusicFields($music);
-                    echo '</div>
-                    <div class="video-trigger-container">
-                        <span class="text__sub-title">Video</span>
-                        <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
-                            <img src="'.$placeholder['url'].'" alt=""/>
-                        </button>  
+                echo '
+                <li>
+                    <button '.$class.'>
+                        <span class="text__sub-title">Theme: </span>
+                        <h2>'.$title.'</h2>
+                    </button>
+                    <div class="warmup-content display--flex">
+                        <div>
+                            '.$intro.'
+                            <ul>';
+                            foreach ($steps as $step)
+                            {
+                                echo '<li>'.$step['instruction'].'</li>';
+                            }
+                            echo '</ul>';
+                            renderMusicFields($music);
+                        echo '</div>
+                        <div class="video-trigger-container">
+                            <span class="text__sub-title">Video</span>
+                            <button class="trigger-video" title="Play '.$title.' video" data-src="'.$video.'">
+                                <img src="'.$placeholder['url'].'" alt=""/>
+                            </button>  
+                        </div>
                     </div>
-                </div>
-            </li>';
+                </li>';
+            }
         }
         echo '</ul>';
         wp_reset_query();

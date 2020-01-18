@@ -4,11 +4,29 @@ the_post();
 
 $id = get_the_ID();
 
-$unit = get_field('unit');
-$duration = get_field('duration');
-$objectives = get_field('objectives');
-$title = get_the_title();
-$lessonNum = get_field('lesson_number');
+$unit = wp_get_post_terms($id, 'unit');
+$unitID = $unit[0]->term_id;
+$unitNumber = get_field('unit_number','unit_'.$unitID);
+$logo = get_field('unit_logo', 'unit_'.$unitID);
+$unitColour = get_field('colour', 'unit_'.$unitID);
+
+if(!in_array($unit[0]->slug, array_keys($_SESSION['memberships']))) : 
+    $requiredMembership = get_page_by_path($unit[0]->slug, OBJECT, 'wc_membership_plan');
+    $productIds = get_post_meta($requiredMembership->ID, '_product_ids')[0];
+    $url = get_the_permalink($productIds[0]); ?>
+    <main>
+        <section class="notice notice-no-membership container container--inner">
+            <h3 class="text__title">Lesson not available</h3>
+            <p>You do not have access to this lesson with your existing membership. You may purchase Unit <?php echo $unitNumber;?> to get access to this lesson and the rest of the unit content, or go back to the dashboard.</p>
+            <div class="flex-links">
+                <a href="<?php echo HOME_URI . '/dashboard'; ?>" class="text__sub-title">Back to Dashboard</a>
+                <a href="<?php echo $url;?>" class="text__sub-title">Purchase Unit <?php echo $unitNumber .': ' . $unit[0]->name;?></a>
+            </div>
+        </section>
+    </main>
+
+<?php
+else :
 
 $intro = get_field('overview');
 $new_moves = get_field('new_moves');
@@ -19,11 +37,12 @@ $resources = get_field('resources');
 $additional_content = get_field('additional_content');
 $popout = get_field('popout_message');
 
-$unit = wp_get_post_terms($id, 'unit');
-$unitID = $unit[0]->term_id;
-$unitNumber = get_field('unit_number','unit_'.$unitID);
-$logo = get_field('unit_logo', 'unit_'.$unitID);
-$unitColour = get_field('colour', 'unit_'.$unitID);
+
+$duration = get_field('duration');
+$objectives = get_field('objectives');
+$title = get_the_title();
+$lessonNum = get_field('lesson_number');
+
 
 register_view($id);
 ?>
@@ -192,5 +211,6 @@ register_view($id);
 
 </main>
 <?php 
+endif;
 get_template_part('platform/partials', 'footer');
 ?>

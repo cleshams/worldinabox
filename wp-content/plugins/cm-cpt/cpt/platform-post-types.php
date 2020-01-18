@@ -163,7 +163,7 @@ function create_taxonomies()
         'rewrite'           => array('slug' => 'dashboard/unit-')
     );
 
-    register_taxonomy( 'unit', array( 'lessons' ), $unit_args );   
+    register_taxonomy( 'unit', array( 'lessons', 'games', 'followalongs', 'warmups' ), $unit_args );   
 
     add_rewrite_rule('^dashboard/unit-(.*)/?','index.php?unit=$matches[1]','top');   
 

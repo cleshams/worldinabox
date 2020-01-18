@@ -16,23 +16,33 @@ while ( have_posts() ) : the_post();
             <h1 class="text__center">Active Games</h1>
             <?php the_content(); ?>
             
-        <?php $warmUps = get_posts(array(
+        <?php $games = get_posts(array(
             'post_type' => 'games',
             'posts_per_page' => -1
           ));
 
         echo '<ul class="active-games flex-third lesson-list">';
-        foreach($warmUps as $warmUp)
+        foreach($games as $game)
         {
-            $title = $warmUp->post_title;
-            $link = get_the_permalink($warmUp);
-            echo '
-            <li class="lesson--shape">
-                <a href="'.$link.'">
-                    <span class="text__sub-title">Theme:</span>
-                    <h3>'.$title.'</h3>
-                </a>
-            </li>';
+            $id = $game->ID;
+            $units = wp_get_post_terms($id, 'unit');
+            $proceed = false;
+            foreach($units as $unit)
+            {
+                if(in_array($unit->slug, array_keys($_SESSION['memberships']))) { $proceed = true;} 
+            }
+            if($proceed)
+            {
+                $title = $game->post_title;
+                $link = get_the_permalink($game);
+                echo '
+                <li class="lesson--shape">
+                    <a href="'.$link.'">
+                        <span class="text__sub-title">Theme:</span>
+                        <h3>'.$title.'</h3>
+                    </a>
+                </li>';
+            }
         }
         echo '</ul>';
         wp_reset_query();

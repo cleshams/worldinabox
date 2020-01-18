@@ -26,14 +26,30 @@ while ( have_posts() ) : the_post();
                 $backgroundImage = get_field('background_image', 'unit_'.$unit->term_id);
                 $number = get_field('unit_number', 'unit_' . $unit->term_id);
 
-                echo '<li class="lesson-link card card__image-bg card__colour-overlay" style="background-image:url('.$backgroundImage['url'].');">';
-                    echo '<div class="overlay" style=" background-color: rgb('.$color.');"></div>';
-                    echo '<div class="inner">';
-                        echo '<p class="text__sub-title">Unit '.$number.'</p>';
-                        echo '<h2><a href="/dashboard/unit-'.$slug.'">'.$title.'</a></h2>';
-                        echo '<span class="btn--bordered-white btn btn--small">Lessons </span>';
-                    echo '</div>';
-                echo '</li>';
+                $valid = (in_array($slug, array_keys($_SESSION['memberships']))) ? true : false;
+                if($valid) :
+                    echo '<li class="lesson-link card card__image-bg card__colour-overlay" style="background-image:url('.$backgroundImage['url'].');">';
+                        echo '<div class="overlay" style=" background-color: rgb('.$color.');"></div>';
+                        echo '<div class="inner">';
+                            echo '<p class="text__sub-title">Unit '.$number.'</p>';
+                            echo '<h2><a href="/dashboard/unit-'.$slug.'">'.$title.'</a></h2>';
+                            echo '<span class="btn--bordered-white btn btn--small">Lessons </span>';
+                        echo '</div>';
+                    echo '</li>';
+                else :
+                    $requiredMembership = get_page_by_path($slug, OBJECT, 'wc_membership_plan');
+                    $productIds = get_post_meta($requiredMembership->ID, '_product_ids')[0];
+                    $url = get_the_permalink($productIds[0]);
+                    echo '<li class="lesson-link card card__image-bg card__colour-overlay" style="background-image:url('.$backgroundImage['url'].');">';
+                        echo '<div class="overlay" style=" background-color: rgb('.$color.');"></div>';
+                        echo '<div class="inner">';
+                            echo '<p class="text__sub-title">Unit '.$number.'</p>';
+                            echo '<h2><a href="'.$url.'" target="_blank">'.$title.'</a></h2>';
+                            echo '<span class="btn--bordered-white btn btn--small">Purchase Unit '.$number.'</span>';
+                        echo '</div>';
+                    echo '</li>';
+                    
+                endif;
             }
             ?>
             </ul>

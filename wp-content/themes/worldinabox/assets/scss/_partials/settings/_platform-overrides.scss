@@ -237,6 +237,12 @@
                 color: $yellow;
             }
         }
+
+        .invalid
+        {
+            pointer-events: none;
+            opacity: 0.7;
+        }
     }
 
     @media all and (max-width:959px)
@@ -489,4 +495,51 @@
             }
         }
     }
+}
+
+.notice
+{
+    &-no-membership
+    {
+        padding: 2rem;
+        background: $orange;
+        color: #fff;
+        margin: 4rem auto;
+        border-radius: 8px;
+        text-align: center;
+
+        p
+        {
+            font-size: 18px;
+            text-align: center;
+        }
+        .flex-links
+        {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+        a
+        {
+            font-size: 18px;
+
+            &:first-of-type
+            {
+                margin-right: auto;
+            }
+            &:last-of-type
+            {
+                margin-left: auto;
+            }
+            &:hover, &:focus
+            {
+                color: $blue;
+            }
+            &:after{
+                content: '>';
+                margin-left: 5px;
+            }
+        }
+    }
+    
 }
