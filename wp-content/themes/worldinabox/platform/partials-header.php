@@ -50,7 +50,7 @@ foreach($memberships as $membership)
                                     {
                                         $title = $unit->name;
                                         $slug = $unit->slug;
-                                        $validClass = (in_array($slug, array_keys($_SESSION['memberships']))) ? '' : ' class="invalid"';
+                                        $validClass = (in_array($slug, array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full', array_keys($_SESSION['memberships']))) ? '' : ' class="invalid"';
                                         $number = get_field('unit_number', 'unit_' . $unit->term_id);
 
                                         echo '<li'.$validClass.'>

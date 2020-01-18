@@ -8,7 +8,7 @@ get_template_part('platform/partials', 'header');
 $unit = get_queried_object();
 $number = get_field('unit_number', 'unit_' . $unit->term_id);
 
-if(!in_array($unit->slug, array_keys($_SESSION['memberships']))) : 
+if(!in_array($unit->slug, array_keys($_SESSION['memberships'])) && !in_array('world-in-a-box-full', array_keys($_SESSION['memberships']))) : 
     $requiredMembership = get_page_by_path($unit->slug, OBJECT, 'wc_membership_plan');
     $productIds = get_post_meta($requiredMembership->ID, '_product_ids')[0];
     $url = get_the_permalink($productIds[0]); ?>
