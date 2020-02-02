@@ -393,6 +393,7 @@ function fetch_objectives() {
 /********************************************* */
 
 function renderMusicFields($music) {
+    if(is_array($music) && count($music) > 0)
     foreach($music as $musicItem) :
         switch ($musicItem['link_type']) {
             case 'spotify':
@@ -422,4 +423,21 @@ function renderMusicFields($music) {
                 break;
         }
     endforeach;
+}
+
+/*
+* Covert dropbox share link to download link
+*/
+
+function returnDropboxEmbed($videoURL)
+{
+    if(strpos($videoURL, 'dl=0'))
+    {
+       $videoURL =  str_replace('?dl=0', '?raw=1', $videoURL);
+    }
+    else
+    {
+        //there is an issue...
+    }
+    return $videoURL;
 }

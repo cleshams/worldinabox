@@ -56,6 +56,10 @@ while ( have_posts() ) : the_post();
                 $class = ($slug == $linked) ?'class="trigger-on-load"' : '';
                 $content = get_field('contet', $id);
                 $video = get_field('video', $id);
+                if(strpos($video, 'dropbox'))
+                {
+                    $video = returnDropboxEmbed($video);
+                }
                 $placeholder = get_field('placeholder', $id);
                 $music = get_field('music_items', $id);
                 // $steps = get_field('instructions', $id);
@@ -88,6 +92,7 @@ while ( have_posts() ) : the_post();
         ?>
 
         </div>
+        
     </section>
 
     <section class="section__additional-links">

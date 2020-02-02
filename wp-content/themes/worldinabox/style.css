@@ -2114,6 +2114,7 @@ select[multiple] {
 }
 .warm-ups > li img {
   max-width: 100%;
+  pointer-events: none;
 }
 .warm-ups > li ul {
   list-style: disc;
