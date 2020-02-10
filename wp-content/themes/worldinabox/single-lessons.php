@@ -31,6 +31,10 @@ else :
 $intro = get_field('overview');
 $new_moves = get_field('new_moves');
 $video = get_field('video');
+if(strpos($video, 'dropbox'))
+{
+    $video = returnDropboxEmbed($video);
+}
 $placeholder = get_field(('video_placeholder'));
 $creative_task = get_field('creative_task');
 $resources = get_field('resources');

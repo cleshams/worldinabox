@@ -48,6 +48,10 @@ while ( have_posts() ) : the_post();
                 
                 $intro = get_field('intro', $id);
                 $video = get_field('video', $id);
+                if(strpos($video, 'dropbox'))
+                {
+                    $video = returnDropboxEmbed($video);
+                }
                 $placeholder = get_field('placeholder', $id);
                 $steps = get_field('instructions', $id);
                 $music = get_field('music_items', $id);
