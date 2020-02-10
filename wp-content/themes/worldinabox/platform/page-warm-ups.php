@@ -53,6 +53,10 @@ while ( have_posts() ) : the_post();
                     $video = returnDropboxEmbed($video);
                 }
                 $placeholder = get_field('placeholder', $id);
+                if($placeholder == '' || $placeholder == false)
+                {
+                    $placeholder['url'] = THEME_URI . '/assets/images/placeholder.png';
+                }
                 $steps = get_field('instructions', $id);
                 $music = get_field('music_items', $id);
 
