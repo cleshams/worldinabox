@@ -35,7 +35,11 @@ if(strpos($video, 'dropbox'))
 {
     $video = returnDropboxEmbed($video);
 }
-$placeholder = get_field(('video_placeholder'));
+$placeholder = get_field('video_placeholder');
+if($placeholder == '' || $placeholder == false)
+{
+    $placeholder['url'] = THEME_URI . '/assets/images/placeholder.png';
+}
 $creative_task = get_field('creative_task');
 $resources = get_field('resources');
 $additional_content = get_field('additional_content');
