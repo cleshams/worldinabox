@@ -87,6 +87,10 @@ register_view($id);
                             <?php foreach($new_moves as $new_moves)
                             {
                                 $link = $new_moves['video'];
+                                if(strpos($link, 'dropbox'))
+                                {
+                                    $link = returnDropboxEmbed($link);
+                                }
                                 echo '<li><button class="trigger-single-video trigger-video" data-src="'.$link.'">'.$new_moves['move'].'</button></li>';
                             }
                             ?>
