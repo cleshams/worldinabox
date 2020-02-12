@@ -219,3 +219,21 @@
     font-size: 20px;
     min-width: 300px;
 }
+
+.intro-video-button
+{
+    padding: 6px 10px;
+    background-color: $platformPink;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-family: $fontPrimary;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover,
+    &:focus
+    {
+        background: $orange;
+        color: white;
+    }
+}

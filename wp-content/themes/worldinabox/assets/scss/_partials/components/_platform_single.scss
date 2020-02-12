@@ -69,6 +69,41 @@
         font-size: 17px;
         margin-bottom: 0px;
         cursor: pointer;
+        background: none;
+        text-align: left;
+    }
+    ul
+    {
+        margin: 1rem 0 1rem 30px;
+    }
+    ul li:hover
+    {
+        color: $orange;
+    }
+
+    ul button
+    {
+        &:after
+        {
+            transition: opacity 0.3s ease-in-out, transform 0.35s ease-out 0.27s;
+            content: ">";
+            margin-left: 5px;
+            color: $orange;
+            opacity: 0;
+            transform: translateX(-7px);
+        }
+    }
+
+    ul button:hover,
+    ul button:focus
+    {
+        color: $orange;
+
+        &::after
+        {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     > div
@@ -76,11 +111,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
         .trigger-video-full
         {
             width:37.5%;
             margin: auto 2rem;
+            min-width: 160px;
 
             img
             {

@@ -2495,6 +2495,21 @@ select[multiple] {
   min-width: 300px;
 }
 
+.intro-video-button {
+  padding: 6px 10px;
+  background-color: #d95ca0;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-family: "Londrina Solid", cursive;
+  font-size: 20px;
+  cursor: pointer;
+}
+.intro-video-button:hover, .intro-video-button:focus {
+  background: #f18500;
+  color: white;
+}
+
 .single-lessons .lesson-main-content, .single-games .lesson-main-content {
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
@@ -2541,6 +2556,36 @@ select[multiple] {
   font-size: 17px;
   margin-bottom: 0px;
   cursor: pointer;
+  background: none;
+  text-align: left;
+}
+.new-moves ul {
+  margin: 1rem 0 1rem 30px;
+}
+.new-moves ul li:hover {
+  color: #f18500;
+}
+.new-moves ul button:after {
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-out 0.27s;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-out 0.27s;
+  transition: opacity 0.3s ease-in-out, transform 0.35s ease-out 0.27s;
+  transition: opacity 0.3s ease-in-out, transform 0.35s ease-out 0.27s, -webkit-transform 0.35s ease-out 0.27s;
+  content: ">";
+  margin-left: 5px;
+  color: #f18500;
+  opacity: 0;
+  -webkit-transform: translateX(-7px);
+          transform: translateX(-7px);
+}
+.new-moves ul button:hover,
+.new-moves ul button:focus {
+  color: #f18500;
+}
+.new-moves ul button:hover::after,
+.new-moves ul button:focus::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 .new-moves > div {
   display: -webkit-box;
@@ -2552,10 +2597,13 @@ select[multiple] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .new-moves > div .trigger-video-full {
   width: 37.5%;
   margin: auto 2rem;
+  min-width: 160px;
 }
 .new-moves > div .trigger-video-full img {
   max-width: 100%;
@@ -2927,10 +2975,10 @@ img.footer-logo__img {
 .trigger-video-full::after {
   content: "";
   border-radius: 50%;
-  border: 10px solid #d95ca0;
+  border: 10px solid #e6007d;
   width: 40px;
   height: 40px;
-  background-color: #d95ca0;
+  background-color: #e6007d;
   background-image: url("assets/images/icons/play.svg");
   background-position: center;
   background-repeat: no-repeat;

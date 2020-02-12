@@ -35,6 +35,12 @@ if(strpos($video, 'dropbox'))
 {
     $video = returnDropboxEmbed($video);
 }
+$introVideo = get_field('intro_video');
+if(strpos($introVideo, 'dropbox'))
+{
+    $introVideo = returnDropboxEmbed($introVideo);
+}
+
 $placeholder = get_field('video_placeholder');
 if($placeholder == '' || $placeholder == false)
 {
@@ -85,7 +91,12 @@ register_view($id);
                 <?php echo $intro; ?>
 
                 <div class="new-moves">
-                    <h2 class="text__big-title">Learn <?= count($new_moves); ?> moves from the video</h2>
+                    <h2 class="text__big-title">Learn <?= count($new_moves); ?> moves from the videos</h2>
+                    <?php if($introVideo) : ?>
+                        <p> Click the button below to watch a short intro to the dance moves you will be learning, or on the name of a dance move to start the video instructions. When you are confident with the moves, try the full sequence!</p>
+                        <button class="trigger-single-video trigger-video intro-video-button" data-src="<?= $introVideo;?>">Watch Intro</button>
+                    <?php endif; ?>
+                    
                     <div>
                         <ul>
                             <?php foreach($new_moves as $new_moves)
