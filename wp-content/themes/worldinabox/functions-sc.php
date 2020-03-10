@@ -412,22 +412,22 @@ function renderMusicFields($music) {
             case 'file' :
                 $file = $musicItem['file'];
                 $title = $musicItem['title'];
-                echo '<a href="'.$file['url'].'" download class="resource-link">
+                echo '<dd><a href="'.$file['url'].'" download class="resource-link">
                     <span class="icon">';
                     include('assets/images/icons/' . $musicItem['link_type'] . '.php');
                     echo '</span>
                     <span>' . $title .'</span>
-                </a>';
+                </a></dd>';
                 break;
             
             default: 
                 $link = $musicItem['link'];
                 $title = $musicItem['title'];
-                echo '<a href="' . $link . '" class="resource-link">
+                echo '<dd><a href="' . $link . '" class="resource-link">
                     <span class="icon">'; include('assets/images/icons/' . $musicItem['link_type'] . '.php');
                     echo '</span>
                     <span>' . $title .'</span>
-                </a>';
+                </a></dd>';
                 break;
         }
     endforeach;

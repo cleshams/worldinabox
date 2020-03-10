@@ -62,9 +62,11 @@ register_view($id);
                 <?php echo $intro; ?>
 
                 <h2 class="text__big-title">Music</h2>
-                <?php 
-                renderMusicFields($music);
-                ?>
+                <dl>
+                    <?php 
+                    renderMusicFields($music);
+                    ?>
+                </dl>
 
                 <div class="new-moves">
                     <h2 class="text__big-title">The Game</h2>
