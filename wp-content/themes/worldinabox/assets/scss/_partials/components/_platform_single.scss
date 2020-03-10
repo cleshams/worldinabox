@@ -68,7 +68,6 @@
         color: $purple;
         font-size: 17px;
         margin-bottom: 0px;
-        cursor: pointer;
         background: none;
         text-align: left;
     }
@@ -76,13 +75,10 @@
     {
         margin: 1rem 0 1rem 30px;
     }
-    ul li:hover
-    {
-        color: $orange;
-    }
 
     ul button
     {
+        cursor: pointer;
         &:after
         {
             transition: opacity 0.3s ease-in-out, transform 0.35s ease-out 0.27s;

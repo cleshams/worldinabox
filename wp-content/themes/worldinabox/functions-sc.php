@@ -344,7 +344,15 @@ function renderMusic($source, $resource)
             break;
         
         default:
-            # code...
+            $link = $resource['url'];
+            $title = $resource['title'];
+            echo '
+                <dd><a href="'.$link.'" target="_blank" class="resource-link">
+                    <span class="icon">';
+                        include('assets/images/icons/other.php');
+                    echo '</span>
+                    <span>' . $title . '</span>
+                </a></dd>';
             break;
     }
 }

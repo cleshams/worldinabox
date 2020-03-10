@@ -207,6 +207,15 @@ register_view($id);
                                     <span>' . $link . '</span>
                                 </a></dd>';
                                 break;
+                            case 'other':
+                                    $link = $resource['url'];
+                                    echo '
+                                <dd><a href="'.$link.'" target="_blank" class="resource-link">
+                                    <span class="icon">';
+                                        include('assets/images/icons/other.php');
+                                    echo '</span>
+                                    <span>' . $link . '</span>
+                                </a></dd>';
                             ;
                         }
                     }

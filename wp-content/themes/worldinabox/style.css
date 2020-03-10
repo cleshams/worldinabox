@@ -2555,15 +2555,14 @@ select[multiple] {
   color: #e6007d;
   font-size: 17px;
   margin-bottom: 0px;
-  cursor: pointer;
   background: none;
   text-align: left;
 }
 .new-moves ul {
   margin: 1rem 0 1rem 30px;
 }
-.new-moves ul li:hover {
-  color: #f18500;
+.new-moves ul button {
+  cursor: pointer;
 }
 .new-moves ul button:after {
   -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.35s ease-out 0.27s;
