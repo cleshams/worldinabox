@@ -466,3 +466,109 @@ function sdt_remove_ver_css_js( $src, $handle )
 
     return $src;
 }
+
+
+/********************************************* */
+//Add Options Page
+/********************************************* */
+
+if( function_exists( 'acf_add_options_page' ) ) {
+
+	// Create top level options page
+	acf_add_options_page(array(
+		'page_title' 	=> 'Site Options',
+		'menu_title'	=> 'Site Options',
+		'menu_slug' 	=> 'site-options',
+		'capability'	=> 'edit_posts',
+		'icon_url' 		=> 'dashicons-admin-settings',
+		'redirect'		=> true
+    ));
+    
+}
+
+
+/********************************************* */
+//Additional Billing Fields
+/********************************************* */
+
+add_filter('woocommerce_billing_fields', 'wiab_woocommerce_billing_fields');
+
+function wiab_woocommerce_billing_fields($fields)
+{
+    $fields['billing']['school_org_name'] = array(
+        'type'		=> 'text',
+        'label' 	=> __('School / Organisation Name', 'woocommerce'),
+        'required' 	=> true,
+        'class' 	=> array('form-row-wide'),
+        'clear' 	=> true
+    );
+    $fields['billing']['school_org_name']['custom_attributes']['data-lookup-reference'] = 'School_Name';
+
+
+    $localAuthorities = get_field('local_authorities', 'options');
+
+    $localAuthorityNames = array();
+
+    foreach($localAuthorities as $localAuthority)
+    {
+        $localAuthorityNames[$localAuthority['local_authority']] = $localAuthority['local_authority'];
+    }
+
+    $fields['billing']['local_authority'] = array(
+        'type'          => 'select',
+        'options'       => $localAuthorityNames,
+        'label'         => __('Local Authority', 'woocommerce'),
+        'placeholder'   => _x('', 'placeholder', 'woocommerce'),
+        'required'      => false,
+        'class'         => array('form-row-wide','hidden'),
+        'clear'         => true
+    );
+
+}
+
+add_action('woocommerce_checkout_update_user_meta', 'wiab_woocommerce_checkout_update_user_meta', 10, 3);
+
+function motd_woocommerce_checkout_update_user_meta($customer_id, $posted)
+{
+    if(isset($posted['school_org_name']))
+    {
+        $urn = sanitize_text_field($posted['school_org_name']);
+        update_user_meta($customer_id, 'school_org_name', $urn);
+    }
+    $la = $posted['local_authority'];
+    update_field('local_authority', $la, 'user_'.$customer_id);
+}
+
+
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'woo_show_additional_form_fields', 10, 1 );
+
+function woo_show_additional_form_fields($order)
+{
+    $new_text_fields = array(
+        'local_authority' => 'Local Authority',
+        'school_org_name' => 'School / Organisation Name',
+    );
+    foreach($new_text_fields as $key => $value) 
+    {
+        echo '<p><strong>'.__($value).':</strong> ' . get_post_meta( $order->get_id(), $value, true ) . '</p>';
+    }
+}
+
+function importLA()
+{
+    $csv = fopen(get_stylesheet_directory().'/LocalAuthorities.csv', 'r');
+    $urnLength = count(file(get_stylesheet_directory()."/LocalAuthorities.csv"));
+    // $urnLength = 55;
+    // for($j = 1; $j <= $urnLength; $j++) :
+    //         $i = delete_row('field_5e6a509776ea2', ($j +1), 'options');
+    // endfor;
+
+    for($j = 1; $j <= $urnLength; $j++) :
+        $cols = fgetcsv($csv, 0, ',');
+        if(!$cols) { continue; }
+        $la = array('name' => $cols[0]);
+
+        $i = add_row('field_5e6a509776ea2', $la, 'options');
+        echo $i;
+    endfor;
+}
