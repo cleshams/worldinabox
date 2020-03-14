@@ -121,7 +121,8 @@ jQuery(document).ready(function($){
                 {
                     output += v.objective += '\n';
                 });
-                $('#pdf-objectives').val(output);
+                var StrippedString = output.replace(/(<([^>]+)>)/ig,"");
+                $('#pdf-objectives').val(StrippedString);
             }
         });
     });
