@@ -495,26 +495,26 @@ add_filter('woocommerce_billing_fields', 'wiab_woocommerce_billing_fields');
 
 function wiab_woocommerce_billing_fields($fields)
 {
-    $fields['billing']['school_org_name'] = array(
+    $fields['billing_school_org_name'] = array(
         'type'		=> 'text',
         'label' 	=> __('School / Organisation Name', 'woocommerce'),
         'required' 	=> true,
         'class' 	=> array('form-row-wide'),
         'clear' 	=> true
     );
-    $fields['billing']['school_org_name']['custom_attributes']['data-lookup-reference'] = 'School_Name';
+    $fields['billing_school_org_name']['custom_attributes']['data-lookup-reference'] = 'School_Name';
 
 
-    $localAuthorities = get_field('local_authorities', 'options');
+    $localAuthorities = get_field('local_authority', 'options');
 
     $localAuthorityNames = array();
 
     foreach($localAuthorities as $localAuthority)
     {
-        $localAuthorityNames[$localAuthority['local_authority']] = $localAuthority['local_authority'];
+        $localAuthorityNames[$localAuthority['name']] = $localAuthority['name'];
     }
 
-    $fields['billing']['local_authority'] = array(
+    $fields['billing_local_authority'] = array(
         'type'          => 'select',
         'options'       => $localAuthorityNames,
         'label'         => __('Local Authority', 'woocommerce'),
@@ -524,6 +524,7 @@ function wiab_woocommerce_billing_fields($fields)
         'clear'         => true
     );
 
+    return $fields;
 }
 
 add_action('woocommerce_checkout_update_user_meta', 'wiab_woocommerce_checkout_update_user_meta', 10, 3);
@@ -554,14 +555,19 @@ function woo_show_additional_form_fields($order)
     }
 }
 
+add_filter('user_contactmethods', 'update_contact_methods', 10, 1);
+
+function update_contact_methods($fields) {
+    $fields['school_org_name'] = 'School /Organisation Name';
+    $fields['local_authority'] = 'Local Authority';
+}
+
+
 function importLA()
 {
     $csv = fopen(get_stylesheet_directory().'/LocalAuthorities.csv', 'r');
     $urnLength = count(file(get_stylesheet_directory()."/LocalAuthorities.csv"));
-    // $urnLength = 55;
-    // for($j = 1; $j <= $urnLength; $j++) :
-    //         $i = delete_row('field_5e6a509776ea2', ($j +1), 'options');
-    // endfor;
+
 
     for($j = 1; $j <= $urnLength; $j++) :
         $cols = fgetcsv($csv, 0, ',');
