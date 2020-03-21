@@ -228,6 +228,10 @@ register_view($id);
 
     </section>
 
+    <section class="active-link container container--inner">
+        <a href="<?php echo site_url();?>/dashboard/active-minutes" class="btn">Finished the lesson? Record your Active Minutes here</a>
+    </section>
+
     <section class="pagination">
         <?php
         if($lessonNum > 1)

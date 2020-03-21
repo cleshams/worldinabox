@@ -144,3 +144,47 @@ function populatePDFTitle() {
     })
 }
 
+
+
+/************** */
+/* Classes toggle*/
+/************** */
+const classBlocks = document.querySelectorAll('.classes');
+
+if(classBlocks)
+{
+    var classQuestions = document.querySelectorAll('.expand-class')
+    classQuestions.forEach(function(i,d)
+    {
+        i.addEventListener('click', function() {
+            i.classList.toggle('open');
+            console.log(i.nextElementSibling);
+            if(i.nextElementSibling.classList.contains('open'))
+            {
+                i.nextElementSibling.style.maxHeight = "0px";
+                i.nextElementSibling.style.padding = "0 10px";
+            }
+            else{
+                var height = i.nextElementSibling.scrollHeight + 20;
+                i.nextElementSibling.style.maxHeight = '' + height + 'px';
+                i.nextElementSibling.style.padding = "10px";
+            }
+            i.nextElementSibling.classList.toggle('open');
+        })
+    })
+}
+
+/************** */
+/* Add new class */
+/************** */
+
+const newClassForm = document.querySelector('.add-new-class-container form');
+if(newClassForm) {
+    newClassForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const userId = newClassForm.getAttribute('data-currentuserid');
+        const className = document.querySelector('#class_name').value;
+        const unit = document.querySelector('#class_unit').value;
+        console.log(userId + ' ' + className + ' ' + unit);
+    })
+}

@@ -7,11 +7,30 @@
 		"uuidString": "3335D356-4220-4D15-BBF4-EFE05BB20046"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "29136",
 "files": {
+	"/acf-templates/acf_block-faq.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/acf-templates/acf_block-faq.php",
+		"oF": 0
+		},
+	"/admin.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/admin-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/archive.php",
 		"oF": 0
@@ -19,8 +38,27 @@
 	"/assets/css/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/css/_notes/dwsync.xml",
+		"oF": 0
+		},
+	"/assets/css/admin.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/admin-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/css/admin.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/css/admin.css.map",
 		"oF": 0
 		},
 	"/assets/css/animate-min.css": {
@@ -116,6 +154,7 @@
 	"/assets/fonts/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/_notes/dwsync.xml",
 		"oF": 0
@@ -123,6 +162,7 @@
 	"/assets/fonts/flexslider-icon.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/flexslider-icon.eot",
 		"oF": 0
@@ -140,6 +180,7 @@
 	"/assets/fonts/flexslider-icon.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/flexslider-icon.ttf",
 		"oF": 0
@@ -147,6 +188,7 @@
 	"/assets/fonts/flexslider-icon.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/flexslider-icon.woff",
 		"oF": 0
@@ -154,6 +196,7 @@
 	"/assets/fonts/font-awesome-4.7.0/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/_notes/dwsync.xml",
 		"oF": 0
@@ -161,6 +204,7 @@
 	"/assets/fonts/font-awesome-4.7.0/css/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/css/_notes/dwsync.xml",
 		"oF": 0
@@ -205,9 +249,30 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/fonts/font-awesome-4.7.0/css/mixins.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/font-awesome-4.7.0/css/mixins-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/fonts/font-awesome-4.7.0/css/variables.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/font-awesome-4.7.0/css/variables-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/assets/fonts/font-awesome-4.7.0/fonts/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/_notes/dwsync.xml",
 		"oF": 0
@@ -215,6 +280,7 @@
 	"/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot",
 		"oF": 0
@@ -232,6 +298,7 @@
 	"/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf",
 		"oF": 0
@@ -239,6 +306,7 @@
 	"/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
 		"oF": 0
@@ -246,6 +314,7 @@
 	"/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
 		"oF": 0
@@ -253,6 +322,7 @@
 	"/assets/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf",
 		"oF": 0
@@ -260,6 +330,7 @@
 	"/assets/fonts/font-awesome-4.7.0/HELP-US-OUT.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/HELP-US-OUT.txt",
 		"oF": 0
@@ -267,6 +338,7 @@
 	"/assets/fonts/font-awesome-4.7.0/less/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/less/_notes/dwsync.xml",
 		"oF": 0
@@ -352,6 +424,7 @@
 	"/assets/fonts/font-awesome-4.7.0/less/font-awesome.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/less/font-awesome.css.map",
 		"oF": 0
@@ -633,6 +706,7 @@
 	"/assets/fonts/font-awesome-4.7.0/scss/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/font-awesome-4.7.0/scss/_notes/dwsync.xml",
 		"oF": 0
@@ -722,6 +796,14 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/fonts/font-awesome-4.7.0/scss/font-awesome.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/fonts/font-awesome-4.7.0/scss/font-awesome.css.map",
+		"oF": 0
+		},
 	"/assets/fonts/font-awesome-4.7.0/scss/font-awesome.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -738,6 +820,7 @@
 	"/assets/fonts/slick.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/slick.eot",
 		"oF": 0
@@ -755,6 +838,7 @@
 	"/assets/fonts/slick.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/slick.ttf",
 		"oF": 0
@@ -762,6 +846,7 @@
 	"/assets/fonts/slick.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/fonts/slick.woff",
 		"oF": 0
@@ -769,6 +854,7 @@
 	"/assets/images/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/images/_notes/dwsync.xml",
 		"oF": 0
@@ -796,6 +882,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/bg-drums--light.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/cross.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/cross.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -833,11 +929,31 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/images/edge__btm--greyLight.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/edge__btm--greyLight.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/edge__btm--light.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/edge__btm--light.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/edge__btm--pink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/edge__btm--pink.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -882,6 +998,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/assets/images/favicon.png": {
+		"ft": 32768,
+		"iS": 8019,
+		"oA": 0,
+		"oAP": "/assets/images/favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/images/home-link-full-resource.jpg": {
 		"ft": 16384,
@@ -997,6 +1124,262 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/images/icons/circle-cross.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/circle-cross.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/circle-tick.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/circle-tick.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/document.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/document.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/download.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/download.php",
+		"oF": 0
+		},
+	"/assets/images/icons/download.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/download.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/file.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/file.php",
+		"oF": 0
+		},
+	"/assets/images/icons/icon-1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/icon-3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/icon-3.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/other.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/other.php",
+		"oF": 0
+		},
+	"/assets/images/icons/other.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/other.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/play.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/play.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/soundcloud.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/soundcloud.php",
+		"oF": 0
+		},
+	"/assets/images/icons/soundcloud.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/soundcloud.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/spotify.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/spotify.php",
+		"oF": 0
+		},
+	"/assets/images/icons/spotify.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/spotify.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/swoosh-blue.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/swoosh-blue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/swoosh-green.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/swoosh-green.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/swoosh-orange.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/swoosh-orange.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/swoosh-purple.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/swoosh-purple.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/swoosh-yellow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/swoosh-yellow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/toggle-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/toggle-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/view-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/view-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/web.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/web.php",
+		"oF": 0
+		},
+	"/assets/images/icons/web.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/web.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/youtube.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/youtube.php",
+		"oF": 0
+		},
+	"/assets/images/icons/youtube.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/youtube.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1037,14 +1420,37 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/images/placeholder.png": {
+		"ft": 32768,
+		"iS": 4528,
+		"oA": 0,
+		"oAP": "/assets/images/placeholder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/tick.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/tick.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/js/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/js/_notes/dwsync.xml",
 		"oF": 0
 		},
 	"/assets/js/imagesloaded.pkgd.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1055,6 +1461,7 @@
 		"tS": 0
 		},
 	"/assets/js/imagesloaded.pkgd.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1065,6 +1472,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.easing.1.3.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1075,6 +1483,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.easing.1.3.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1085,6 +1494,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.fancybox.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1095,6 +1505,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.flexslider-min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1105,6 +1516,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.flexslider-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1115,6 +1527,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.magnific-popup.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1125,6 +1538,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.magnific-popup.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1135,6 +1549,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.vide.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1145,6 +1560,7 @@
 		"tS": 0
 		},
 	"/assets/js/jquery.vide.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1155,6 +1571,7 @@
 		"tS": 0
 		},
 	"/assets/js/lity.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1165,6 +1582,7 @@
 		"tS": 0
 		},
 	"/assets/js/lity.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1175,6 +1593,7 @@
 		"tS": 0
 		},
 	"/assets/js/modernizr.custom-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1185,6 +1604,7 @@
 		"tS": 0
 		},
 	"/assets/js/modernizr.custom.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1194,7 +1614,30 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/assets/js/platform-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/platform-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/js/platform.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/platform-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/assets/js/scripts-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1205,6 +1648,7 @@
 		"tS": 0
 		},
 	"/assets/js/scripts.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1215,6 +1659,7 @@
 		"tS": 0
 		},
 	"/assets/js/wow.min-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1225,6 +1670,7 @@
 		"tS": 0
 		},
 	"/assets/js/wow.min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1237,6 +1683,7 @@
 	"/assets/scss/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_notes/dwsync.xml",
 		"oF": 0
@@ -1302,6 +1749,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_edges.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/_partials/components/_faqs.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_faqs.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -1410,6 +1870,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/assets/scss/_partials/components/_modal.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_modal.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/scss/_partials/components/_nav-btns.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1452,6 +1925,7 @@
 	"/assets/scss/_partials/components/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/components/_notes/dwsync.xml",
 		"oF": 0
@@ -1508,6 +1982,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/assets/scss/_partials/components/_platform_single.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_platform_single.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/scss/_partials/components/_post-info.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1530,6 +2017,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_resource-icons.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/_partials/components/_search-form.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_search-form.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -1651,6 +2151,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/assets/scss/_partials/content/_active-minutes.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_active-minutes.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/scss/_partials/content/_base.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1660,6 +2173,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_base.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/_partials/content/_cards.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_cards.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -1719,9 +2245,23 @@
 	"/assets/scss/_partials/content/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/content/_notes/dwsync.xml",
 		"oF": 0
+		},
+	"/assets/scss/_partials/content/_pdf.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_pdf.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		},
 	"/assets/scss/_partials/content/_tables.scss": {
 		"aP": 1,
@@ -1778,6 +2318,7 @@
 	"/assets/scss/_partials/layout/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/layout/_notes/dwsync.xml",
 		"oF": 0
@@ -1847,19 +2388,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/assets/scss/_partials/settings/_header.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_header.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"/assets/scss/_partials/settings/_layout.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -1889,9 +2417,23 @@
 	"/assets/scss/_partials/settings/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/settings/_notes/dwsync.xml",
 		"oF": 0
+		},
+	"/assets/scss/_partials/settings/_platform-overrides.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_platform-overrides.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		},
 	"/assets/scss/_partials/settings/_typography.scss": {
 		"aP": 1,
@@ -1961,6 +2503,7 @@
 	"/assets/scss/_partials/tools/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/tools/_notes/dwsync.xml",
 		"oF": 0
@@ -2020,9 +2563,41 @@
 	"/assets/scss/_partials/vendor/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/scss/_partials/vendor/_notes/dwsync.xml",
 		"oF": 0
+		},
+	"/assets/scss/admin.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/scss/admin-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/scss/admin.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/scss/admin.css.map",
+		"oF": 0
+		},
+	"/assets/scss/admin.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/admin.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
 		},
 	"/assets/scss/style-min.css": {
 		"aP": 1,
@@ -2044,6 +2619,14 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/scss/style.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/scss/style.css.map",
+		"oF": 0
+		},
 	"/assets/scss/style.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -2060,6 +2643,7 @@
 	"/assets/video/eh5v-howto.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/eh5v-howto.html",
 		"oF": 0
@@ -2067,6 +2651,7 @@
 	"/assets/video/eh5v.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/eh5v.html",
 		"oF": 0
@@ -2074,11 +2659,13 @@
 	"/assets/video/flashfox.swf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/flashfox.swf",
 		"oF": 0
 		},
 	"/assets/video/html5ext.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -2102,6 +2689,7 @@
 	"/assets/video/video.mp4": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/video.mp4",
 		"oF": 0
@@ -2109,6 +2697,7 @@
 	"/assets/video/video.ogv": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/video.ogv",
 		"oF": 0
@@ -2116,6 +2705,7 @@
 	"/assets/video/video.webm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/video.webm",
 		"oF": 0
@@ -2134,6 +2724,7 @@
 	"/assets/video/wiab-video.m4v": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/wiab-video.m4v",
 		"oF": 0
@@ -2141,6 +2732,7 @@
 	"/assets/video/wiab-video.mp4": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/wiab-video.mp4",
 		"oF": 0
@@ -2148,6 +2740,7 @@
 	"/assets/video/wiab-video.ogv": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/wiab-video.ogv",
 		"oF": 0
@@ -2155,6 +2748,7 @@
 	"/assets/video/wiab-video.webm": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/assets/video/wiab-video.webm",
 		"oF": 0
@@ -2162,6 +2756,7 @@
 	"/config.rb": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
@@ -2169,6 +2764,7 @@
 	"/content/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/_notes/dwsync.xml",
 		"oF": 0
@@ -2176,6 +2772,7 @@
 	"/content/content-hero.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/content-hero.php",
 		"oF": 0
@@ -2183,6 +2780,7 @@
 	"/content/content-slider.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/content-slider.php",
 		"oF": 0
@@ -2190,6 +2788,7 @@
 	"/content/content-testimonials-slider.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/content-testimonials-slider.php",
 		"oF": 0
@@ -2197,6 +2796,7 @@
 	"/content/content-video-slider.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/content-video-slider.php",
 		"oF": 0
@@ -2204,6 +2804,7 @@
 	"/content/loop-post.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/content/loop-post.php",
 		"oF": 0
@@ -2211,13 +2812,23 @@
 	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/footer.php",
+		"oF": 0
+		},
+	"/functions-sc.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/functions-sc.php",
 		"oF": 0
 		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions.php",
 		"oF": 0
@@ -2225,6 +2836,7 @@
 	"/functions/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/_notes/dwsync.xml",
 		"oF": 0
@@ -2232,6 +2844,7 @@
 	"/functions/bs4navwalker-master/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/bs4navwalker-master/_notes/dwsync.xml",
 		"oF": 0
@@ -2239,6 +2852,7 @@
 	"/functions/bs4navwalker-master/bs4navwalker.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/bs4navwalker-master/bs4navwalker.php",
 		"oF": 0
@@ -2246,6 +2860,7 @@
 	"/functions/bs4navwalker-master/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/bs4navwalker-master/LICENSE",
 		"oF": 0
@@ -2258,6 +2873,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/functions/bs4navwalker-master/README.html",
 		"oF": 0,
@@ -2268,1629 +2884,10 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/functions/cmb-functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/cmb-functions.php",
-		"oF": 0
-		},
-	"/functions/CMB2/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/.gitignore",
-		"oF": 0
-		},
-	"/functions/CMB2/.scrutinizer.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/.scrutinizer.yml",
-		"oF": 0
-		},
-	"/functions/CMB2/.travis.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/.travis.yml",
-		"oF": 0
-		},
-	"/functions/CMB2/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/bootstrap.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/bootstrap.php",
-		"oF": 0
-		},
-	"/functions/CMB2/CHANGELOG.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/CHANGELOG.html",
-		"oF": 0
-		},
-	"/functions/CMB2/CHANGELOG.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/functions/CMB2/CHANGELOG.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/functions/CMB2/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/functions/CMB2/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/functions/CMB2/CONTRIBUTING.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/CONTRIBUTING.html",
-		"oF": 0
-		},
-	"/functions/CMB2/CONTRIBUTING.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/functions/CMB2/CONTRIBUTING.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/functions/CMB2/coverage.clover": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/coverage.clover",
-		"oF": 0
-		},
-	"/functions/CMB2/css/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/css/cmb2-front.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/functions/CMB2/css/cmb2-front-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/functions/CMB2/css/cmb2-front.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/cmb2-front.css.map",
-		"oF": 0
-		},
-	"/functions/CMB2/css/cmb2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/functions/CMB2/css/cmb2-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/functions/CMB2/css/cmb2.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/cmb2.css.map",
-		"oF": 0
-		},
-	"/functions/CMB2/css/cmb2.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/functions/CMB2/css/cmb2.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/functions/CMB2/css/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/css/sass/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/sass/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/css/sass/cmb2-front.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/functions/CMB2/css/sass/cmb2-front-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/functions/CMB2/css/sass/cmb2-front.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/cmb2-front.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/cmb2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/functions/CMB2/css/sass/cmb2-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/functions/CMB2/css/sass/cmb2.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/cmb2.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/sass/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/css/sass/partials/_collapsible_ui.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_collapsible_ui.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_front.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_front.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_jquery_ui.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_jquery_ui.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_main_wrap.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_main_wrap.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_misc.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_misc.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_mixins.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_mixins.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/sass/partials/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/css/sass/partials/_post_metaboxes.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_post_metaboxes.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_sidebar_placements.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_sidebar_placements.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/_variables.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_variables.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/functions/CMB2/css/sass/partials/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/css/sass/partials/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/Dockunit.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/functions/CMB2/Dockunit-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/functions/CMB2/example-functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/example-functions.php",
-		"oF": 0
-		},
-	"/functions/CMB2/Gruntfile-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/functions/CMB2/Gruntfile-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/functions/CMB2/Gruntfile.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/functions/CMB2/Gruntfile-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/functions/CMB2/images/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/images/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/images/ico-delete.png": {
-		"ft": 32768,
-		"iS": 715,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ico-delete.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/images/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/images/ui-bg_flat_0_aaaaaa_40x100.png": {
-		"ft": 32768,
-		"iS": 116,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_flat_0_aaaaaa_40x100.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_flat_75_ffffff_40x100.png": {
-		"ft": 32768,
-		"iS": 116,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_flat_75_ffffff_40x100.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_glass_55_fbf9ee_1x400.png": {
-		"ft": 32768,
-		"iS": 120,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_glass_55_fbf9ee_1x400.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_glass_65_ffffff_1x400.png": {
-		"ft": 32768,
-		"iS": 105,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_glass_65_ffffff_1x400.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_glass_75_dadada_1x400.png": {
-		"ft": 32768,
-		"iS": 111,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_glass_75_dadada_1x400.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_glass_75_e6e6e6_1x400.png": {
-		"ft": 32768,
-		"iS": 110,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_glass_75_e6e6e6_1x400.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_glass_95_fef1ec_1x400.png": {
-		"ft": 32768,
-		"iS": 119,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_glass_95_fef1ec_1x400.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-bg_highlight-soft_75_cccccc_1x100.png": {
-		"ft": 32768,
-		"iS": 101,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-icons_222222_256x240.png": {
-		"ft": 32768,
-		"iS": 4233,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-icons_222222_256x240.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-icons_2e83ff_256x240.png": {
-		"ft": 32768,
-		"iS": 4233,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-icons_2e83ff_256x240.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-icons_454545_256x240.png": {
-		"ft": 32768,
-		"iS": 4233,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-icons_454545_256x240.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-icons_888888_256x240.png": {
-		"ft": 32768,
-		"iS": 4233,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-icons_888888_256x240.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/images/ui-icons_cd0a0a_256x240.png": {
-		"ft": 32768,
-		"iS": 4233,
-		"oA": 0,
-		"oAP": "/functions/CMB2/images/ui-icons_cd0a0a_256x240.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/functions/CMB2/includes/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Ajax.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Ajax.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Boxes.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Boxes.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Field.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Field.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_hookup.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_hookup.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_JS.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_JS.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Options.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Options.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Sanitize.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Sanitize.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Show_Filters.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Show_Filters.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Types.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Types.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/CMB2_Utils.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/CMB2_Utils.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/helper-functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/helper-functions.php",
-		"oF": 0
-		},
-	"/functions/CMB2/includes/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/includes/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/init.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/init.php",
-		"oF": 0
-		},
-	"/functions/CMB2/js/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/js/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/js/cmb2.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/functions/CMB2/js/cmb2-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/functions/CMB2/js/cmb2.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/functions/CMB2/js/cmb2.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/functions/CMB2/js/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/js/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/js/jquery-ui-timepicker-addon.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/functions/CMB2/js/jquery-ui-timepicker-addon.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/functions/CMB2/languages/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ach.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ach.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-af.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-af.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ar.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ar.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-az.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-az.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-be_BY.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-be_BY.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-bg_BG.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-bg_BG.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-bn_BD.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-bn_BD.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-br.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-br.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-bs_BA.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-bs_BA.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ca.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ca.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-co.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-co.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-cs_CZ.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-cs_CZ.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-cy.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-cy.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-da_DK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-da_DK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-de_AT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-de_AT.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-de_DE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-de_DE.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-de_DE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-de_DE.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-el.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-el.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-en@pirate.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-en@pirate.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-en_GB.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-en_GB.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-en_US.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-en_US.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-en_US.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-en_US.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-eo.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-eo.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_AR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_AR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_CL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_CL.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_ES.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_ES.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_ES.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_ES.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_MX.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_MX.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_MX.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_MX.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_PE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_PE.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-es_VE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-es_VE.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-et.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-et.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-eu.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-eu.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fa.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fa.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fa_IR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fa_IR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fi.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fi.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fi.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fi.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fo.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fo.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fr_FR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fr_FR.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-fr_FR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-fr_FR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ga.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ga.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-gl_ES.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-gl_ES.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-gu_IN.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-gu_IN.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-he_IL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-he_IL.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-hi_IN.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-hi_IN.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-hr.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-hr.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-hu_HU.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-hu_HU.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-hy.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-hy.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-id.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-id.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-id_ID.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-id_ID.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-id_ID.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-id_ID.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-is_IS.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-is_IS.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-it_IT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-it_IT.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ja.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ja.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-jv.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-jv.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ka.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ka.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-kk.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-kk.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-km.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-km.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ko_KR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ko_KR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ku.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ku.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ky.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ky.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-lt_LT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-lt_LT.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-lv.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-lv.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-mg.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-mg.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-mk_MK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-mk_MK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-mn.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-mn.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-my_MM.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-my_MM.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-nb_NO.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-nb_NO.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ne_NP.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ne_NP.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-nl_NL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-nl_NL.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-nn_NO.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-nn_NO.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-oc.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-oc.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pap.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pap.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pl_PL.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pl_PL.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pl_PL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pl_PL.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pt_BR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pt_BR.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pt_BR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pt_BR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-pt_PT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-pt_PT.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ro_RO.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ro_RO.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ru_RU.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ru_RU.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ru_RU.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ru_RU.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sah.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sah.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-si_LK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-si_LK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sk_SK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sk_SK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sl_SI.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sl_SI.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sq.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sq.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sr_RS.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sr_RS.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-su.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-su.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sv_SE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sv_SE.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sv_SE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sv_SE.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-sw.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-sw.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ta_LK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ta_LK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-te.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-te.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-th.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-th.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-tk_TM.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-tk_TM.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-tr_TR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-tr_TR.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ug.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ug.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-uk.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-uk.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-ur_PK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-ur_PK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-uz.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-uz.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-vi.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-vi.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-zh_CN.GB2312.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-zh_CN.GB2312.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-zh_CN.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-zh_CN.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-zh_HK.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-zh_HK.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2-zh_TW.po": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2-zh_TW.po",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2.mo",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/cmb2.pot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/cmb2.pot",
-		"oF": 0
-		},
-	"/functions/CMB2/languages/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/languages/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/functions/CMB2/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/functions/CMB2/phpunit.xml.dist": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/phpunit.xml.dist",
-		"oF": 0
-		},
-	"/functions/CMB2/readme.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/readme.html",
-		"oF": 0
-		},
-	"/functions/CMB2/readme.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/functions/CMB2/readme.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/functions/CMB2/readme.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/readme.txt",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/bin/_notes/dwsync.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/bin/_notes/dwsync.xml",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/bin/install-wp-tests.sh": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/bin/install-wp-tests.sh",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/bootstrap.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/bootstrap.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/cmb-tests-base.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/cmb-tests-base.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/index.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/README.html",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/functions/CMB2/tests/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/functions/CMB2/tests/test-cmb-core.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/test-cmb-core.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/test-cmb-field.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/test-cmb-field.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/test-cmb-types.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/test-cmb-types.php",
-		"oF": 0
-		},
-	"/functions/CMB2/tests/test-cmb-utils.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/functions/CMB2/tests/test-cmb-utils.php",
-		"oF": 0
-		},
 	"/functions/walker/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/walker/_notes/dwsync.xml",
 		"oF": 0
@@ -3898,6 +2895,7 @@
 	"/functions/walker/walker.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/walker/walker.php",
 		"oF": 0
@@ -3905,6 +2903,7 @@
 	"/functions/woocommerce.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions/woocommerce.php",
 		"oF": 0
@@ -3912,6 +2911,7 @@
 	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/header.php",
 		"oF": 0
@@ -3919,15 +2919,129 @@
 	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/index.php",
+		"oF": 0
+		},
+	"/LocalAuthorities.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/LocalAuthorities.csv",
+		"oF": 0
+		},
+	"/page-temp.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/page-temp.php",
 		"oF": 0
 		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page.php",
+		"oF": 0
+		},
+	"/platform/functions-platform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/functions-platform.php",
+		"oF": 0
+		},
+	"/platform/page-active-games.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-active-games.php",
+		"oF": 0
+		},
+	"/platform/page-active-minutes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-active-minutes.php",
+		"oF": 0
+		},
+	"/platform/page-dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-dashboard.php",
+		"oF": 0
+		},
+	"/platform/page-glossary.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-glossary.php",
+		"oF": 0
+		},
+	"/platform/page-help-support.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-help-support.php",
+		"oF": 0
+		},
+	"/platform/page-lesson-plans.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-lesson-plans.php",
+		"oF": 0
+		},
+	"/platform/page-routines.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-routines.php",
+		"oF": 0
+		},
+	"/platform/page-search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-search.php",
+		"oF": 0
+		},
+	"/platform/page-warm-ups.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/page-warm-ups.php",
+		"oF": 0
+		},
+	"/platform/partials-footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/partials-footer.php",
+		"oF": 0
+		},
+	"/platform/partials-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/platform/partials-header.php",
 		"oF": 0
 		},
 	"/screenshot.png": {
@@ -3944,13 +3058,31 @@
 	"/sidebar.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/sidebar.php",
+		"oF": 0
+		},
+	"/single-games.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/single-games.php",
+		"oF": 0
+		},
+	"/single-lessons.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/single-lessons.php",
 		"oF": 0
 		},
 	"/single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/single.php",
 		"oF": 0
@@ -3968,27 +3100,39 @@
 	"/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/style.css.map",
+		"oF": 0
+		},
+	"/taxonomy-unit.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/taxonomy-unit.php",
 		"oF": 0
 		},
 	"/templates/_notes/dwsync.xml": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/_notes/dwsync.xml",
 		"oF": 0
 		},
-	"/templates/template-about-old.php": {
+	"/templates/classes.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "/templates/template-about-old.php",
+		"oAP": "/templates/classes.php",
 		"oF": 0
 		},
 	"/templates/template-about.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/template-about.php",
 		"oF": 0
@@ -3996,20 +3140,15 @@
 	"/templates/template-contact.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/template-contact.php",
-		"oF": 0
-		},
-	"/templates/template-home-old.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/templates/template-home-old.php",
 		"oF": 0
 		},
 	"/templates/template-home.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/template-home.php",
 		"oF": 0
@@ -4017,6 +3156,7 @@
 	"/templates/template-testimonials.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/template-testimonials.php",
 		"oF": 0
@@ -4024,8 +3164,25 @@
 	"/templates/template-videos.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/template-videos.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/woocommerce/myaccount/dashboard.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/navigation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/woocommerce/myaccount/navigation.php",
 		"oF": 0
 		}
 	},
@@ -4035,7 +3192,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 525013512,
-	"displayValue": "Starter",
+	"displayValue": "World In A Box",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ceiling",
 	"iconImageWasSetByUser": 0
@@ -4123,6 +3280,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -4142,6 +3305,36 @@
 			"active": 0
 			},
 		"minify-booleans": {
+			"active": 0
+			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -4192,6 +3385,9 @@
 		"pipeline-operator": {
 			"active": 0
 			},
+		"private-methods": {
+			"active": 0
+			},
 		"property-literals": {
 			"active": 0
 			},
@@ -4225,10 +3421,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -5177,6 +4379,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 0,
 			"optionString": ""
@@ -5839,6 +5045,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -5860,6 +5067,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -5882,7 +5090,8 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -5921,6 +5130,7 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -5930,7 +5140,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -5951,7 +5162,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -5980,7 +5192,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -6068,16 +5281,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -6089,14 +5306,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -6119,6 +5336,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -6144,10 +5365,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -6156,13 +5373,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -6174,6 +5391,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -6196,13 +5417,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -6211,10 +5432,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -6238,6 +5455,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -6272,6 +5493,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -6281,6 +5506,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6308,15 +5537,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},

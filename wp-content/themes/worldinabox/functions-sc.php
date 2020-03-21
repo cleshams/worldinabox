@@ -560,6 +560,8 @@ add_filter('user_contactmethods', 'update_contact_methods', 10, 1);
 function update_contact_methods($fields) {
     $fields['school_org_name'] = 'School /Organisation Name';
     $fields['local_authority'] = 'Local Authority';
+
+    return $fields;
 }
 
 
@@ -578,3 +580,147 @@ function importLA()
         echo $i;
     endfor;
 }
+
+
+/********
+ * Shotcode for Classes on Active Minutes
+ ********/
+
+function classes_section_render()
+{
+    ob_start();
+    get_template_part('/templates/classes');
+    return ob_get_clean();
+}
+add_shortcode( 'classes', 'classes_section_render' );
+
+
+/********
+ * Shotcode for Classes on Inactive Statistic
+ ********/
+
+ function render_inactive_statistic(){
+    $current_user_id = get_current_user_id();
+    $userlocalAuthority = get_field('local_authority', 'user_'.$current_user_id);
+
+    $localAuthorities = get_field('local_authority', 'options');
+    $localAuthority = array();
+    foreach($localAuthorities as $la)
+    {
+        if($la['name'] == $userlocalAuthority)
+        {
+            $localAuthority = $la;
+        }
+    }
+    $inactive = $localAuthority['inactive_stat'];
+
+    ob_start();
+    ?>
+    <p class="inactive_stat">
+        Percentage of Population that are inactive in <?=$userlocalAuthority?>
+        <br><span><?=$inactive?>%</span>
+    </p>
+    <?php 
+    return ob_get_clean();
+ }
+ add_shortcode('inactive-statistic', 'render_inactive_statistic');
+
+
+
+/********
+ * Shotcode for Classes on Inactive Statistic
+ ********/
+
+function render_obesity_statistic(){
+    $current_user_id = get_current_user_id();
+    $userlocalAuthority = get_field('local_authority', 'user_'.$current_user_id);
+
+    $localAuthorities = get_field('local_authority', 'options');
+    $localAuthority = array();
+    foreach($localAuthorities as $la)
+    {
+        if($la['name'] == $userlocalAuthority)
+        {
+            $localAuthority = $la;
+        }
+    }
+    $obesity = $localAuthority['obesity_stat'];
+    
+    return '<strong>'.$obesity.'%</strong>';
+}
+add_shortcode('obesity-statistic', 'render_obesity_statistic');
+
+
+
+
+/********
+ * Shotcode for Leaderboard
+ ********/
+
+function render_leaderboard()
+{
+    $current_user_id = get_current_user_id();
+    $classes = get_field('classes', 'user_'.$current_user_id);
+    $school_name = get_user_meta($current_user_id, 'school_org_name', true);
+    if(!is_array($classes) || count($classes) < 2)
+    {
+        exit;
+    }
+   
+    foreach($classes as $index => $class) 
+    {
+        $total = 0;
+        $results = json_decode($class['results']);
+        $values = get_object_vars($results);
+        $total = array_sum($values);
+        $lessons = count(array_filter($values));
+        $average = $total / $lessons;
+        $classes[$index]['average'] = $average;
+    }
+    if(is_array($classes) && count($classes) > 2) {
+
+        function average_sort($a, $b)
+        {
+            return ($a['average'] > $b['average']) ? -1 : 1;
+        }
+        $classesOrdered = usort( $classes, "average_sort"); 
+
+        ob_start();
+        ?>
+        </div>
+    </section>
+    <section class="container container--inner">
+        <header>
+            <h2 class="text__title"><?= $school_name;?> Leaderboard</h2>
+        </header>
+        <div class="leaderboard-container">
+            <table>
+                <thead>
+                    <th>Class Name</th>
+                    <th>Unit</th>
+                    <th>Average Active Minutes</th>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach($classes as $class) 
+                    {
+                        echo '<tr>
+                        <td>'.$class['class_name'] . '</td>
+                        <td>'.$class['unit']->name.'</td>
+                        <td>'.$class['average'].'</td>
+                        </tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+        <?php 
+        return ob_get_clean();
+    }
+}
+add_shortcode('leaderboard', 'render_leaderboard');
+
+
+/********
+ * Save new class
+ ********/

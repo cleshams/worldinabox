@@ -1,0 +1,215 @@
+.classes
+{
+    max-width: 750px;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    width: 95%;
+    padding-bottom: 2rem;
+
+    .lessons-container
+    {
+        background: #ebebeb;
+        padding: 10px;
+        max-height: 0px;
+        padding: 0 10px; 
+        overflow: hidden;
+        transition: 0.35s ease-out;
+    }
+
+    .lesson
+    {
+        display: flex;
+        padding: 1rem;
+        border-radius: 4px;
+        background: #d6d6d6;
+        margin-bottom: 0.5rem;
+
+        display: grid;
+        grid-template-columns: 4fr 2fr 3fr;
+
+        span
+        {
+            display: block;
+        }
+    }
+
+    .submit-minutes
+    {
+        background: #fff;
+        padding: 0.5em;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .icon
+    {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: auto;
+
+        &.complete
+        {
+            background-image: url(assets/images/icons/circle-tick.svg);
+        }
+        &.incomplete
+        {
+            background-image: url(assets/images/icons/circle-cross.svg);
+        }
+    }
+
+    .toggle-icon
+    {
+        width: 20px;
+        height: 20px;
+        background: url(assets/images/icons/toggle-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: 0.3s cubic-bezier(.5, 0, .5, 1);
+        transform: rotate(180deg);
+        display: inline-block;
+        vertical-align: text-top;
+    }
+    .value
+    {
+        text-align: center;
+        width: 175px;
+    }
+
+    .expand-class
+    {
+        padding: 1rem;
+        font-weight: bold;
+        background: $greyLight;
+        transition: 0.3s cubic-bezier(.5, 0, .5, 1);
+        width: 100%;
+        margin-bottom: 0.75rem;
+        text-align: left;
+        cursor: pointer;
+
+        &.active
+        {
+            background: $platformPink;
+            color: #fff;
+        }
+    }
+}
+
+.add-class-form
+{
+    justify-content: space-between;
+    
+    .input-container
+    {
+        position: relative;
+        padding-top: 40px;
+        margin: 0 0 1rem 0;
+        display: flex;
+        justify-content: flex-start;
+        min-width: 290px;
+        width: 46%;
+    
+        label
+        {
+            top: 0px;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+        }
+    
+        #class_unit
+        {
+            min-width: 290px;
+        }
+    
+    }
+}
+
+.add-new-class-container
+{
+    padding: 2rem 30px;
+    background: #424a53;
+    max-width: 1140px;
+    border-radius: 8px;
+    color: #fff;
+
+    input,
+    select {
+        background: #fff;
+        border: 1px solid #fff;
+
+        &:hover, &:focus {
+            border-color: $orange;
+        }
+    }
+
+    label{
+        color: #fff;
+    }
+}
+
+.inactive_stat
+{
+    text-align: center;
+    font-size: 30px;
+    color: $platformPink;
+    font-family: $fontPrimary;
+    padding: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+    max-width: 50ch;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span
+    {
+        font-size: 40px;
+    }
+}
+
+.leaderboard-container
+{
+    background: $orange;
+    padding: 0rem 3rem 1.5rem 3rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        width: calc(100% + 6rem);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 46px;
+        background: rgba(0,0,0,0.2);
+        z-index: 0;
+    }
+
+    table
+    {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    table, tbody, tbody tr, th {
+        background: transparent;
+    }
+
+    td
+    {
+        color: #fff;
+        font-family: $fontBody;
+        border-bottom: none;
+
+        &:nth-last-child(1)
+        {
+            font-weight: bold;
+        }
+    }
+}
