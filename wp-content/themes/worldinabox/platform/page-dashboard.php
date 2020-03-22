@@ -82,7 +82,7 @@ while ( have_posts() ) : the_post();
         <div class="container container--inner">
             <ul class="flex-third">
                 <li><a href="/dashboard/glossary" class="text__med-title">Glossary</a></li>
-                <li><a href="/dashboard/lesson-plans" class="text__med-title">Lesson Plan Builder</a></li>
+                <li><a href="/dashboard/active-minutes" class="text__med-title">Active Minutes</a></li>
                 <li><a href="/dashboard/help-support" class="text__med-title">Help & Support</a></li>
             </ul>
         </div>

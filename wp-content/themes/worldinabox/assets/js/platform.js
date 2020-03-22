@@ -7,7 +7,7 @@ window.addEventListener('load', function()
 //	Modals
 //
 function loadAll() {
-    initModals();
+    initModalForms();
     toggleLessonNav();
     if(document.querySelector('.page-template-page-lesson-plans'))
     {
@@ -15,7 +15,7 @@ function loadAll() {
     }
 }
 
-function initModals()
+function initModalForms()
 {
 
     var openModalButtons = document.querySelectorAll('.trigger-video');
@@ -174,17 +174,62 @@ if(classBlocks)
     })
 }
 
+
+
 /************** */
-/* Add new class */
+/* Lesson form */
 /************** */
 
-const newClassForm = document.querySelector('.add-new-class-container form');
-if(newClassForm) {
-    newClassForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const userId = newClassForm.getAttribute('data-currentuserid');
-        const className = document.querySelector('#class_name').value;
-        const unit = document.querySelector('#class_unit').value;
-        console.log(userId + ' ' + className + ' ' + unit);
-    })
+
+function initModalForms()
+{
+
+    var openModalButtons = document.querySelectorAll('.submit-minutes');
+
+
+    for(let i = 0; i < openModalButtons.length; i++)
+    {
+        openModalButtons[i].addEventListener('click', openFormModal);
+    }
 }
+
+function openFormModal(e)
+{
+    let classNum = e.target.getAttribute('data-classnum');
+    console.log(classNum);
+    let formContainer = document.querySelector('.lesson-minutes-container[data-classnum="'+classNum+'"]');
+    let open = formContainer.classList.contains('is-open');
+
+    if(open){
+        formContainer.removeClass('is-open').classList.add('closing');
+        setTimeout(function(){
+            formContainer.classList.add('closed').classList.remove('closing');
+        }, 300);
+
+    }
+    else
+    {
+        formContainer.classList.remove('closed')
+        formContainer.classList.add('opening');
+        setTimeout(function(){
+            formContainer.classList.add('is-open')
+            setTimeout(function() {formContainer.classList.remove('opening')}, 100);
+        }, 300);
+
+        formContainer.addEventListener('click', function(e) {
+            console.log(e.target);
+            if(e.target.classList.contains('lesson-minutes-container') || e.target.classList.contains('close-modal'))
+            {
+                formContainer.classList.add('closing');
+                setTimeout(function() {
+                    formContainer.classList.add('closed');
+                    formContainer.classList.remove('closing');
+                    formContainer.classList.remove('is-open');
+                }, 300);
+            }
+        });
+    }
+
+}
+
+

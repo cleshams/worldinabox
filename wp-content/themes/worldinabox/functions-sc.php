@@ -674,7 +674,7 @@ function render_leaderboard()
         $values = get_object_vars($results);
         $total = array_sum($values);
         $lessons = count(array_filter($values));
-        $average = $total / $lessons;
+        $average = ($total > 0 && $lessons > 0) ?$total / $lessons : 0;
         $classes[$index]['average'] = $average;
     }
     if(is_array($classes) && count($classes) > 2) {
@@ -705,9 +705,11 @@ function render_leaderboard()
                     foreach($classes as $class) 
                     {
                         echo '<tr>
-                        <td>'.$class['class_name'] . '</td>
-                        <td>'.$class['unit']->name.'</td>
-                        <td>'.$class['average'].'</td>
+                            <td>'.$class['class_name'] . '</td>
+                            <td>'.$class['unit']->name.'</td>
+                            <td>';
+                            echo ($class['average'] != 0) ? number_format((float)$class['average'],1) : '-';
+                            echo '</td>
                         </tr>';
                     }
                     ?>
@@ -724,3 +726,52 @@ add_shortcode('leaderboard', 'render_leaderboard');
 /********
  * Save new class
  ********/
+
+add_action( 'wp_ajax_nopriv_save_new_class', 'save_new_class' );
+add_action( 'wp_ajax_save_new_class', 'save_new_class' );
+
+function save_new_class()
+{
+    $userId = $_POST['userId'];
+    $className = $_POST['className'];
+    $unitSlug = $_POST['unit'];
+
+    $unit = get_term_by('slug', $unitSlug, 'unit');
+
+    $row = array(
+        'class_name' => $className,
+        'unit' => $unit,
+        'results' => '{"1":null,"2":null,"3":null,"4":null,"5":null,"6":null}'
+    );
+    $result = add_row('classes', $row, 'user_'.$userId);
+    return $result;
+}
+
+
+
+/********
+ * Save lesson 
+ ********/
+
+add_action( 'wp_ajax_nopriv_save_lesson_data', 'save_lesson_data' );
+add_action( 'wp_ajax_save_lesson_data', 'save_lesson_data' );
+
+function save_lesson_data()
+{
+    $userId = $_POST['userId'];
+    $className = $_POST['className'];
+    $unitSlug = $_POST['unit'];
+    $rowId = $_POST['rowId'];
+    $results = $_POST['results'];       
+
+    $unit = get_term_by('slug', $unitSlug, 'unit');
+
+    $row = array(
+        'class_name' => $className,
+        'unit' => $unit,
+        'results' => $results
+    );
+    $result = update_row('classes', $rowId, $row, 'user_'.$userId);
+    return $result;
+   
+}

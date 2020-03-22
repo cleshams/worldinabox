@@ -39,8 +39,6 @@ foreach($units as $unit) {
     <div class="classes">
         <?php
 
-        $exampleJson = '{"1":"10","2":null,"3":null,"4":null,"5":null,"6":null}';
-
         $classes = get_field('classes', 'user_'.$current_user_id);
         if(is_array($classes) && count($classes) > 0) {
             $classNum = 0;
@@ -48,8 +46,7 @@ foreach($units as $unit) {
                 $unit = $class['unit']->slug;
                 $className = $class['class_name'];
                 $unitLessonTitles = $lessonTitles[$unit];
-                // $values = json_decode($class['results']);
-                $values = json_decode($exampleJson);
+                $values = json_decode($class['results']);
                 $index = 1;
                 echo '<div class="class">
                 <button class="expand-class" data-class="'.$classNum.'">'.$className.' <span class="toggle-icon"></span></button>';
@@ -62,14 +59,31 @@ foreach($units as $unit) {
                         <span class="title">Lesson '.$index.' - '.$unitLesson.'</span>';
                         if($hasValue) :
                             echo '<span class="icon complete"></span>';
-                            echo '<span class="value">'.$values->$index.' Active Minutes</span>';
+                            echo '<span class="value" data-value="'.$values->$index.'">'.$values->$index.' Active Minutes</span>';
                         else :
                             echo '<span class="icon incomplete"></span>';
                             echo '<button data-classnum="'.$classNum.'" class="submit-minutes">Submit Active Minutes</button>';
                         endif;
-                    echo '</div>';
-                    $index++;
+                        echo '</div>';
+                        $index++;
                 }
+                $index = 1;
+                echo '
+                <div class="form-container lesson-minutes-container" data-classnum="'.$classNum.'">
+                <div class="form-container-container">
+                <form class="lesson-minutes" action="" type="post" data-classnum="'.$classNum.'" id="'.$classNum.'-form">';
+                echo '<h3 class="text__title">Update '.$className.' Active Minutes</h3>';
+                    foreach($unitLessonTitles as $unitLesson) {
+                        echo '<div class="input-container">
+                                <input type="number" id="'.$classNum . '-' . $index.'" name="'.$index.'" value="'.$values->$index.'"/>
+                                <label for="'.$classNum . '-' . $index.'">'.$unitLesson.'</label>
+                            </div>';
+                        $index++;
+                    }
+                    echo '<button class="submit-lesson-form btn" data-rowid="'.($classNum+1).'" data-classnum="'.$classNum.'" data-unit="'.$unit.'" data-userid="'.$current_user_id.'" data-className="'.$className.'">Update Active Minutes</button>
+                </form>
+                </div>
+                </div>';
                 $classNum++;
                 echo '</div></div>';
             }
@@ -90,9 +104,12 @@ foreach($units as $unit) {
             <div class="input-container">
                 <select  name="Unit" id="class_unit" required>
                     <options>
-                        <option value="unit_1">Unit 1</option>
-                        <option value="unit_2">Unit 2</option>
-                        <option value="unit_3">Unit 3</option>
+                        <?php $units = get_terms(array('taxonomy'=>'unit'));
+                        foreach($units as $singleUnit)
+                        {
+                            echo '<option value="'.$singleUnit->slug.'">'.$singleUnit->name.'</option>';
+                        }
+                        ?>
                     </options>
 
                 </select>

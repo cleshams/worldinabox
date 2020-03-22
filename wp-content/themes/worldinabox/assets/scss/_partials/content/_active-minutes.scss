@@ -14,6 +14,11 @@
         padding: 0 10px; 
         overflow: hidden;
         transition: 0.35s ease-out;
+
+        &.open
+        {
+            margin-bottom: 10px;
+        }
     }
 
     .lesson
@@ -31,6 +36,7 @@
         {
             display: block;
         }
+
     }
 
     .submit-minutes
@@ -39,6 +45,13 @@
         padding: 0.5em;
         border-radius: 4px;
         cursor: pointer;
+        transition: 0.3s cubic-bezier(.5, 0, .5, 1);
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background: $greyDark;
+        }
     }
 
     .icon
@@ -69,13 +82,17 @@
         background-size: contain;
         transition: 0.3s cubic-bezier(.5, 0, .5, 1);
         transform: rotate(180deg);
-        display: inline-block;
         vertical-align: text-top;
+        float: right;
     }
     .value
     {
         text-align: center;
         width: 175px;
+        font-family: $fontPrimary;
+        color: #0BA14B;
+        font-size: 1.825rem;
+        width: auto;
     }
 
     .expand-class
@@ -89,10 +106,15 @@
         text-align: left;
         cursor: pointer;
 
-        &.active
+        &.open
         {
             background: $platformPink;
             color: #fff;
+
+            .toggle-icon{
+                transform: rotate(270deg);
+                filter: brightness(10);
+            }
         }
     }
 }
@@ -127,6 +149,37 @@
     }
 }
 
+
+.lesson-minutes
+{
+    padding: 1rem;
+
+    .input-container
+    {
+        position: relative;
+        padding-top: 10px;
+        margin: 0 0 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    
+        label
+        {
+            font-size: 18px;
+            color: $greyLight;
+            display: block;
+        }
+        input
+        {
+            background: #fff;
+            width: 100px;
+            margin: 0 0 0 1rem;
+            padding: 0.75em;
+        }
+    }
+}
+
 .add-new-class-container
 {
     padding: 2rem 30px;
@@ -134,6 +187,8 @@
     max-width: 1140px;
     border-radius: 8px;
     color: #fff;
+    margin: 0 20px;
+    width: calc(100% - 40px);
 
     input,
     select {
@@ -212,4 +267,190 @@
             font-weight: bold;
         }
     }
+}
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.lesson-minutes-container
+{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: none;
+    display: none;
+
+    h3{
+        color: #fff;
+    }
+
+    form
+    {
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        margin-bottom: 0px;
+    }
+
+    &::after
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height:100%;
+        overflow: auto;
+        text-align: center;
+        -webkit-overflow-scrolling: touch;
+        backface-visibility: hidden;
+        background: rgba(39,49,66,0.5);
+        transition: 0.3s;
+    }
+
+    &.opening
+    {
+        display: block;
+
+        &::after,
+        .form-container-container
+        {
+            opacity: 0;
+            animation: opacity-fill 0.4s forwards;
+        }
+
+    }
+
+    &.closing
+    {
+        display: block;
+
+        &::after,
+        .form-container-container
+        {
+            opacity: 1;
+            animation: opacity-fade 0.3s forwards;
+            display: block;
+        }
+
+    }
+
+    &.is-open
+    {
+        display: block;
+        &::after
+        {
+            opacity: 1;
+            display: block;
+        }
+    }
+    .form-container-container
+    {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #424a53;
+        width: 60%;
+        min-width: 260px;
+        max-width: 800px;
+        max-height: 95vh;
+        border-radius: 4px;
+        box-sizing: border-box;
+        max-width: 500px;
+        padding: 30px;
+        overflow: scroll;
+
+        form
+        {
+            padding-top: 0px;
+        }
+    }
+    .close-modal
+    {
+        position: absolute;
+        z-index: 7;
+        top: 0px;
+        right: 0px;
+        font-size: 30px;
+        widtH: 50px;
+        height: 50px;
+        color: #fff;
+        padding: 10px;
+        font-family: $fontPrimary;
+        box-shadow: 0 2px 4px 0px rgba(0,0,0,0.4);
+        border-radius: 0px 0 0px 3px;
+        background: swatch('main', 'motty');
+    }
+}
+
+
+
+@keyframes modal-opening {
+	from {
+		transform: scale(.85);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+@keyframes modal-closing {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform:  scale(1.05);
+		opacity: 0;
+	}
+}
+
+
+@keyframes opacity-fill
+{
+    from {opacity: 0}
+    to {opacity:1}
+}
+@keyframes opacity-fade
+{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+.modal__overlay
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	display: flex;
+	justify-content: center;
+    align-items: center;
+
+	z-index: 5;
+}
+
+.modal__container
+{
+	background-color: #fff;
+	padding: 30px;
+    //max-width: 500px;
+    width: 60%;
+    min-width: 260px;
+	max-width: 800px;
+	max-height: 90vh;
+	border-radius: 4px;
+	overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 6;
+
+	//cursor:default;
 }

@@ -127,8 +127,95 @@ jQuery(document).ready(function($){
         });
     });
   
+    
+    /************** */
+    /* Add new class */
+    /************** */
+    
+    const newClassForm = document.querySelector('.add-new-class-container form');
+    if(newClassForm) {
+        newClassForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userId = newClassForm.getAttribute('data-currentuserid');
+            const className = document.querySelector('#class_name').value;
+            const unit = document.querySelector('#class_unit').value;
+            console.log(userId + ' ' + className + ' ' + unit);
+    
+            $.ajax({
+                url:ajaxpagination.ajaxurl,
+                type:'post',
+                data: {
+                    'userId': userId,
+                    'className': className,
+                    'unit': unit,
+                    action: 'save_new_class'
+                },
+                success: function(result) {
+                    var jsonResult = JSON.parse(result);
+                    console.log(jsonResult);
+                    //@TODO some form response stuff and remove loading anim
+                    window.location.reload();
+                }
+            });
+        })
+    }
+
+
+    /************** */
+    /* Update Lesson */
+    /************** */
+
+    const submitLessonButtons = document.querySelectorAll('.submit-lesson-form');
+    
+    if(submitLessonButtons)
+    {
+       $(submitLessonButtons).each(function(i, v) {
+            $(v).on('click', function(e) {
+                e.preventDefault();
+                const rowId = $(this).data('rowid');
+                const userId = $(this).data('userid');
+                const className = $(this).data('classname');
+                const unit = $(this).data('unit');
+                const classNum = $(this).data('classnum');
+                inputs = $('form[data-classnum="'+classNum+'"] input[type="number"]');
+                var values ='{';
+                inputs.each(function(i,v)
+                {
+                    var j = i+1;
+                    values += '"'+j+'":"'+$(v).val()+'"';
+                    if(j < 6)
+                    {
+                        values += ',';
+                    }
+                });
+                values += '}';
+                console.log(values);
+                console.log(rowId + ' ' + userId + ' ' + className + ' ' + unit );
+                $.ajax({
+                    url:ajaxpagination.ajaxurl,
+                    type:'post',
+                    data: {
+                        'userId': userId,
+                        'rowId': rowId,
+                        'className': className,
+                        'unit': unit,
+                        'results': values, 
+                        action: 'save_lesson_data'
+                    },
+                    success: function(result) {
+                        var jsonResult = JSON.parse(result);
+                        console.log(jsonResult);
+                        //@TODO some form response stuff and remove loading anim
+                        window.location.reload();
+                    }
+                });
+            })
+       })
+    }
 
 });
+
+
 
 
   jQuery(window).load(function() {
