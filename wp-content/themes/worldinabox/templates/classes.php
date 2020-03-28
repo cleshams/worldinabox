@@ -81,6 +81,7 @@ foreach($units as $unit) {
                         $index++;
                     }
                     echo '<button class="submit-lesson-form btn" data-rowid="'.($classNum+1).'" data-classnum="'.$classNum.'" data-unit="'.$unit.'" data-userid="'.$current_user_id.'" data-className="'.$className.'">Update Active Minutes</button>
+                    <p class="error"></p>
                 </form>
                 </div>
                 </div>';
@@ -115,7 +116,11 @@ foreach($units as $unit) {
                 </select>
                 <label for="class_unit">Unit</label>
             </div>
-            <button class="btn newClass">Save class</button>
+            <div class="buttonContainer">
+                <button class="btn newClass">Save class</button>
+                <p class="error"></p>
+            </div>
+
         </form>
     </div>
 </section>

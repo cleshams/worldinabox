@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	);
 ?></p>
 
-<p><a href="..//dashboard" class="btn btn--medium dashboard-link">Looking for the digital platform? Click here</a></p>
+<p><a href="../dashboard" class="btn btn--medium dashboard-link">Looking for the digital platform? Click here</a></p>
 
 <p><?php
 	printf(
@@ -41,6 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
 ?></p>
+<p><strong>Active Minutes</strong><br>If you are looking to manage your active minutes or just to find out more about them <a href="../dashboard/active-minutes" style="text-decoration:underline">click here</a></p>
 
 <?php
 	/**

@@ -757,7 +757,7 @@ add_action( 'wp_ajax_nopriv_save_lesson_data', 'save_lesson_data' );
 add_action( 'wp_ajax_save_lesson_data', 'save_lesson_data' );
 
 function save_lesson_data()
-{
+{   
     $userId = $_POST['userId'];
     $className = $_POST['className'];
     $unitSlug = $_POST['unit'];

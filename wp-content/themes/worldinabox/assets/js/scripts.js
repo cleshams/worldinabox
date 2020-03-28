@@ -49,7 +49,6 @@ jQuery(document).ready(function($){
         var string = document.createTextNode(val);
 
         var url = location.origin +'/dashboard/search/?search=';
-        console.log(url + encodeURIComponent(string.textContent));
         location.href = url + encodeURIComponent(string.textContent);
 
     })
@@ -105,7 +104,7 @@ jQuery(document).ready(function($){
     $('#pdf-lesson').on('change', function(e)
     {
         var lessonId = e.target.options[e.target.selectedIndex].value;
-        console.log(lessonId);
+
         $.ajax({
             url:ajaxpagination.ajaxurl,
             type:'post',
@@ -115,7 +114,6 @@ jQuery(document).ready(function($){
             },
             success: function(result) {
                 var jsonResult = JSON.parse(result);
-                console.log(jsonResult);
                 let output = '';
                 $.each(jsonResult, function(i,v) 
                 {
@@ -139,7 +137,12 @@ jQuery(document).ready(function($){
             const userId = newClassForm.getAttribute('data-currentuserid');
             const className = document.querySelector('#class_name').value;
             const unit = document.querySelector('#class_unit').value;
-            console.log(userId + ' ' + className + ' ' + unit);
+            const button = document.querySelector('form .newClass');
+
+            $(newClassForm).find('p.error').slideUp();
+
+            newClassForm.classList.add('submitting');
+            button.textContent = '';
     
             $.ajax({
                 url:ajaxpagination.ajaxurl,
@@ -152,9 +155,15 @@ jQuery(document).ready(function($){
                 },
                 success: function(result) {
                     var jsonResult = JSON.parse(result);
-                    console.log(jsonResult);
                     //@TODO some form response stuff and remove loading anim
                     window.location.reload();
+                },
+                error: function(result) {
+                    console.log(result);
+                    newClassForm.classList.remove('submitting');
+                    button.textContent = 'Save class';
+                    newClassForm.classList.add('error');
+                    $(newClassForm).find('p.error').text('There was an error with your submission. Please refresh the page and try again, or contact us for support').slideDown();
                 }
             });
         })
@@ -172,11 +181,17 @@ jQuery(document).ready(function($){
        $(submitLessonButtons).each(function(i, v) {
             $(v).on('click', function(e) {
                 e.preventDefault();
+
+                const classNum = $(this).data('classnum');
                 const rowId = $(this).data('rowid');
                 const userId = $(this).data('userid');
                 const className = $(this).data('classname');
                 const unit = $(this).data('unit');
-                const classNum = $(this).data('classnum');
+                const form = $('form[data-classnum="'+classNum+'"]')
+
+                $(form).find('p.error').slideUp();
+                $(form).addClass('submitting');
+                $(this).text('');
                 inputs = $('form[data-classnum="'+classNum+'"] input[type="number"]');
                 var values ='{';
                 inputs.each(function(i,v)
@@ -189,8 +204,7 @@ jQuery(document).ready(function($){
                     }
                 });
                 values += '}';
-                console.log(values);
-                console.log(rowId + ' ' + userId + ' ' + className + ' ' + unit );
+
                 $.ajax({
                     url:ajaxpagination.ajaxurl,
                     type:'post',
@@ -207,6 +221,14 @@ jQuery(document).ready(function($){
                         console.log(jsonResult);
                         //@TODO some form response stuff and remove loading anim
                         window.location.reload();
+                    },
+                    error: function(result) {
+                        console.log(result);
+                        $(form).removeClass('submitting');
+                        $(form).find('button').text('Update Active Minutes');
+                        $(form).addClass('error');
+                        $(form).find('p.error').text('There was an error with your submission. Please refresh the page and try again, or contact us for support').slideDown();
+
                     }
                 });
             })
