@@ -56,10 +56,10 @@
                     <div class="home-page-link__item" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/home-link-workshop.jpg');">
                         <div class="home-page-link__info">
                             <h6 class="home-page-link__sub-title">Special offer</h6>
-                            <h2 class="home-page-link__title">FREE taster experience</h2>
+                            <h2 class="home-page-link__title">FREE 6 month trial</h2>
                             <div class="home-page-link__content">
-                                <p>Enliven your school assembly with a visit from our dynamic team who will lead a short World in a Box session for FREE*</p>
-                                <a href="<?php echo HOME_URI; ?>/contact" class="btn btn--bordered-white">Book workshop</a>
+                                <p>Enliven your teaching with our digital resources </p>
+                                <a href="<?php echo HOME_URI; ?>/contact" class="btn btn--bordered-white">Try our digital platform</a>
                             </div>
                         </div>
                     </div>

@@ -41,7 +41,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
 ?></p>
-<p><strong>Active Minutes</strong><br>If you are looking to manage your active minutes or just to find out more about them <a href="../dashboard/active-minutes" style="text-decoration:underline">click here</a></p>
+<p><strong>Active Minutes</strong><br>If you are looking to manage your active minutes or just to find out more about them click the link below.</p>
+<a href="../dashboard/active-minutes" class="btn btn--medium dashboard-link">Go to Active Minutes</a>
 
 <?php
 	/**

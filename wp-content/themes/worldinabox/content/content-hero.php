@@ -7,9 +7,9 @@
                     <div class="columns hero__columns">
                         <div class="columns__column columns__column--half">
                             <h1 class="hero__title hero__title--large">Easy &amp; fun <span>world dance resources</span></h1>
-                                <p class="hero__text">"World in a Box has all the resources you need in one box. It’s fun, cross-curricular, adaptable and creative!"</p>
-                                <p class="hero__text hero__text--small">- Debbie Woods, Primary School Teacher</p>
-                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-1-full-resource/" class="btn btn--primary hero__btn">Get World in a Box</a>
+                                <p class="hero__text">Access our resources online, build bespoke PDF lesson plans and track active minutes on our new platform FREE!</p>
+                                <p class="hero__text hero__text--small">6 month introductory trial</p>
+                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-digital-platform-free-trial/" class="btn btn--primary hero__btn">Get World in a Box</a>
                         </div>
                         <div class="columns__column columns__column--half hero-btn-video">
                             <a href="https//www.youtube.com/watch?v=OA1eiwnOy_o" class="hero-btn-video__btn" data-lity>
