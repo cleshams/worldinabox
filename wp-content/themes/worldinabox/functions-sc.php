@@ -613,6 +613,11 @@ add_shortcode( 'classes', 'classes_section_render' );
         }
     }
     $inactive = $localAuthority['inactive_stat'];
+    if($inactive == '')
+    {
+        $inactive = $localAuthorities['UK']['obesity_stat'];
+        $userlocalAuthority = 'UK';
+    }
 
     ob_start();
     ?>
@@ -645,6 +650,10 @@ function render_obesity_statistic(){
         }
     }
     $obesity = $localAuthority['obesity_stat'];
+    if($obesity == '')
+    {
+        $obesity = $localAuthorities['UK']['obesity_stat'];
+    }
     
     return '<strong>'.$obesity.'%</strong>';
 }
@@ -656,6 +665,11 @@ add_shortcode('obesity-statistic', 'render_obesity_statistic');
 /********
  * Shotcode for Leaderboard
  ********/
+
+function average_sort($a, $b)
+{
+    return ($a['average'] > $b['average']) ? -1 : 1;
+}
 
 function render_leaderboard()
 {
@@ -679,10 +693,7 @@ function render_leaderboard()
     }
     if(is_array($classes) && count($classes) > 2) {
 
-        function average_sort($a, $b)
-        {
-            return ($a['average'] > $b['average']) ? -1 : 1;
-        }
+        
         $classesOrdered = usort( $classes, "average_sort"); 
 
         ob_start();
