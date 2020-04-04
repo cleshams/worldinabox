@@ -615,7 +615,14 @@ add_shortcode( 'classes', 'classes_section_render' );
     $inactive = $localAuthority['inactive_stat'];
     if($inactive == '')
     {
-        $inactive = $localAuthorities['UK']['obesity_stat'];
+        foreach($localAuthorities as $la)
+        {
+            if($la['name'] == 'UK')
+            {
+                $localAuthority = $la;
+            }
+        }
+        $inactive = $localAuthority['inactive_stat'];
         $userlocalAuthority = 'UK';
     }
 
@@ -652,7 +659,14 @@ function render_obesity_statistic(){
     $obesity = $localAuthority['obesity_stat'];
     if($obesity == '')
     {
-        $obesity = $localAuthorities['UK']['obesity_stat'];
+        foreach($localAuthorities as $la)
+        {
+            if($la['name'] == 'UK')
+            {
+                $localAuthority = $la;
+            }
+        }
+        $obesity = $localAuthority['obesity_stat'];
     }
     
     return '<strong>'.$obesity.'%</strong>';
