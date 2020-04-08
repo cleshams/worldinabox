@@ -28,6 +28,7 @@
 define('ENV_LOCAL', 		'local-worldinabox.co.uk');
 define('ENV_STAGING',		'staging-worldinabox-co.stackstaging.com');
 define('ENV_PRODUCTION', 	'worldinabox.co');
+define('ENV_WWW', 'www.worldinabox.co');
 
 
 if($_SERVER['HTTP_HOST'] == ENV_LOCAL)
@@ -58,7 +59,7 @@ elseif($_SERVER['HTTP_HOST'] == ENV_STAGING)
     define('DEBUG_DISPLAY', false);
 
 }
-elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION)
+elseif($_SERVER['HTTP_HOST'] == ENV_PRODUCTION || $_SERVER['HTTP_HOST'] == ENV_WWW)
 {
     define('IS_LOCAL', false);
     define('IS_STAGING', false);
