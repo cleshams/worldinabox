@@ -544,3 +544,45 @@
     }
     
 }
+
+.woocommerce-account
+{
+    .resource
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        > div
+        {
+            width: 33%;
+            min-width: 150px;
+
+            button
+            {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+        > p
+        {
+            width: 66%;
+            margin-bottom: 0px;
+        }
+        margin-bottom: 16px;
+
+        .text__med-title
+        {
+            margin-bottom: 4px;
+        }
+    }
+
+    .btn.bg__blue
+    {
+        &:hover, &:focus
+        {
+            background-color: $platformPink;
+        }
+    }
+}

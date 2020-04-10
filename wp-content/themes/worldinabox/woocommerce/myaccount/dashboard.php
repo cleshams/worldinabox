@@ -22,27 +22,48 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<p><?php
-	/* translators: 1: user display name 2: logout url */
-	printf(
-		__( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ),
-		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
-		esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) )
-	);
-?></p>
-
-<p><a href="../dashboard" class="btn btn--medium dashboard-link">Looking for the digital platform? Click here</a></p>
+<h2>Welcome 
+    <?php
+    $school = get_user_meta($current_user->ID,'school_org_name', true);
+    echo $school;
+    ?>
+</h2>
 
 <p><?php
 	printf(
-		__( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
+        __( 'From your account page you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
 		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
-?></p>
+    ?></p>
+<p><a href="../dashboard" class="btn btn--medium dashboard-link">Looking for the digital platform? Click here</a></p>
 <p><strong>Active Minutes</strong><br>If you are looking to manage your active minutes or just to find out more about them click the link below.</p>
 <a href="../dashboard/active-minutes" class="btn btn--medium dashboard-link">Go to Active Minutes</a>
+
+<hr>
+
+<?php
+$resources = get_field('resources'); 
+echo '<h3>Resources</h3>';
+echo '<p>'.$resources['introduction'].'</p>';
+echo '<div class="resources">';
+    foreach ($resources['resources'] as $resource) {
+        $title = $resource['title'];
+        $file = $resource['file'];
+        $description = $resource['description'];
+
+        echo '
+        <div class="resource">
+            <p class="text__med-title">'.$title.'</p>
+            <p>'.$description.'</p>
+            <div>
+                <a class="btn btn--small bg__blue" href="'.$file['url'].'" download>Download Resource</a>
+            </div>
+        </div>';
+    }
+    echo '</div>';
+?>
 
 <?php
 	/**

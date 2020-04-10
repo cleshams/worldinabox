@@ -558,7 +558,7 @@ function woo_show_additional_form_fields($order)
 add_filter('user_contactmethods', 'update_contact_methods', 10, 1);
 
 function update_contact_methods($fields) {
-    $fields['school_org_name'] = 'School /Organisation Name';
+    $fields['school_org_name'] = 'School / Organisation Name';
     $fields['local_authority'] = 'Local Authority';
 
     return $fields;
