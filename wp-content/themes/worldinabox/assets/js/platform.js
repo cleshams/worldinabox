@@ -13,6 +13,9 @@ function loadAll() {
     {
         populatePDFTitle();
     }
+    if(document.querySelector('.submit-minutes')) {
+        initModalFormsLessons();
+    }
 }
 
 function initModalForms()
@@ -181,7 +184,7 @@ if(classBlocks)
 /************** */
 
 
-function initModalForms()
+function initModalFormsLessons()
 {
 
     var openModalButtons = document.querySelectorAll('.submit-minutes');
