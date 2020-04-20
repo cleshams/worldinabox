@@ -44,7 +44,7 @@
                             <h6 class="home-page-link__sub-title">Introductory offer</h6>
                             <h2 class="home-page-link__title">World in a Box FULL resource</h2>
                             <div class="home-page-link__content">
-                                <p>Buy the full resource pack NOW for just £500 for a 6 month period. Price goes up to £600 July 2019.</p>
+                                <p>Buy the full resource pack NOW for just £500 for a 6 month period. Price goes up to £600 July 2020.</p>
                                 <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-1-full-resource/" class="btn btn--bordered-white">Get World in a Box</a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                             <h2 class="home-page-link__title">FREE 6 month trial</h2>
                             <div class="home-page-link__content">
                                 <p>Enliven your teaching with our digital resources </p>
-                                <a href="<?php echo HOME_URI; ?>/contact" class="btn btn--bordered-white">Try our digital platform</a>
+                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-1-full-resource/" class="btn btn--bordered-white">Try our digital platform</a>
                             </div>
                         </div>
                     </div>

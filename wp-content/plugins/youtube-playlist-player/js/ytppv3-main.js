@@ -8,6 +8,7 @@ function ytCreatePlaylist() {
 
     // https://developers.google.com/youtube/v3/docs/videos/list
     httpRequest.open('GET', "https://www.googleapis.com/youtube/v3/videos?part=snippet&fields=items(id,snippet)&id=" + videoId + "&key=" + ytApiKey, true);
+    httpRequest.setRequestHeader('Content-Type', 'application/json');
     httpRequest.onreadystatechange = function (data) {
         if (httpRequest.readyState === 4) {
             data = JSON.parse(httpRequest.responseText);
@@ -54,9 +55,13 @@ if (document.readyState !== 'loading') {
 /**
  * Change YouTube video based on playlist selection
  */
-document.querySelector('.yt-api-video-item').addEventListener('click', function () {
-    var ytUri = 'https://www.youtube.com',
-        thisId = this.dataset.id;
+document.addEventListener('DOMContentLoaded', function () {
+    if (document.querySelector('.yt-api-video-item')) {
+        document.querySelector('.yt-api-video-item').addEventListener('click', function () {
+            let ytUri = 'https://www.youtube.com';
+            let thisId = this.dataset.id;
 
-    document.getElementById('vid_frame').src = ytUri + '/embed/' + thisId + '?autoplay=1&rel=0&showinfo=1&autohide=1';
+            document.getElementById('vid_frame').src = ytUri + '/embed/' + thisId + '?autoplay=1&rel=0&showinfo=1&autohide=1';
+        });
+    }
 });

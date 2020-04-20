@@ -3,7 +3,7 @@
 Plugin Name: YouTube Playlist Player
 Plugin URI: https://getbutterfly.com/wordpress-plugins/
 Description: Display a YouTube player (with an optional playlist) on any post or page using a simple shortcode.
-Version: 4.5.0
+Version: 4.5.1
 Author: Ciprian Popescu
 Author URI: https://getbutterfly.com/
 License: GPL3
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: youtube-playlist-player
 
 YouTube Playlist Player
-Copyright (C) 2013-2019 Ciprian Popescu (getbutterfly@gmail.com)
+Copyright (C) 2013-2020 Ciprian Popescu (getbutterfly@gmail.com)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,13 +35,6 @@ include 'includes/functions.php';
 include 'includes/settings.php';
 
 /*
- * Register/enqueue plugin scripts and styles (backend)
- */
-function ytppPssAdmin() {
-    wp_enqueue_style('gbad-ytpp', plugins_url('css/gbad.css', __FILE__));
-}
-
-/*
  * Register/enqueue plugin scripts and styles (frontend)
  */
 function ytppPss() {
@@ -59,7 +52,6 @@ register_activation_hook(__FILE__, 'ytppInstall');
  * Initialise plugin
  */
 add_action('admin_menu', 'ytPlaylist');
-add_action('admin_enqueue_scripts', 'ytppPssAdmin');
 add_action('wp_enqueue_scripts', 'ytppPss');
 
 /*

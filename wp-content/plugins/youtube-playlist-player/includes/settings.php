@@ -23,7 +23,7 @@ function ytpp_settings() { ?>
                 <p>By embedding YouTube videos on your site, you are agreeing to <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" rel="external">YouTube API Terms of Service</a>.</p>
 
                 <hr>
-                <p><img src="<?php echo plugins_url('img/developed-with-youtube.png', dirname(__FILE__)); ?>" alt="Developed with YouTube" class="ytpp-developed"></p>
+                <p><img src="<?php echo plugins_url('img/developed-with-youtube.png', dirname(__FILE__)); ?>"  alt="Developed with YouTube" width="256" class="ytpp-developed"></p>
 
                 <hr>
                 <p>For support, feature requests and bug reporting, please visit the <a href="https://getbutterfly.com/" rel="external">official website</a>. If you enjoy this plugin, don't forget to rate it. Also, try our other WordPress plugins at <a href="https://getbutterfly.com/wordpress-plugins/" rel="external" target="_blank">getButterfly.com</a>.</p>
@@ -98,17 +98,17 @@ function ytpp_settings() { ?>
             <div id="poststuff">
                 <h3><?php _e('Help &amp; Usage Details', 'youtube-playlist-player'); ?></h3>
                 <h4>Use one of the shortcodes below to add the YouTube player</h4>
-                <p>Static YouTube player: <code class="codor">[yt_playlist mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]</code></p>
-                <p>Dynamic YouTube player (YouTube Data API v3): <code class="codor">[yt_playlist_v3 mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]</code></p>
+                <p>Static YouTube player: <code>[yt_playlist mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]</code></p>
+                <p>Dynamic YouTube player (YouTube Data API v3): <code>[yt_playlist_v3 mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]</code></p>
                 <p>or use the shortcode in one of your theme templates using the code below:</p>
-                <p><code class="codor">&lt;?php echo do_shortcode('[yt_playlist mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]'); ?&gt;</code></p>
-                <p><code class="codor">&lt;?php echo do_shortcode('[yt_playlist_v3 mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]'); ?&gt;</code></p>
+                <p><code>&lt;?php echo do_shortcode('[yt_playlist mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]'); ?&gt;</code></p>
+                <p><code>&lt;?php echo do_shortcode('[yt_playlist_v3 mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]'); ?&gt;</code></p>
 
                 <p><b>Note:</b> Shortcodes can be added to posts, pages, custom post types or widgets.</p>
 
                 <hr>
-                <p><code class="codor">mainid</code> is the main video ID and <code class="codor">vdid</code> is the list of playlist videos (also include the main video ID).</p>
-                <p>Style the <code class="codor">.main_box</code> element to change the videos (and playlist) container.</p>
+                <p><code>mainid</code> is the main video ID and <code>vdid</code> is the list of playlist videos (also include the main video ID).</p>
+                <p>Style the <code>.main_box</code> element to change the videos (and playlist) container.</p>
             </div>
             <?php
         }

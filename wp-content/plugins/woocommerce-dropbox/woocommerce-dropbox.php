@@ -1,27 +1,30 @@
 <?php
-/*
-Plugin Name: WooCommerce Dropbox
-Version: 1.1.1
-Description: WooCommerce Dropbox integration for downloadable products.
-Author: Vadiem Janssens
-Author URI: https://www.vadiemjanssens.nl
-Plugin URI: https://www.vadiemjanssens.nl/woocommerce-dropbox
-Text Domain: woocommerce-dropbox
-Domain Path: /lang
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+/**
+ * Plugin Name: WooCommerce Dropbox
+ * Version: 1.2.3
+ * Description: WooCommerce Dropbox integration for downloadable products.
+ * Author: Vadiem Janssens
+ * Author URI: https://www.vadiemjanssens.nl
+ * Plugin URI: https://www.vadiemjanssens.nl/woocommerce-dropbox
+ * Text Domain: woocommerce-dropbox
+ * Domain Path: /lang
+ *
+ * WC requires at least: 2.6.0
+ * WC tested up to: 4.0.1
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 if ( ! function_exists( 'add_filter' ) ) {
 	header( 'Status: 403 Forbidden' );
@@ -33,7 +36,7 @@ define( 'WCDB_URL', plugin_dir_url(__FILE__) );
 define( 'WCDB_PATH', plugin_dir_path(__FILE__) );
 define( 'WCDB_BASENAME', plugin_basename(__FILE__) );
 
-define('WCDB_VERSION', '1.1.1');
+define('WCDB_VERSION', '1.2.3');
 
 class WC_Dropbox {
 
@@ -108,7 +111,7 @@ class WC_Dropbox {
 	 */
 	public function plugin_action_links( $links ) {
 		$action_links = array(
-			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=integration' ) . '" title="' . esc_attr( __( 'View WooCommerce Dropbox Settings', 'woocommerce-dropbox' ) ) . '">' . __( 'Settings', 'woocommerce-dropbox' ) . '</a>',
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=integration&section=woocommerce-dropbox' ) . '" title="' . esc_attr( __( 'View WooCommerce Dropbox Settings', 'woocommerce-dropbox' ) ) . '">' . __( 'Settings', 'woocommerce-dropbox' ) . '</a>',
 		);
 
 		return array_merge( $action_links, $links );

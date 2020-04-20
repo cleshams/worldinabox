@@ -2,9 +2,9 @@
 Contributors: butterflymedia
 Tags: youtube, player, playlist, video, carousel, thumbnail, javascript
 Requires at least: 4.6
-Tested up to: 5.1
+Tested up to: 5.4
 Requires PHP: 7.0
-Stable tag: 4.5.0
+Stable tag: 4.5.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,8 +14,10 @@ Display a YouTube player (with an optional playlist) on any post or page using a
 
 Display a YouTube player (with an optional playlist) on any post or page using a simple shortcode. The plugin supports a static YouTube player (no video title) and a dynamic one (video title) using the YouTube Data API v3.
 
-Check out the YouTube Playlist Player demo here:
+Check out a YouTube Playlist Player demo here:
 [https://getbutterfly.com/demos/youtube-playlist-player/](https://getbutterfly.com/demos/youtube-playlist-player/ "YouTube Playlist Player demo")
+or here:
+[https://www.quakewiki.net/demo/youtube-playlist-player-demo/](https://www.quakewiki.net/demo/youtube-playlist-player-demo/ "YouTube Playlist Player demo")
 
 Check out more WordPress plugins here:
 [https://getbutterfly.com/wordpress-plugins/](https://getbutterfly.com/wordpress-plugins/ "More WordPress plugins")
@@ -35,6 +37,13 @@ Check out more WordPress plugins here:
 5. Help/Usage
 
 == Changelog ==
+
+= 4.5.1 =
+* FIX: Fixed issue with playlist not appearing
+* FIX: Fixed issue with playlist styling
+* UPDATE: Refactored JS for less overhead
+* UPDATE: Updated WordPress compatibility
+* UPDATE: Updated demo link
 
 = 4.5.0 =
 * UPDATE: Updated PHP requirements
