@@ -59,7 +59,7 @@
                             <h2 class="home-page-link__title">FREE 6 month trial</h2>
                             <div class="home-page-link__content">
                                 <p>Enliven your teaching with our digital resources </p>
-                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-1-full-resource/" class="btn btn--bordered-white">Try our digital platform</a>
+                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-digital-platform-free-trial/" class="btn btn--bordered-white">Try our digital platform</a>
                             </div>
                         </div>
                     </div>
