@@ -45,7 +45,7 @@ while ( have_posts() ) : the_post();
             $proceed = false;
             foreach($units as $unit)
             {
-                if(in_array($unit->slug, array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full', array_keys($_SESSION['memberships']))) { $proceed = true;} 
+                if(in_array($unit->slug, array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full', array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full-copy', array_keys($_SESSION['memberships']))) { $proceed = true;} 
             }
             
             if($proceed)

@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
                 $backgroundImage = get_field('background_image', 'unit_'.$unit->term_id);
                 $number = get_field('unit_number', 'unit_' . $unit->term_id);
 
-                $valid = (in_array($slug, array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full', array_keys($_SESSION['memberships']))) ? true : false;
+                $valid = (in_array($slug, array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full', array_keys($_SESSION['memberships'])) || in_array('world-in-a-box-full-copy', array_keys($_SESSION['memberships']))) ? true : false;
                 if($valid) :
                     echo '<li class="lesson-link card card__image-bg card__colour-overlay" style="background-image:url('.$backgroundImage['url'].');">';
                         echo '<div class="overlay" style=" background-color: rgb('.$color.');"></div>';

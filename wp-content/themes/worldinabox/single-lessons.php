@@ -10,7 +10,7 @@ $unitNumber = get_field('unit_number','unit_'.$unitID);
 $logo = get_field('unit_logo', 'unit_'.$unitID);
 $unitColour = get_field('colour', 'unit_'.$unitID);
 
-if(!in_array($unit[0]->slug, array_keys($_SESSION['memberships'])) && !in_array('world-in-a-box-full', array_keys($_SESSION['memberships']))) : 
+if(!in_array($unit[0]->slug, array_keys($_SESSION['memberships'])) && !in_array('world-in-a-box-full', array_keys($_SESSION['memberships'])) && !in_array('world-in-a-box-full-copy', array_keys($_SESSION['memberships']))) : 
     $requiredMembership = get_page_by_path($unit[0]->slug, OBJECT, 'wc_membership_plan');
     $productIds = get_post_meta($requiredMembership->ID, '_product_ids')[0];
     $url = get_the_permalink($productIds[0]); ?>
