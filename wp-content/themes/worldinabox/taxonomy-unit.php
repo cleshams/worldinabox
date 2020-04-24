@@ -35,7 +35,7 @@ echo '
             <div>
             <p class="text__med-title">Unit '.$number.'</p>
                 <h1>'.$title.'</h1>
-                <p class="text__larger">'.$description.'</p>
+                <p class="text__larger">'.wpautop($description).'</p>
             </div>
         </div>
     </section>';
