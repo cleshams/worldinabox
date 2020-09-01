@@ -56,10 +56,10 @@
                     <div class="home-page-link__item" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/home-link-workshop.jpg');">
                         <div class="home-page-link__info">
                             <h6 class="home-page-link__sub-title">Special offer</h6>
-                            <h2 class="home-page-link__title">FREE 6 month trial</h2>
+                            <h2 class="home-page-link__title">Become a world dance teacher in minutes!</h2>
                             <div class="home-page-link__content">
-                                <p>Enliven your teaching with our digital resources </p>
-                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-digital-platform-free-trial/" class="btn btn--bordered-white">Try our digital platform</a>
+                                <p>Subscribe to our interactive, digital platform to access resources online, build bespoke PDF lesson plans and track active minutes, just £25 per year!</p>
+                                <a href="<?php echo HOME_URI; ?>/product/world-in-a-box-digital-platform/" class="btn btn--bordered-white">Sign up!</a>
                             </div>
                         </div>
                     </div>
