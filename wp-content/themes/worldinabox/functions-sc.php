@@ -531,10 +531,10 @@ add_action('woocommerce_checkout_update_user_meta', 'wiab_woocommerce_checkout_u
 
 function motd_woocommerce_checkout_update_user_meta($customer_id, $posted)
 {
-    if(isset($posted['school_org_name']))
+    if(isset($posted['billing_school_org_name']))
     {
-        $urn = sanitize_text_field($posted['school_org_name']);
-        update_user_meta($customer_id, 'school_org_name', $urn);
+        $urn = sanitize_text_field($posted['billing_school_org_name']);
+        update_user_meta($customer_id, 'billing_school_org_name', $urn);
     }
     $la = $posted['local_authority'];
     update_field('local_authority', $la, 'user_'.$customer_id);
@@ -547,7 +547,7 @@ function woo_show_additional_form_fields($order)
 {
     $new_text_fields = array(
         'local_authority' => 'Local Authority',
-        'school_org_name' => 'School / Organisation Name',
+        'billing_school_org_name' => 'School / Organisation Name',
     );
     foreach($new_text_fields as $key => $value) 
     {
